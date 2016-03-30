@@ -33,7 +33,7 @@ num = size(ps,1);
 ps = ps(1:num,:);
 cad = cad(1:num,:);
 upd = upd(1:num,:);
-[id,cluster,label] = picMeanShift(ps,cad,upd);
+[id,cluster,label,clusterCenter] = picMeanShift(ps,cad,upd);
 
 histogram(cluster,max(cluster));
 title('cluster distribution');
@@ -41,12 +41,33 @@ title('cluster distribution');
 dot = find(matrixFile == '.');
 clusterFile = [matrixFile(1:dot) 'cluster'];
 fid = fopen(clusterFile,'w');
+fprintf(fid,'%d\n',ind);
 for i=1:ind
-    fprintf(fid,'%s %d\n',fileName{i},cluster(i));
+    fprintf(fid,'%s %f %f %f %f %f %f %f %f %f %d\n',...
+        fileName{i},...
+        ps
+        cluster(i));
 end
-fclose(fid);
 
-clusterCopyTo(i);
+for i=1:size(clusterCenter,1)
+    
+    fprintf(fid,'%f %f %f %f %f %f %f %f %f\n',clusterCenter(i,1),...
+        clusterCenter(i,2),...
+        clusterCenter(i,3),...
+        clusterCenter(i,4),...
+        clusterCenter(i,5),...
+        clusterCenter(i,6),...
+        clusterCenter(i,7),...
+        clusterCenter(i,8),...
+        clusterCenter(i,9));
+        
+end
+
+fclose(fid);
+disp('write done');
+
+% copy images to folder with name as clusterId
+% clusterCopyTo(imgSource,clusterDest,fileName,cluster);
 
 %% compute dist
 %{

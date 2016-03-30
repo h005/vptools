@@ -1,6 +1,6 @@
 clear
 clc
-matrixFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredameSelected.matrix';
+matrixFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.matrix';
 imgSource = '/home/h005/Documents/vpDataSet/notredame/imgs';
 clusterDest = '/home/h005/Documents/vpDataSet/notredame/cluster';
 fid = fopen(matrixFile,'r');
@@ -41,8 +41,20 @@ title('cluster distribution');
 dot = find(matrixFile == '.');
 clusterFile = [matrixFile(1:dot) 'cluster'];
 fid = fopen(clusterFile,'w');
+fprintf(fid,'%d %d\n',size(clusterCenter,1),ind);
 for i=1:ind
-    fprintf(fid,'%s %d\n',fileName{i},cluster(i));
+    fprintf(fid,'%s %f %f %f %f %f %f %f %f %f %d\n',...
+        fileName{i},...
+        ps(i,1),...
+        ps(i,2),...
+        ps(i,3),...
+        cad(i,1),...
+        cad(i,2),...
+        cad(i,3),...
+        upd(i,1),...
+        upd(i,2),...
+        upd(i,3),...
+        cluster(i));
 end
 
 for i=1:size(clusterCenter,1)
@@ -62,8 +74,9 @@ end
 fclose(fid);
 disp('write done');
 
+% copy images to folder with name as clusterId
 % clusterCopyTo(imgSource,clusterDest,fileName,cluster);
-
+disp('copy done');
 %% compute dist
 %{
 dot = find(matrixFile == '.');
