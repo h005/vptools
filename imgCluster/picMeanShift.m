@@ -5,7 +5,6 @@ function [id,cluster,label,clusterCenter] = picMeanShift(ps,cad,upd)
 
 ncases = size(ps,1);
 label = cell(ncases,1);
-cluster = [];
 id = 1:ncases;
 %% case 1:
 % get mean vlaue by ps cad upd
@@ -112,7 +111,7 @@ for i=1:ncases
 end
 edis = mapminmax(edis',0,1)';
 % for two plane distace
-% metric then by abs(cos(angle)) between them
+% metric them by abs(cos(angle)) between them
 
 % normal line vector
 pvec = zeros(ncases,3);

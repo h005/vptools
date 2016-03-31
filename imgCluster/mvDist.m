@@ -5,6 +5,10 @@ imgSource = '/home/h005/Documents/vpDataSet/notredame/imgs';
 clusterDest = '/home/h005/Documents/vpDataSet/notredame/cluster';
 fid = fopen(matrixFile,'r');
 ind = 0;
+% ps cad upd meanshift
+% method = 1;
+% ps first cad upd next
+method = 2;
 while 1
     tline = fgetl(fid);
     if tline == -1
@@ -30,14 +34,41 @@ fclose(fid);
 
 [ps,cad,upd] = extractCameraInfo(mv);
 num = size(ps,1);
+% num = 100;
 ps = ps(1:num,:);
 cad = cad(1:num,:);
 upd = upd(1:num,:);
-[id,cluster,label,clusterCenter] = picMeanShift(ps,cad,upd);
 
+if method == 1
+    [id,cluster,label,clusterCenter] = picMeanShift(ps,cad,upd);
+else
+    ncases = size(ps,1);
+    id = zeros(ncases,1);
+    cluster = zeros(ncases,1);
+    label = cell(ncases,1);
+%     clusterCenter = zeros(ncases,9);
+    [idPS,clusterPS,labelPS,clusterCenterPS] = picMeanShiftPS(ps);
+    numClusterPS = size(clusterCenterPS,1);
+    % num of cluster
+    ncl = 0;
+    for i = 1:numClusterPS
+        clSet = find(clusterPS == i);
+        [idcu,clustercu,labelcu,clusterCentercu] = picMeanShiftCU(cad(clSet,:),upd(clSet,:));
+        % sub clusters
+        for j = 1:size(clusterCentercu,1)
+            ncl = ncl + 1;
+            % cluseter set by cad and upd
+            cuSet = find(clustercu ==  j);
+            cluster(clSet(cuSet)) = ncl;
+            clusterCenter(ncl,:) = [clusterCenterPS(i,:),clusterCentercu(j,:)];
+        end
+    end
+end
+%% plot the result
 histogram(cluster,max(cluster));
 title('cluster distribution');
-
+%{
+%% print out clustering info
 dot = find(matrixFile == '.');
 clusterFile = [matrixFile(1:dot) 'cluster'];
 fid = fopen(clusterFile,'w');
@@ -73,7 +104,7 @@ end
 
 fclose(fid);
 disp('write done');
-
+%}
 % copy images to folder with name as clusterId
 % clusterCopyTo(imgSource,clusterDest,fileName,cluster);
 disp('copy done');
