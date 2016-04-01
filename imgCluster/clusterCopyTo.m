@@ -12,6 +12,6 @@ for i=1:num
     mkdir([clusterDir '/' num2str(i)]);
     % copy files into it
     for j=1:length(ind)
-        copyfile([imgDir '/' fileName{j}],[clusterDir '/' num2str(i) '/']);
+        copyfile([imgDir '/' fileName{ind(j)}],[clusterDir '/' num2str(i) '/']);
     end
 end

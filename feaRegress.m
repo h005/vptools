@@ -16,7 +16,7 @@ titleText = {
     'svm regress', ...
     'ens regress'};
 
-method = 3;
+method = 2;
 
 [score,predictScore] = feaAnalysis(feafile,titleText{method});
 showInfo(titleText{method},score,predictScore,'2d+3d',2,2,1);

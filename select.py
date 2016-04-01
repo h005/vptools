@@ -1,13 +1,21 @@
 # this file was created to seelct matrixs for given filename
 # input : raw matrix file
-#		  selected matrixs file// contains filename
+#		  selected matrixs file// only contains filename
+#	   or score file // only contains filename score1 and score2
 # output : selectedMatrix file
 import io
 
-matrixfile = open('notredame.matrix','r')
-# scorefile = open('notredameScore.txt')
-selectfile = open('201601061046KmedoidsPAM-mvMatrix_26_selecedFS_seleced.matrixs')
-extractfile = open('notredameSelected.matrix','w')
+matrixfilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameOriginal.matrix';
+scorefilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameScore.txt';
+extractfilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameSelected.matrix';
+
+matrixfile = open(matrixfilePath,'r')
+selectfile = open(scorefilePath)
+# selectfile = open('201601061046KmedoidsPAM-mvMatrix_26_selecedFS_seleced.matrixs')
+extractfile = open(extractfilePath,'w')
+
+# method is scoreFile or matrixsFile
+method = 'socreFile';
 
 # this is a dict
 mvp = {}
@@ -23,7 +31,12 @@ while fname :
 		paralist.append(para)
 
 	fname = fname.strip()
-	fname = fname.split('/')[1]
+	spString = fname.split('/')
+	print spString
+	if len(spString) <= 1 :
+		fname = spString[0];
+	else :
+		fname = spString[1];
 	fname = fname.split('.')[0]
 	mvp[fname] = paralist
 	fname = matrixfile.readline()

@@ -6,10 +6,10 @@
 
 import io
 
-file1 = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredamemodel.3df'
+file1 = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredamemodel.fea'
 file2 = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredameScore.txt'
 
-fileout = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.3dfs'
+fileout = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.feas'
 
 feaDict = {}
 
@@ -48,6 +48,8 @@ while line:
 		fout.write("%s\n" % lines[-1])
 
 	line = feaSc.readline()
+
+print 'done'
 
 fout.close()
 fea2f.close()

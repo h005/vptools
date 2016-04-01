@@ -46,3 +46,8 @@ end
 figure(4)
 histogram(score(:,2),'BinWidth',10,'Normalization','count');
 title('score');
+
+score = score(:,1) ./ score(:,2);
+figure(5)
+histogram(score,'Normalization','probability');
+title('score');

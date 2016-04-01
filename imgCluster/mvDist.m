@@ -3,12 +3,16 @@ clc
 matrixFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.matrix';
 imgSource = '/home/h005/Documents/vpDataSet/notredame/imgs';
 clusterDest = '/home/h005/Documents/vpDataSet/notredame/cluster';
+feaFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.fs';
 fid = fopen(matrixFile,'r');
 ind = 0;
 % ps cad upd meanshift
 % method = 1;
 % ps first cad upd next
-method = 2;
+method = 1; 
+copyFlag = 0;
+output = 0;
+
 while 1
     tline = fgetl(fid);
     if tline == -1
@@ -51,9 +55,11 @@ else
     numClusterPS = size(clusterCenterPS,1);
     % num of cluster
     ncl = 0;
+    pcCluster = zeros(2,numClusterPS);
     for i = 1:numClusterPS
         clSet = find(clusterPS == i);
         [idcu,clustercu,labelcu,clusterCentercu] = picMeanShiftCU(cad(clSet,:),upd(clSet,:));
+        pcCluster(1,i) = ncl+1;
         % sub clusters
         for j = 1:size(clusterCentercu,1)
             ncl = ncl + 1;
@@ -62,52 +68,66 @@ else
             cluster(clSet(cuSet)) = ncl;
             clusterCenter(ncl,:) = [clusterCenterPS(i,:),clusterCentercu(j,:)];
         end
+        pcCluster(2,i) = ncl;
     end
 end
 %% plot the result
 histogram(cluster,max(cluster));
 title('cluster distribution');
-%{
-%% print out clustering info
-dot = find(matrixFile == '.');
-clusterFile = [matrixFile(1:dot) 'cluster'];
-fid = fopen(clusterFile,'w');
-fprintf(fid,'%d %d\n',size(clusterCenter,1),ind);
-for i=1:ind
-    fprintf(fid,'%s %f %f %f %f %f %f %f %f %f %d\n',...
-        fileName{i},...
-        ps(i,1),...
-        ps(i,2),...
-        ps(i,3),...
-        cad(i,1),...
-        cad(i,2),...
-        cad(i,3),...
-        upd(i,1),...
-        upd(i,2),...
-        upd(i,3),...
-        cluster(i));
-end
+%% output to .cluster file
+if output
+    %% print out clustering info
+    dot = find(matrixFile == '.');
+    clusterFile = [matrixFile(1:dot) 'cluster'];
+    fid = fopen(clusterFile,'w');
+    fprintf(fid,'%d %d\n',size(clusterCenter,1),ind);
+    for i=1:ind
+        fprintf(fid,'%s %f %f %f %f %f %f %f %f %f %d\n',...
+            fileName{i},...
+            ps(i,1),...
+            ps(i,2),...
+            ps(i,3),...
+            cad(i,1),...
+            cad(i,2),...
+            cad(i,3),...
+            upd(i,1),...
+            upd(i,2),...
+            upd(i,3),...
+            cluster(i));
+    end
 
-for i=1:size(clusterCenter,1)
-    
-    fprintf(fid,'%f %f %f %f %f %f %f %f %f\n',clusterCenter(i,1),...
-        clusterCenter(i,2),...
-        clusterCenter(i,3),...
-        clusterCenter(i,4),...
-        clusterCenter(i,5),...
-        clusterCenter(i,6),...
-        clusterCenter(i,7),...
-        clusterCenter(i,8),...
-        clusterCenter(i,9));
-        
-end
+    for i=1:size(clusterCenter,1)
 
-fclose(fid);
-disp('write done');
-%}
-% copy images to folder with name as clusterId
-% clusterCopyTo(imgSource,clusterDest,fileName,cluster);
+        fprintf(fid,'%f %f %f %f %f %f %f %f %f\n',clusterCenter(i,1),...
+            clusterCenter(i,2),...
+            clusterCenter(i,3),...
+            clusterCenter(i,4),...
+            clusterCenter(i,5),...
+            clusterCenter(i,6),...
+            clusterCenter(i,7),...
+            clusterCenter(i,8),...
+            clusterCenter(i,9));
+
+    end
+
+    fclose(fid);
+    disp('write done');
+end
+%% copy images to folder with name as clusterId
+if copyFlag
+    clusterCopyTo(imgSource,clusterDest,fileName,cluster);
+end
 disp('copy done');
+
+% the last two column is score of the imgs
+feaData = load(feaFile);
+sc = feaData(:,end-1 : end);
+clear feaData;
+sc(find(sc(:,2)==0),2) = 1;
+sc = sc(:,1) ./ sc(:,2);
+clusterSet = 1:size(clusterCenter,1);
+showScoreDistribution(sc,cluster,clusterSet);
+
 %% compute dist
 %{
 dot = find(matrixFile == '.');

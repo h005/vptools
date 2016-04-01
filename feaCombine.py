@@ -55,6 +55,8 @@ while fname:
 
 	fname = fea3f.readline()
 
+print 'done'
+
 fout.close()
 fea2f.close()
 fea3f.close()
