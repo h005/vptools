@@ -4,6 +4,10 @@ function clusterCopyTo(imgDir,clusterDir,fileName,cluster)
 % clusterDir is the dest folder which will contain clusters named with
 % clueterID
 num = max(cluster);
+if exist(clusterDir) == 7
+    rmdir(clusterDir,'s');
+end
+mkdir(clusterDir);
 for i=1:num
     ind = find(cluster == i);
     if exist([clusterDir '/' num2str(i)]) == 7

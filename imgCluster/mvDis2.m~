@@ -1,0 +1,2 @@
+function dis = mvDis(A,B)
+    dis = norm(expm(m(A*inv(B))));

@@ -9,9 +9,10 @@ ind = 0;
 % ps cad upd meanshift
 % method = 1;
 % ps first cad upd next
-method = 1; 
-copyFlag = 0;
+method = 2; 
+copyFlag = 1;
 output = 0;
+showDistribution = 0;
 
 while 1
     tline = fgetl(fid);
@@ -43,33 +44,36 @@ ps = ps(1:num,:);
 cad = cad(1:num,:);
 upd = upd(1:num,:);
 
-if method == 1
-    [id,cluster,label,clusterCenter] = picMeanShift(ps,cad,upd);
-else
-    ncases = size(ps,1);
-    id = zeros(ncases,1);
-    cluster = zeros(ncases,1);
-    label = cell(ncases,1);
-%     clusterCenter = zeros(ncases,9);
-    [idPS,clusterPS,labelPS,clusterCenterPS] = picMeanShiftPS(ps);
-    numClusterPS = size(clusterCenterPS,1);
-    % num of cluster
-    ncl = 0;
-    pcCluster = zeros(2,numClusterPS);
-    for i = 1:numClusterPS
-        clSet = find(clusterPS == i);
-        [idcu,clustercu,labelcu,clusterCentercu] = picMeanShiftCU(cad(clSet,:),upd(clSet,:));
-        pcCluster(1,i) = ncl+1;
-        % sub clusters
-        for j = 1:size(clusterCentercu,1)
-            ncl = ncl + 1;
-            % cluseter set by cad and upd
-            cuSet = find(clustercu ==  j);
-            cluster(clSet(cuSet)) = ncl;
-            clusterCenter(ncl,:) = [clusterCenterPS(i,:),clusterCentercu(j,:)];
+switch method
+    case 2
+        [cluster,label,clusterCenter] = picMeanShiftMV(mv);
+    case 1
+        [id,cluster,label,clusterCenter] = picMeanShift(ps,cad,upd);
+    case 0
+        ncases = size(ps,1);
+        id = zeros(ncases,1);
+        cluster = zeros(ncases,1);
+        label = cell(ncases,1);
+    %     clusterCenter = zeros(ncases,9);
+        [idPS,clusterPS,labelPS,clusterCenterPS] = picMeanShiftPS(ps);
+        numClusterPS = size(clusterCenterPS,1);
+        % num of cluster
+        ncl = 0;
+        pcCluster = zeros(2,numClusterPS);
+        for i = 1:numClusterPS
+            clSet = find(clusterPS == i);
+            [idcu,clustercu,labelcu,clusterCentercu] = picMeanShiftCU(cad(clSet,:),upd(clSet,:));
+            pcCluster(1,i) = ncl+1;
+            % sub clusters
+            for j = 1:size(clusterCentercu,1)
+                ncl = ncl + 1;
+                % cluseter set by cad and upd
+                cuSet = find(clustercu ==  j);
+                cluster(clSet(cuSet)) = ncl;
+                clusterCenter(ncl,:) = [clusterCenterPS(i,:),clusterCentercu(j,:)];
+            end
+            pcCluster(2,i) = ncl;
         end
-        pcCluster(2,i) = ncl;
-    end
 end
 %% plot the result
 histogram(cluster,max(cluster));
@@ -115,18 +119,22 @@ if output
 end
 %% copy images to folder with name as clusterId
 if copyFlag
+    % WARNNING: this function is dangerous!
+    % make sure your clusterDest don't have another other important files
     clusterCopyTo(imgSource,clusterDest,fileName,cluster);
+    disp('copy done');
 end
-disp('copy done');
 
-% the last two column is score of the imgs
-feaData = load(feaFile);
-sc = feaData(:,end-1 : end);
-clear feaData;
-sc(find(sc(:,2)==0),2) = 1;
-sc = sc(:,1) ./ sc(:,2);
-clusterSet = 1:size(clusterCenter,1);
-showScoreDistribution(sc,cluster,clusterSet);
+if showDistribution
+    % the last two column is score of the imgs
+    feaData = load(feaFile);
+    sc = feaData(:,end-1 : end);
+    clear feaData;
+    sc(find(sc(:,2)==0),2) = 1;
+    sc = sc(:,1) ./ sc(:,2);
+    clusterSet = 1:size(clusterCenter,1);
+    showScoreDistribution(sc,cluster,clusterSet);
+end
 
 %% compute dist
 %{
