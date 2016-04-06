@@ -9,8 +9,16 @@ ind = 0;
 % ps cad upd meanshift
 % method = 1;
 % ps first cad upd next
-method = 2; 
-copyFlag = 1;
+%%
+%{
+method = 'meanshiftPCU'
+        'meanshiftPcu'
+        'meanshiftMV'
+        'kmedoidsMV'
+%}
+method = 'kmedoidsMV';
+%%
+copyFlag = 0;
 output = 0;
 showDistribution = 0;
 
@@ -44,12 +52,16 @@ ps = ps(1:num,:);
 cad = cad(1:num,:);
 upd = upd(1:num,:);
 
+mv = mv(1:100,:,:);
+
 switch method
-    case 2
+    case 'kmedoidsMV'
+        [cluster,clusterCenter] = picKmedoidsMV(mv);
+    case 'meanshiftMV'
         [cluster,label,clusterCenter] = picMeanShiftMV(mv);
-    case 1
+    case 'meanshiftPCU'
         [id,cluster,label,clusterCenter] = picMeanShift(ps,cad,upd);
-    case 0
+    case 'meanshiftPcu'
         ncases = size(ps,1);
         id = zeros(ncases,1);
         cluster = zeros(ncases,1);

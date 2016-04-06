@@ -1,9 +1,29 @@
 %% k-medoids cluster imgs metric distance by mv matrix
-function [cluster,label,clusterCenter] = picKmedoidsMV(mv)
+function [idx,C] = picKmedoidsMV(mv)
 % mv matrix is a matrix with ncases * 4 * 4
-ncases = size(mv,1);
-label = cell(ncases,1);
+% pmv matrix is a matrix with ncases * 16;
 pmv = convertmv(mv);
+% kmedoids
+% row of Data correspond to obervations
+% col of Data correspond to variables
+nClusters = 5;
+[idx,C] = kmedoids(pmv,nClusters,'Distance',@getDis);
 
 
+function pmv = convertmv(mv)
+%% convert ncases * 4 * 4 to ncases * 16
+ncases = size(mv,1);
+pmv = zeros(ncases,16);
+for i=1:ncases
+    tmp = reshape(mv(i,:,:),16,1);
+    pmv(i,:) = tmp;
+end
 
+function dis = getDis(mv1,mv2)
+ncases = size(mv2,1);
+dis = zeros(ncases,1);
+A = reshape(mv1,4,4);
+for i=1:ncases
+    B = reshape(mv2(i,:),4,4);
+    dis(i) = mvDis(A,B);
+end
