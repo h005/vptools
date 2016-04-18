@@ -6,8 +6,8 @@ pmv = convertmv(mv);
 % kmedoids
 % row of Data correspond to obervations
 % col of Data correspond to variables
-nClusters = 5;
-[idx,C] = kmedoids(pmv,nClusters,'Distance',@getDis);
+nClusters = 21;
+[idx,C] = kmedoids(pmv,nClusters,'Distance',@getDisKmedoids);
 
 
 function pmv = convertmv(mv)
@@ -17,13 +17,4 @@ pmv = zeros(ncases,16);
 for i=1:ncases
     tmp = reshape(mv(i,:,:),16,1);
     pmv(i,:) = tmp;
-end
-
-function dis = getDis(mv1,mv2)
-ncases = size(mv2,1);
-dis = zeros(ncases,1);
-A = reshape(mv1,4,4);
-for i=1:ncases
-    B = reshape(mv2(i,:),4,4);
-    dis(i) = mvDis(A,B);
 end

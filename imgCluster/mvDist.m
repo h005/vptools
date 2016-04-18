@@ -1,9 +1,19 @@
 clear
 clc
+%{
 matrixFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.matrix';
 imgSource = '/home/h005/Documents/vpDataSet/notredame/imgs';
 clusterDest = '/home/h005/Documents/vpDataSet/notredame/cluster';
 feaFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.fs';
+%}
+modelName = 'notredame';
+% matrixFile = '/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.matrix';
+matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/vpFea/' modelName '.matrix'];
+% imgSource = '/home/h005/Documents/vpDataSet/kxm/imgs';
+imgSource = ['/home/h005/Documents/vpDataSet/' modelName '/imgs'];
+% clusterDest = '/home/h005/Documents/vpDataSet/kxm/cluster';
+clusterDest = ['/home/h005/Documents/vpDataSet/' modelName '/cluster'];
+% feaFile = '/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.fs';
 fid = fopen(matrixFile,'r');
 ind = 0;
 % ps cad upd meanshift
@@ -18,8 +28,8 @@ method = 'meanshiftPCU'
 %}
 method = 'kmedoidsMV';
 %%
-copyFlag = 0;
-output = 0;
+copyFlag = 1;
+output = 1;
 showDistribution = 0;
 
 while 1
@@ -52,7 +62,7 @@ ps = ps(1:num,:);
 cad = cad(1:num,:);
 upd = upd(1:num,:);
 
-mv = mv(1:100,:,:);
+% mv = mv(1:100,:,:);
 
 switch method
     case 'kmedoidsMV'
@@ -88,8 +98,8 @@ switch method
         end
 end
 %% plot the result
-histogram(cluster,max(cluster));
-title('cluster distribution');
+% histogram(cluster,max(cluster));
+% title('cluster distribution');
 %% output to .cluster file
 if output
     %% print out clustering info

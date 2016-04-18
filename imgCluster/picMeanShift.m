@@ -21,7 +21,7 @@ for i=1:ncases
 end
 minDis = min(min(disGraph));
 maxDis = max(max(disGraph));
-r = (maxDis - minDis) * 0.05 + minDis;
+r = (maxDis - minDis) * 0.02 + minDis;
 clear disGraph;
 
 
