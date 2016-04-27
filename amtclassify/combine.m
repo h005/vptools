@@ -45,7 +45,3 @@ elseif nargin == 3
         fs(i,len1+len2+1:end) = sc{Isc(i)}.fs;
     end
 end
-
-
-
-

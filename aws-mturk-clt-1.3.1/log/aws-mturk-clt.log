@@ -1,0 +1,742 @@
+[2016-04-20 22:18:17] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-04-20 22:18:18] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:18:18] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_0-29.input
+[2016-04-20 22:18:18] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_0-29.properties
+[2016-04-20 22:18:18] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_0-29.question
+[2016-04-20 22:18:18] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:18:21] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:18:21] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:18:21 CST 2016
+[2016-04-20 22:18:21] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-04-20 22:18:23] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3M47JKRKCX2CXVV113FXJXVS0AH68H
+[2016-04-20 22:18:23] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '36FWM6US0JS0RJFFQ5X4N6470TH4SG' here: 
+[2016-04-20 22:18:23] INFO  (RequesterService.java: 1593) - 
+  https://workersandbox.mturk.com/mturk/preview?groupId=36FWM6US0JS0RJFFQ5X4N6470TH4SG
+
+[2016-04-20 22:18:23] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:18:23 CST 2016
+[2016-04-20 22:18:23] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:18:23] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-20 22:18:23] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:26:27] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:26:27] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_30-59.input
+[2016-04-20 22:26:27] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_30-59.properties
+[2016-04-20 22:26:27] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_30-59.question
+[2016-04-20 22:26:27] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:26:29] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:26:29] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:26:29 CST 2016
+[2016-04-20 22:26:30] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:26:31] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3XJOUITW8USO5X69JABHY82DGKTTQY
+[2016-04-20 22:26:31] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3ISL4H6O6HKES9PYE8GYKC4EY97CIW' here: 
+[2016-04-20 22:26:31] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3ISL4H6O6HKES9PYE8GYKC4EY97CIW
+
+[2016-04-20 22:26:31] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:26:31 CST 2016
+[2016-04-20 22:26:31] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:26:31] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:26:31] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:26:32] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:26:32] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_60-89.input
+[2016-04-20 22:26:32] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_60-89.properties
+[2016-04-20 22:26:32] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_60-89.question
+[2016-04-20 22:26:32] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:26:34] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:26:34] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:26:34 CST 2016
+[2016-04-20 22:26:34] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:26:36] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3CRWSLD91K5H7Q39V0I1NPCL7BFOMK
+[2016-04-20 22:26:36] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3I6QNRBGCVKANK94WQ1YWDJEBOWCJ8' here: 
+[2016-04-20 22:26:36] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3I6QNRBGCVKANK94WQ1YWDJEBOWCJ8
+
+[2016-04-20 22:26:36] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:26:36 CST 2016
+[2016-04-20 22:26:36] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:26:36] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-20 22:26:36] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:26:37] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:26:37] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_90-119.input
+[2016-04-20 22:26:37] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_90-119.properties
+[2016-04-20 22:26:37] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_90-119.question
+[2016-04-20 22:26:37] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:26:39] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:26:39] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:26:39 CST 2016
+[2016-04-20 22:26:39] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:26:41] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=382GHPVPHSSCHBLH6YYDDSXAQTY349
+[2016-04-20 22:26:41] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3SBFCXF7YBKTY0WOAAEV251YL7NW49' here: 
+[2016-04-20 22:26:41] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3SBFCXF7YBKTY0WOAAEV251YL7NW49
+
+[2016-04-20 22:26:41] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:26:41 CST 2016
+[2016-04-20 22:26:41] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:26:41] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-20 22:26:41] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:26:41] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:26:41] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_540-569.input
+[2016-04-20 22:26:41] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_540-569.properties
+[2016-04-20 22:26:41] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_540-569.question
+[2016-04-20 22:26:41] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:26:43] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:26:43] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:26:43 CST 2016
+[2016-04-20 22:26:44] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:26:45] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3FHTJGYT8N1Z0GJOZXXLZKXELUZGPL
+[2016-04-20 22:26:45] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3EP32X46385U9B4GST9T34K8UZ11H2' here: 
+[2016-04-20 22:26:45] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3EP32X46385U9B4GST9T34K8UZ11H2
+
+[2016-04-20 22:26:45] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:26:45 CST 2016
+[2016-04-20 22:26:45] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:26:45] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:26:45] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:26:46] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:26:46] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_390-419.input
+[2016-04-20 22:26:46] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_390-419.properties
+[2016-04-20 22:26:46] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_390-419.question
+[2016-04-20 22:26:46] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:26:48] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:26:48] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:26:48 CST 2016
+[2016-04-20 22:26:48] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:26:50] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3FULMHZ7OUYD3XTRCG3S9R6GQKFM48
+[2016-04-20 22:26:50] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3JD5BATOXPVV1FDFKM4G6YQE0YR3VN' here: 
+[2016-04-20 22:26:50] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3JD5BATOXPVV1FDFKM4G6YQE0YR3VN
+
+[2016-04-20 22:26:50] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:26:50 CST 2016
+[2016-04-20 22:26:50] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:26:50] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:26:50] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:26:50] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:26:50] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_330-359.input
+[2016-04-20 22:26:50] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_330-359.properties
+[2016-04-20 22:26:50] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_330-359.question
+[2016-04-20 22:26:50] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:26:53] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:26:53] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:26:53 CST 2016
+[2016-04-20 22:26:53] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:26:55] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3BJKPTD2QCDOHYL9WP0H3YCIC6VTRZ
+[2016-04-20 22:26:55] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3I73X3EUMD4B7I574LRHY7FUY0XZ6N' here: 
+[2016-04-20 22:26:55] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3I73X3EUMD4B7I574LRHY7FUY0XZ6N
+
+[2016-04-20 22:26:55] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:26:55 CST 2016
+[2016-04-20 22:26:55] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:26:55] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:26:55] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:26:55] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:26:55] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_450-479.input
+[2016-04-20 22:26:55] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_450-479.properties
+[2016-04-20 22:26:55] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_450-479.question
+[2016-04-20 22:26:55] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:26:57] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:26:57] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:26:57 CST 2016
+[2016-04-20 22:26:58] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:26:59] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3QD8LUVX4XZ6TSWV4SOBP0SSXKU5XG
+[2016-04-20 22:26:59] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3DQQATL6OSFBX5CJLTAG1ESQ6WQI4P' here: 
+[2016-04-20 22:26:59] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3DQQATL6OSFBX5CJLTAG1ESQ6WQI4P
+
+[2016-04-20 22:26:59] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:26:59 CST 2016
+[2016-04-20 22:26:59] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:26:59] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-20 22:26:59] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:00] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:00] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_420-449.input
+[2016-04-20 22:27:00] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_420-449.properties
+[2016-04-20 22:27:00] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_420-449.question
+[2016-04-20 22:27:00] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:02] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:02] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:02 CST 2016
+[2016-04-20 22:27:02] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:04] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3QMELQS6Y5CIF0AX0CSOSOK4SYKR6M
+[2016-04-20 22:27:04] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '33JNTVT0Y4V8G4DKAW9CS09S77T3WX' here: 
+[2016-04-20 22:27:04] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=33JNTVT0Y4V8G4DKAW9CS09S77T3WX
+
+[2016-04-20 22:27:04] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:04 CST 2016
+[2016-04-20 22:27:04] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:04] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-20 22:27:04] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:05] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:05] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_510-539.input
+[2016-04-20 22:27:05] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_510-539.properties
+[2016-04-20 22:27:05] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_510-539.question
+[2016-04-20 22:27:05] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:07] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:07] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:07 CST 2016
+[2016-04-20 22:27:07] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:09] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3LVTFB9DE5JK0SK3ZACAZPNOQQLGQC
+[2016-04-20 22:27:09] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3O6P9CW6LWI67TCP4GA1SSD8FRFKOC' here: 
+[2016-04-20 22:27:09] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3O6P9CW6LWI67TCP4GA1SSD8FRFKOC
+
+[2016-04-20 22:27:09] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:09 CST 2016
+[2016-04-20 22:27:09] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:09] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:27:09] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:09] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:09] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_0-29.input
+[2016-04-20 22:27:09] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_0-29.properties
+[2016-04-20 22:27:09] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_0-29.question
+[2016-04-20 22:27:09] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:11] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:11] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:11 CST 2016
+[2016-04-20 22:27:12] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:13] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3ZVPAMTJWN4KCTZ3CP1A4FXTMCNGRD
+[2016-04-20 22:27:13] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3K3YEJM7505BUJ0OOFX57X7CL3IW5E' here: 
+[2016-04-20 22:27:13] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3K3YEJM7505BUJ0OOFX57X7CL3IW5E
+
+[2016-04-20 22:27:13] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:13 CST 2016
+[2016-04-20 22:27:13] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:13] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:27:13] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:14] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:14] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_180-209.input
+[2016-04-20 22:27:14] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_180-209.properties
+[2016-04-20 22:27:14] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_180-209.question
+[2016-04-20 22:27:14] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:16] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:16] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:16 CST 2016
+[2016-04-20 22:27:16] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:18] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3PCPFX4U40REMSO8OQ6SH4NCPBKQFM
+[2016-04-20 22:27:18] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3IPH7GEBVEJU56F0YBRE3GLNUCG1IV' here: 
+[2016-04-20 22:27:18] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3IPH7GEBVEJU56F0YBRE3GLNUCG1IV
+
+[2016-04-20 22:27:18] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:18 CST 2016
+[2016-04-20 22:27:18] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:18] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-20 22:27:18] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:18] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:18] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_210-239.input
+[2016-04-20 22:27:18] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_210-239.properties
+[2016-04-20 22:27:18] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_210-239.question
+[2016-04-20 22:27:18] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:20] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:20] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:20 CST 2016
+[2016-04-20 22:27:21] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:22] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3X7837UUADZ1HCRKS7JFQXYDIHQJ6M
+[2016-04-20 22:27:22] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '36872VQHZ43YQU8MN34ZAFAN9XO9MS' here: 
+[2016-04-20 22:27:22] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=36872VQHZ43YQU8MN34ZAFAN9XO9MS
+
+[2016-04-20 22:27:22] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:22 CST 2016
+[2016-04-20 22:27:22] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:22] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-20 22:27:22] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:23] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:23] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_150-179.input
+[2016-04-20 22:27:23] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_150-179.properties
+[2016-04-20 22:27:23] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_150-179.question
+[2016-04-20 22:27:23] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:25] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:25] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:25 CST 2016
+[2016-04-20 22:27:25] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:27] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=378G7J1SJLZR0BKY5OLSRBKY1BNWEF
+[2016-04-20 22:27:27] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3D1RILWJRGZFKXYMA3AFAV77FYMEZO' here: 
+[2016-04-20 22:27:27] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3D1RILWJRGZFKXYMA3AFAV77FYMEZO
+
+[2016-04-20 22:27:27] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:27 CST 2016
+[2016-04-20 22:27:27] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:27] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:27:27] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:27] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:27] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_360-389.input
+[2016-04-20 22:27:27] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_360-389.properties
+[2016-04-20 22:27:27] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_360-389.question
+[2016-04-20 22:27:27] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:30] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:30] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:30 CST 2016
+[2016-04-20 22:27:30] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:31] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=30UZJB2POHDUDUPHK3HNIK3OQPT35E
+[2016-04-20 22:27:31] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3GC398RH520OSTOQJGNGHSIYPWBKPT' here: 
+[2016-04-20 22:27:31] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3GC398RH520OSTOQJGNGHSIYPWBKPT
+
+[2016-04-20 22:27:31] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:31 CST 2016
+[2016-04-20 22:27:31] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:31] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:27:31] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:32] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:32] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_240-269.input
+[2016-04-20 22:27:32] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_240-269.properties
+[2016-04-20 22:27:32] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_240-269.question
+[2016-04-20 22:27:32] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:34] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:34] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:34 CST 2016
+[2016-04-20 22:27:35] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:36] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3UYRNV2KIT0K4G1T0K853IBLXWL8N1
+[2016-04-20 22:27:36] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3QPQ7LAZERT3GSGJ72PGNJ5CPG3QAB' here: 
+[2016-04-20 22:27:36] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3QPQ7LAZERT3GSGJ72PGNJ5CPG3QAB
+
+[2016-04-20 22:27:36] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:36 CST 2016
+[2016-04-20 22:27:36] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:36] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:27:36] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:37] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:37] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_120-149.input
+[2016-04-20 22:27:37] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_120-149.properties
+[2016-04-20 22:27:37] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_120-149.question
+[2016-04-20 22:27:37] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:39] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:39] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:39 CST 2016
+[2016-04-20 22:27:39] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:41] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=38VTL6WC4AEVTXM59OAD8EZ1ZQO5YM
+[2016-04-20 22:27:41] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3BNVQ7CWENATQPCJ2O100KABEGJ73Y' here: 
+[2016-04-20 22:27:41] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3BNVQ7CWENATQPCJ2O100KABEGJ73Y
+
+[2016-04-20 22:27:41] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:41 CST 2016
+[2016-04-20 22:27:41] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:41] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:27:41] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:41] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:41] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_570-599.input
+[2016-04-20 22:27:41] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_570-599.properties
+[2016-04-20 22:27:41] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_570-599.question
+[2016-04-20 22:27:41] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:43] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:43] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:43 CST 2016
+[2016-04-20 22:27:44] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:45] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=37M4O367VJJVZGXRQLM2EJCUQGAM5D
+[2016-04-20 22:27:45] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3U6C37VJ6U5MJ7QRVR468OH4GBAN1X' here: 
+[2016-04-20 22:27:45] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3U6C37VJ6U5MJ7QRVR468OH4GBAN1X
+
+[2016-04-20 22:27:45] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:45 CST 2016
+[2016-04-20 22:27:45] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:45] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:27:45] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:46] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:46] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_270-299.input
+[2016-04-20 22:27:46] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_270-299.properties
+[2016-04-20 22:27:46] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_270-299.question
+[2016-04-20 22:27:46] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:47] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:47] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:47 CST 2016
+[2016-04-20 22:27:48] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:49] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=39O0SQZVJN81J0O2JMXGY2K0N94R7L
+[2016-04-20 22:27:49] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3CM00QMEULN7DN02TY7AZ3LCHYTW6U' here: 
+[2016-04-20 22:27:49] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3CM00QMEULN7DN02TY7AZ3LCHYTW6U
+
+[2016-04-20 22:27:49] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:49 CST 2016
+[2016-04-20 22:27:49] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:49] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-20 22:27:49] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:50] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:50] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_480-509.input
+[2016-04-20 22:27:50] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_480-509.properties
+[2016-04-20 22:27:50] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_480-509.question
+[2016-04-20 22:27:50] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:52] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:52] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:52 CST 2016
+[2016-04-20 22:27:52] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:54] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3BA7SXOG1JR5JETLTRPMC2GVYTAR88
+[2016-04-20 22:27:54] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '35I9CFS6VH0TTOGJZYTQ66Y46SLI5U' here: 
+[2016-04-20 22:27:54] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=35I9CFS6VH0TTOGJZYTQ66Y46SLI5U
+
+[2016-04-20 22:27:54] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:54 CST 2016
+[2016-04-20 22:27:54] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:54] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-20 22:27:54] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-20 22:27:55] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-20 22:27:55] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_300-329.input
+[2016-04-20 22:27:55] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_300-329.properties
+[2016-04-20 22:27:55] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/bigben/bigben_300-329.question
+[2016-04-20 22:27:55] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-20 22:27:56] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-20 22:27:56] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 20 22:27:56 CST 2016
+[2016-04-20 22:27:57] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-20 22:27:58] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3LVTFB9DE5JK0SK3ZACAZPNOQQKQGL
+[2016-04-20 22:27:58] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '30GFZMOUMP0AOQSS1KHTMEPL9SIF0F' here: 
+[2016-04-20 22:27:58] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=30GFZMOUMP0AOQSS1KHTMEPL9SIF0F
+
+[2016-04-20 22:27:58] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 20 22:27:58 CST 2016
+[2016-04-20 22:27:58] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-20 22:27:58] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-20 22:27:58] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-25 20:38:05] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-04-25 20:38:06] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-25 20:38:06] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/freeGodness/freeGodness_0-29.input
+[2016-04-25 20:38:06] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/freeGodness/freeGodness_0-29.properties
+[2016-04-25 20:38:06] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/freeGodness/freeGodness_0-29.question
+[2016-04-25 20:38:06] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-25 20:38:09] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-25 20:38:09] INFO  (LoadHITs.java: 231) -   Start time: Mon Apr 25 20:38:09 CST 2016
+[2016-04-25 20:38:09] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-04-25 20:38:11] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3FO95NVK5C1N2Y8U7PO0BJMP9TLRSO
+[2016-04-25 20:38:11] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3XMLB3JQD68L4CK62V10KHNK2NP0KG' here: 
+[2016-04-25 20:38:11] INFO  (RequesterService.java: 1593) - 
+  https://workersandbox.mturk.com/mturk/preview?groupId=3XMLB3JQD68L4CK62V10KHNK2NP0KG
+
+[2016-04-25 20:38:11] INFO  (LoadHITs.java: 239) -   End time: Mon Apr 25 20:38:11 CST 2016
+[2016-04-25 20:38:11] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-25 20:38:11] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-25 20:38:11] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-26 16:18:33] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-04-26 16:18:34] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-26 16:18:34] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.input
+[2016-04-26 16:18:34] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.properties
+[2016-04-26 16:18:34] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.question
+[2016-04-26 16:18:34] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-26 16:18:37] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-26 16:18:37] INFO  (LoadHITs.java: 231) -   Start time: Tue Apr 26 16:18:37 CST 2016
+[2016-04-26 16:18:37] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-04-26 16:18:38] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3SD15I2WD2VQWYPVPMK1SGNHLXP365
+[2016-04-26 16:18:38] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3FRA5KKDL2Q8JQ4TDLEPDW2JORW92E' here: 
+[2016-04-26 16:18:38] INFO  (RequesterService.java: 1593) - 
+  https://workersandbox.mturk.com/mturk/preview?groupId=3FRA5KKDL2Q8JQ4TDLEPDW2JORW92E
+
+[2016-04-26 16:18:38] INFO  (LoadHITs.java: 239) -   End time: Tue Apr 26 16:18:38 CST 2016
+[2016-04-26 16:18:38] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-26 16:18:38] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-26 16:18:38] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 09:11:43] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-04-27 09:11:44] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 09:11:44] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_30-59.input
+[2016-04-27 09:11:44] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_30-59.properties
+[2016-04-27 09:11:44] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_30-59.question
+[2016-04-27 09:11:44] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 09:11:46] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 09:11:46] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 09:11:46 CST 2016
+[2016-04-27 09:11:47] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-04-27 09:11:49] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3UEBBGULPFP6ELVP5ZJ69VQUSEXUF3
+[2016-04-27 09:11:49] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3M8DJV5FJV4D9MKZ2QC1FGRS2KKFN5' here: 
+[2016-04-27 09:11:49] INFO  (RequesterService.java: 1593) - 
+  https://workersandbox.mturk.com/mturk/preview?groupId=3M8DJV5FJV4D9MKZ2QC1FGRS2KKFN5
+
+[2016-04-27 09:11:49] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 09:11:49 CST 2016
+[2016-04-27 09:11:49] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 09:11:49] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-04-27 09:11:49] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:26:39] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:26:39] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_420-449.input
+[2016-04-27 14:26:39] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_420-449.properties
+[2016-04-27 14:26:39] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_420-449.question
+[2016-04-27 14:26:39] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:26:42] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:26:42] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:26:42 CST 2016
+[2016-04-27 14:26:42] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:26:44] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3L21G7IH47XW5FLM81815OMKNHH1YC
+[2016-04-27 14:26:44] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3VXAMLAOAQ47QBYI5EULSDS7RZ2ZFS' here: 
+[2016-04-27 14:26:44] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3VXAMLAOAQ47QBYI5EULSDS7RZ2ZFS
+
+[2016-04-27 14:26:44] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:26:44 CST 2016
+[2016-04-27 14:26:44] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:26:44] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:26:44] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:26:44] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:26:44] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_120-149.input
+[2016-04-27 14:26:44] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_120-149.properties
+[2016-04-27 14:26:44] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_120-149.question
+[2016-04-27 14:26:44] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:26:46] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:26:46] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:26:46 CST 2016
+[2016-04-27 14:26:46] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:26:48] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3H5TOKO3D9KBEU8ZP0WBKV9U0RX46R
+[2016-04-27 14:26:48] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3ZYIH7REHEB41SQ3W64JNDH96LGO1E' here: 
+[2016-04-27 14:26:48] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3ZYIH7REHEB41SQ3W64JNDH96LGO1E
+
+[2016-04-27 14:26:48] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:26:48 CST 2016
+[2016-04-27 14:26:48] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:26:48] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:26:48] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:26:49] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:26:49] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_240-269.input
+[2016-04-27 14:26:49] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_240-269.properties
+[2016-04-27 14:26:49] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_240-269.question
+[2016-04-27 14:26:49] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:26:50] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:26:50] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:26:50 CST 2016
+[2016-04-27 14:26:51] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:26:52] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3EN4YVUOUCTE0RBGTUS5QABXFSMJXR
+[2016-04-27 14:26:52] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3EY3X634K35VIVGPUCT39A33MITTH4' here: 
+[2016-04-27 14:26:52] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3EY3X634K35VIVGPUCT39A33MITTH4
+
+[2016-04-27 14:26:52] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:26:52 CST 2016
+[2016-04-27 14:26:52] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:26:52] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:26:52] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:26:53] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:26:53] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_390-419.input
+[2016-04-27 14:26:53] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_390-419.properties
+[2016-04-27 14:26:53] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_390-419.question
+[2016-04-27 14:26:53] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:26:55] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:26:55] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:26:55 CST 2016
+[2016-04-27 14:26:55] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:26:56] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=31D0ZWOD0A0V2821WCQLOXL3FY8A08
+[2016-04-27 14:26:56] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3VWCB4I0H86LXQIL0ZDWDS3MO8YQ7L' here: 
+[2016-04-27 14:26:56] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3VWCB4I0H86LXQIL0ZDWDS3MO8YQ7L
+
+[2016-04-27 14:26:56] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:26:56 CST 2016
+[2016-04-27 14:26:56] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:26:56] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:26:56] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:26:57] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:26:57] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_300-329.input
+[2016-04-27 14:26:57] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_300-329.properties
+[2016-04-27 14:26:57] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_300-329.question
+[2016-04-27 14:26:57] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:26:59] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:26:59] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:26:59 CST 2016
+[2016-04-27 14:26:59] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:01] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3W5PY7V3UP830W1QYQE79OI6HYGJYX
+[2016-04-27 14:27:01] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3G39WTVP4C9R2TO3PK08QS4WJRRL6S' here: 
+[2016-04-27 14:27:01] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3G39WTVP4C9R2TO3PK08QS4WJRRL6S
+
+[2016-04-27 14:27:01] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:01 CST 2016
+[2016-04-27 14:27:01] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:01] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:01] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:01] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:01] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_330-359.input
+[2016-04-27 14:27:01] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_330-359.properties
+[2016-04-27 14:27:01] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_330-359.question
+[2016-04-27 14:27:01] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:03] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:03] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:03 CST 2016
+[2016-04-27 14:27:04] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:05] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=37G6BXQPLQMMGEOCTFMMZM2CDH3EQ4
+[2016-04-27 14:27:05] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '31S093JAJ7C0Z6YMLMA8AYC8DL9WRU' here: 
+[2016-04-27 14:27:05] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=31S093JAJ7C0Z6YMLMA8AYC8DL9WRU
+
+[2016-04-27 14:27:05] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:05 CST 2016
+[2016-04-27 14:27:05] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:05] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:05] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:06] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:06] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_150-179.input
+[2016-04-27 14:27:06] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_150-179.properties
+[2016-04-27 14:27:06] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_150-179.question
+[2016-04-27 14:27:06] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:08] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:08] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:08 CST 2016
+[2016-04-27 14:27:08] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:09] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=33N1S8XHHMMWA5VR4NAKJVVMTBL1Z3
+[2016-04-27 14:27:09] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3WOK1A2U0ISDXVZE6XQ3CJ5A27AD17' here: 
+[2016-04-27 14:27:09] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3WOK1A2U0ISDXVZE6XQ3CJ5A27AD17
+
+[2016-04-27 14:27:09] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:09 CST 2016
+[2016-04-27 14:27:09] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:09] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:09] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:10] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:10] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_450-479.input
+[2016-04-27 14:27:10] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_450-479.properties
+[2016-04-27 14:27:10] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_450-479.question
+[2016-04-27 14:27:10] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:12] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:12] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:12 CST 2016
+[2016-04-27 14:27:12] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:14] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3LG268AV387MSF3C6UBM4CCH935ER5
+[2016-04-27 14:27:14] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '37WXWKHWAXNQ3ZHGOC2ME5DBYT9AH1' here: 
+[2016-04-27 14:27:14] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=37WXWKHWAXNQ3ZHGOC2ME5DBYT9AH1
+
+[2016-04-27 14:27:14] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:14 CST 2016
+[2016-04-27 14:27:14] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:14] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:14] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:14] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:14] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_60-89.input
+[2016-04-27 14:27:14] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_60-89.properties
+[2016-04-27 14:27:14] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_60-89.question
+[2016-04-27 14:27:14] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:16] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:16] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:16 CST 2016
+[2016-04-27 14:27:16] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:18] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3XDSWAMB22T7JG4YXOGR9Y29S5RCQA
+[2016-04-27 14:27:18] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3IF0VZGELPGUCBKT866FWJJHE727MG' here: 
+[2016-04-27 14:27:18] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3IF0VZGELPGUCBKT866FWJJHE727MG
+
+[2016-04-27 14:27:18] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:18 CST 2016
+[2016-04-27 14:27:18] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:18] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:18] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:19] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:19] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_270-299.input
+[2016-04-27 14:27:19] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_270-299.properties
+[2016-04-27 14:27:19] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_270-299.question
+[2016-04-27 14:27:19] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:20] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:20] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:20 CST 2016
+[2016-04-27 14:27:21] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:22] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3KA7IJSNW6639ZBDJB57Y96H5O4BPA
+[2016-04-27 14:27:22] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3BWB13R1231QZUS0UUK7EHEQY6OAIU' here: 
+[2016-04-27 14:27:22] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3BWB13R1231QZUS0UUK7EHEQY6OAIU
+
+[2016-04-27 14:27:22] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:22 CST 2016
+[2016-04-27 14:27:22] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:22] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:22] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:23] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:23] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_90-119.input
+[2016-04-27 14:27:23] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_90-119.properties
+[2016-04-27 14:27:23] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_90-119.question
+[2016-04-27 14:27:23] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:25] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:25] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:25 CST 2016
+[2016-04-27 14:27:25] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:27] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3UQVX1UPFSI6X57XJXX6IF253AG20T
+[2016-04-27 14:27:27] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3LI79ZAG3LBBQD8ZFA4XSWREYRUO2V' here: 
+[2016-04-27 14:27:27] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3LI79ZAG3LBBQD8ZFA4XSWREYRUO2V
+
+[2016-04-27 14:27:27] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:27 CST 2016
+[2016-04-27 14:27:27] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:27] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:27] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:27] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:27] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_30-59.input
+[2016-04-27 14:27:27] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_30-59.properties
+[2016-04-27 14:27:27] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_30-59.question
+[2016-04-27 14:27:27] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:29] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:29] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:29 CST 2016
+[2016-04-27 14:27:30] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:31] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3TCFMTM8HEP64USFFG16WKLF82M21W
+[2016-04-27 14:27:31] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '31OVKNPS1SCC0LYZ0BAD08H4ZNSWSI' here: 
+[2016-04-27 14:27:31] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=31OVKNPS1SCC0LYZ0BAD08H4ZNSWSI
+
+[2016-04-27 14:27:31] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:31 CST 2016
+[2016-04-27 14:27:31] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:31] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:31] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:32] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:32] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_180-209.input
+[2016-04-27 14:27:32] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_180-209.properties
+[2016-04-27 14:27:32] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_180-209.question
+[2016-04-27 14:27:32] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:34] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:34] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:34 CST 2016
+[2016-04-27 14:27:34] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:36] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3O71U79SRBQW5IV22HZA7UMM47FMSQ
+[2016-04-27 14:27:36] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '32KI9HN0SH9ZEXA0SSGSMJ9YO75U1Y' here: 
+[2016-04-27 14:27:36] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=32KI9HN0SH9ZEXA0SSGSMJ9YO75U1Y
+
+[2016-04-27 14:27:36] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:36 CST 2016
+[2016-04-27 14:27:36] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:36] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:36] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:36] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:36] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.input
+[2016-04-27 14:27:36] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.properties
+[2016-04-27 14:27:37] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.question
+[2016-04-27 14:27:37] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:38] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:38] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:38 CST 2016
+[2016-04-27 14:27:39] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:40] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=39WICJI5ATTSK896RRO37OAJRVYZ3S
+[2016-04-27 14:27:40] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3IYH2PD9C9JVEQR90UBO9M4IMV8TIX' here: 
+[2016-04-27 14:27:40] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3IYH2PD9C9JVEQR90UBO9M4IMV8TIX
+
+[2016-04-27 14:27:40] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:40 CST 2016
+[2016-04-27 14:27:40] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:40] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:40] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:41] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:41] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_210-239.input
+[2016-04-27 14:27:41] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_210-239.properties
+[2016-04-27 14:27:41] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_210-239.question
+[2016-04-27 14:27:41] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:43] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:43] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:43 CST 2016
+[2016-04-27 14:27:43] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:45] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3MXX6RQ9EV6JO0Q44WVKQV0BVWNP4I
+[2016-04-27 14:27:45] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3BAGKDWT8H1MU5C6CC57QITQBLDAJ6' here: 
+[2016-04-27 14:27:45] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3BAGKDWT8H1MU5C6CC57QITQBLDAJ6
+
+[2016-04-27 14:27:45] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:45 CST 2016
+[2016-04-27 14:27:45] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:45] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:45] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:45] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:45] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_360-389.input
+[2016-04-27 14:27:45] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_360-389.properties
+[2016-04-27 14:27:45] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_360-389.question
+[2016-04-27 14:27:45] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:48] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:48] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:48 CST 2016
+[2016-04-27 14:27:48] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:49] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3QO7EE372OOO9BCSJOKWYEWRAKQBQ1
+[2016-04-27 14:27:49] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3PFZUIOZMHXH5PIOUX5JRXT3QADAK5' here: 
+[2016-04-27 14:27:49] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3PFZUIOZMHXH5PIOUX5JRXT3QADAK5
+
+[2016-04-27 14:27:49] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:49 CST 2016
+[2016-04-27 14:27:49] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:49] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:49] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-27 14:27:50] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-27 14:27:50] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_480-509.input
+[2016-04-27 14:27:50] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_480-509.properties
+[2016-04-27 14:27:50] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_480-509.question
+[2016-04-27 14:27:50] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-27 14:27:52] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-27 14:27:52] INFO  (LoadHITs.java: 231) -   Start time: Wed Apr 27 14:27:52 CST 2016
+[2016-04-27 14:27:52] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-27 14:27:54] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=34O39PNDK69OLCRSW39W346W66SBR2
+[2016-04-27 14:27:54] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '34WBNEQO09S8B30BQVECNKZN3KSRBA' here: 
+[2016-04-27 14:27:54] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=34WBNEQO09S8B30BQVECNKZN3KSRBA
+
+[2016-04-27 14:27:54] INFO  (LoadHITs.java: 239) -   End time: Wed Apr 27 14:27:54 CST 2016
+[2016-04-27 14:27:54] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-27 14:27:54] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-04-27 14:27:54] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.

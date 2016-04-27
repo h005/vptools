@@ -1,0 +1,45 @@
+﻿先将kxm.txt或者kxm.matrix中的名称替换为
+kxm/foreground/img0001.jpg
+
+支持两种输入模式
+python gen_survey.py --bad-item-file=bad.txt < kxm.txt
+或者
+python gen_survey.py --bad-item-file=bad.txt --matrix-in < kxm.matrix
+
+更改bin目录下的配置
+1.设置access_key和secret_key
+2.把service_url的方式改为https, 否则容易报错
+
+修改post_utility.py中的目录
+
+单个提交
+python post_utility.py --single=moviesurvey.input
+
+
+批量提交
+python post_utility.py --dir=. [--production]
+
+
+
+
+生成调查，假设list文件位于amtsurvey/notredame文件夹下
+cd amtsurvey/notredame
+python ../gen_survey --prefix=notredame_ < notredame.survey
+
+选择生成的一个调查，提交到沙盒并测试，注意最后的参数不用加后缀名
+python ../post_utils.py --single=notredame_0-29
+提交完毕后，注意返回信息的最后几行, 复制加粗部分的网址即可在沙盒中查看
+You may see your HIT(s) with HITTypeId '3FRA5KKDL2Q8JQ4TDLEPDW2JORW92E' here:
+
+  https://workersandbox.mturk.com/mturk/preview?groupId=3FRA5KKDL2Q8JQ4TDLEPDW2JORW92E
+
+  End time: Tue Apr 19 14:58:28 CST 2016
+--[Done Loading HITs]----------
+  Total load time: 2 seconds.
+  Successfully loaded 1 HITs.
+
+最后，将本目录所有调查文件批量提交到生产环境中（注意，该操作会遍历指定目录下的所有文件。所以每个调查应该有独立的目录，否则指定目录下的所有调查均会被提交！！！）
+python ../post_utils.py --dir=. --production
+
+
+每个脚本均可以加上 -h 参数查看帮助

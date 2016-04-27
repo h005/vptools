@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Overview>
+    <Title>Evaluate these photos' viewpoints</Title>
+    <Text>Feel free to give us your opinions about these photos, focus on its' viewpoints</Text>
+    <Text>Each HIT has 31 pictures :)</Text>
+  </Overview>
+  
+  
+  <Question> 
+    <QuestionIdentifier>notredame/beggs_88420002.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 1/30: notredame/beggs_88420002.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/beggs_88420002.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/beggs_88420002.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/beggs_88420002.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/beggs_88420002.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/beggs_88420002.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/beggs_88420002.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/vic15_1651507332.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 2/30: notredame/vic15_1651507332.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/vic15_1651507332.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/vic15_1651507332.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/vic15_1651507332.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/vic15_1651507332.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/vic15_1651507332.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/vic15_1651507332.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/noniq_214143525.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 3/30: notredame/noniq_214143525.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/noniq_214143525.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/noniq_214143525.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/noniq_214143525.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/noniq_214143525.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/noniq_214143525.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/noniq_214143525.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/thierryleclercq_2281931159.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 4/30: notredame/thierryleclercq_2281931159.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/thierryleclercq_2281931159.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/thierryleclercq_2281931159.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/thierryleclercq_2281931159.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/thierryleclercq_2281931159.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/thierryleclercq_2281931159.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/thierryleclercq_2281931159.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/davebowman_407843450.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 5/30: notredame/davebowman_407843450.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/davebowman_407843450.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/davebowman_407843450.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/davebowman_407843450.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/davebowman_407843450.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/davebowman_407843450.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/davebowman_407843450.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/gromgull_405709973.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 6/30: notredame/gromgull_405709973.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/gromgull_405709973.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/gromgull_405709973.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/gromgull_405709973.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/gromgull_405709973.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/gromgull_405709973.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/gromgull_405709973.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/shereen84_2312768811.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 7/30: notredame/shereen84_2312768811.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/shereen84_2312768811.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/shereen84_2312768811.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/shereen84_2312768811.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/shereen84_2312768811.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/shereen84_2312768811.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/shereen84_2312768811.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/cocoinzenl_2458339807.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 8/30: notredame/cocoinzenl_2458339807.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/cocoinzenl_2458339807.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/cocoinzenl_2458339807.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/cocoinzenl_2458339807.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/cocoinzenl_2458339807.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/cocoinzenl_2458339807.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/cocoinzenl_2458339807.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/arkangel_213607446.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 9/30: notredame/arkangel_213607446.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/arkangel_213607446.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/arkangel_213607446.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/arkangel_213607446.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/arkangel_213607446.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/arkangel_213607446.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/arkangel_213607446.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/benjroberts_304916048.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 10/30: notredame/benjroberts_304916048.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/benjroberts_304916048.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/benjroberts_304916048.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/benjroberts_304916048.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/benjroberts_304916048.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/benjroberts_304916048.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/benjroberts_304916048.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/jessicamullen_402321359.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 11/30: notredame/jessicamullen_402321359.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/jessicamullen_402321359.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/jessicamullen_402321359.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/jessicamullen_402321359.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/jessicamullen_402321359.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/jessicamullen_402321359.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/jessicamullen_402321359.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/roblisameehan_339481567.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 12/30: notredame/roblisameehan_339481567.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/roblisameehan_339481567.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/roblisameehan_339481567.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/roblisameehan_339481567.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/roblisameehan_339481567.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/roblisameehan_339481567.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/roblisameehan_339481567.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/edwin11_313657632.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 13/30: notredame/edwin11_313657632.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/edwin11_313657632.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/edwin11_313657632.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/edwin11_313657632.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/edwin11_313657632.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/edwin11_313657632.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/edwin11_313657632.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/mpd01605_2535293050.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 14/30: notredame/mpd01605_2535293050.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/mpd01605_2535293050.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/mpd01605_2535293050.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/mpd01605_2535293050.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/mpd01605_2535293050.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/mpd01605_2535293050.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/mpd01605_2535293050.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/nikkole_200429059.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 15/30: notredame/nikkole_200429059.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/nikkole_200429059.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/nikkole_200429059.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/nikkole_200429059.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/nikkole_200429059.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/nikkole_200429059.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/nikkole_200429059.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/mpd01605_2236982979.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 16/30: notredame/mpd01605_2236982979.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/mpd01605_2236982979.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/mpd01605_2236982979.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/mpd01605_2236982979.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/mpd01605_2236982979.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/mpd01605_2236982979.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/mpd01605_2236982979.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/goldberg_50143838.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 17/30: notredame/goldberg_50143838.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/goldberg_50143838.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/goldberg_50143838.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/goldberg_50143838.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/goldberg_50143838.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/goldberg_50143838.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/goldberg_50143838.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/benleto_428261909.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 18/30: notredame/benleto_428261909.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/benleto_428261909.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/benleto_428261909.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/benleto_428261909.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/benleto_428261909.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/benleto_428261909.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/benleto_428261909.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/clark_55429420.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 19/30: notredame/clark_55429420.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/clark_55429420.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/clark_55429420.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/clark_55429420.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/clark_55429420.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/clark_55429420.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/clark_55429420.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/coymelancon_1186253965.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 20/30: notredame/coymelancon_1186253965.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/coymelancon_1186253965.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/coymelancon_1186253965.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/coymelancon_1186253965.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/coymelancon_1186253965.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/coymelancon_1186253965.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/coymelancon_1186253965.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/minnaert_2442824829.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 21/30: notredame/minnaert_2442824829.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/minnaert_2442824829.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/minnaert_2442824829.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/minnaert_2442824829.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/minnaert_2442824829.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/minnaert_2442824829.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/minnaert_2442824829.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/jmanners_220995776.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 22/30: notredame/jmanners_220995776.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/jmanners_220995776.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/jmanners_220995776.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/jmanners_220995776.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/jmanners_220995776.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/jmanners_220995776.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/jmanners_220995776.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/s2art_22800304.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 23/30: notredame/s2art_22800304.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/s2art_22800304.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/s2art_22800304.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/s2art_22800304.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/s2art_22800304.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/s2art_22800304.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/s2art_22800304.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/fhsu_34786504.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 24/30: notredame/fhsu_34786504.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/fhsu_34786504.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/fhsu_34786504.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/fhsu_34786504.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/fhsu_34786504.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/fhsu_34786504.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/fhsu_34786504.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/jpvargas_1413183882.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 25/30: notredame/jpvargas_1413183882.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/jpvargas_1413183882.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/jpvargas_1413183882.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/jpvargas_1413183882.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/jpvargas_1413183882.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/jpvargas_1413183882.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/jpvargas_1413183882.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/willpalmer_147766491.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 26/30: notredame/willpalmer_147766491.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/willpalmer_147766491.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/willpalmer_147766491.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/willpalmer_147766491.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/willpalmer_147766491.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/willpalmer_147766491.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/willpalmer_147766491.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/gcourbis_375030417.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 27/30: notredame/gcourbis_375030417.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/gcourbis_375030417.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/gcourbis_375030417.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/gcourbis_375030417.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/gcourbis_375030417.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/gcourbis_375030417.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/gcourbis_375030417.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/noniq_211997949.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 28/30: notredame/noniq_211997949.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/noniq_211997949.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/noniq_211997949.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/noniq_211997949.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/noniq_211997949.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/noniq_211997949.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/noniq_211997949.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/puroticorico_173583139.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 29/30: notredame/puroticorico_173583139.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/puroticorico_173583139.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/puroticorico_173583139.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/puroticorico_173583139.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/puroticorico_173583139.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/puroticorico_173583139.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/puroticorico_173583139.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>notredame/lynxman_682732590.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 30/30: notredame/lynxman_682732590.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/notredame/lynxman_682732590.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[notredame/lynxman_682732590.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[notredame/lynxman_682732590.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[notredame/lynxman_682732590.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[notredame/lynxman_682732590.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[notredame/lynxman_682732590.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+</QuestionForm>

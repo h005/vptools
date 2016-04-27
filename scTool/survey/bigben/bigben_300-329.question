@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Overview>
+    <Title>Evaluate these photos' viewpoints</Title>
+    <Text>Feel free to give us your opinions about these photos, focus on its' viewpoints</Text>
+    <Text>Each HIT has 31 pictures :)</Text>
+  </Overview>
+  
+  
+  <Question> 
+    <QuestionIdentifier>bigben/img0734.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 1/30: bigben/img0734.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0734.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0734.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0734.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0734.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0734.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0734.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0713.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 2/30: bigben/img0713.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0713.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0713.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0713.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0713.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0713.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0713.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0505.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 3/30: bigben/img0505.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0505.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0505.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0505.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0505.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0505.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0505.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img1014.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 4/30: bigben/img1014.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img1014.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img1014.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img1014.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img1014.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img1014.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img1014.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0123.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 5/30: bigben/img0123.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0123.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0123.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0123.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0123.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0123.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0123.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0981.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 6/30: bigben/img0981.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0981.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0981.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0981.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0981.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0981.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0981.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0539.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 7/30: bigben/img0539.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0539.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0539.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0539.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0539.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0539.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0539.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0243.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 8/30: bigben/img0243.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0243.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0243.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0243.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0243.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0243.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0243.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0050.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 9/30: bigben/img0050.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0050.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0050.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0050.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0050.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0050.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0050.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0041.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 10/30: bigben/img0041.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0041.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0041.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0041.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0041.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0041.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0041.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img1228.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 11/30: bigben/img1228.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img1228.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img1228.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img1228.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img1228.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img1228.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img1228.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0716.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 12/30: bigben/img0716.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0716.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0716.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0716.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0716.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0716.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0716.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img1076.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 13/30: bigben/img1076.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img1076.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img1076.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img1076.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img1076.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img1076.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img1076.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0717.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 14/30: bigben/img0717.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0717.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0717.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0717.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0717.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0717.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0717.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img1254.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 15/30: bigben/img1254.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img1254.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img1254.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img1254.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img1254.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img1254.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img1254.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0871.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 16/30: bigben/img0871.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0871.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0871.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0871.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0871.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0871.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0871.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img1092.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 17/30: bigben/img1092.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img1092.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img1092.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img1092.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img1092.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img1092.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img1092.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0911.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 18/30: bigben/img0911.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0911.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0911.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0911.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0911.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0911.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0911.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0838.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 19/30: bigben/img0838.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0838.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0838.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0838.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0838.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0838.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0838.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img1078.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 20/30: bigben/img1078.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img1078.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img1078.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img1078.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img1078.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img1078.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img1078.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0294.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 21/30: bigben/img0294.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0294.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0294.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0294.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0294.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0294.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0294.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0490.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 22/30: bigben/img0490.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0490.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0490.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0490.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0490.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0490.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0490.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0137.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 23/30: bigben/img0137.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0137.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0137.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0137.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0137.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0137.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0137.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0035.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 24/30: bigben/img0035.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0035.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0035.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0035.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0035.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0035.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0035.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img1017.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 25/30: bigben/img1017.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img1017.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img1017.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img1017.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img1017.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img1017.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img1017.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0653.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 26/30: bigben/img0653.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0653.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0653.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0653.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0653.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0653.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0653.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0567.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 27/30: bigben/img0567.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0567.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0567.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0567.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0567.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0567.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0567.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0488.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 28/30: bigben/img0488.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0488.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0488.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0488.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0488.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0488.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0488.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0578.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 29/30: bigben/img0578.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0578.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0578.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0578.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0578.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0578.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0578.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+
+  <Question> 
+    <QuestionIdentifier>bigben/img0329.jpg</QuestionIdentifier>  
+    <IsRequired>true</IsRequired>
+    <QuestionContent> 
+      <Text>Progress 30/30: bigben/img0329.jpg</Text>  
+      <Binary> 
+        <MimeType> 
+          <Type>image</Type>  
+          <SubType>jpg</SubType> 
+        </MimeType>  
+        <DataURL>http://7xoro6.com1.z0.glb.clouddn.com/bigben/img0329.jpg</DataURL>  
+        <AltText>Focus on the viewpoint of this photo</AltText> 
+      </Binary> 
+    </QuestionContent>  
+    <AnswerSpecification> 
+      <SelectionAnswer> 
+        <StyleSuggestion>radiobutton</StyleSuggestion>  
+        <Selections> 
+          <Selection> 
+            <SelectionIdentifier>1[bigben/img0329.jpg]</SelectionIdentifier>  
+            <Text>1: I think the viewpoint is poor</Text> 
+          </Selection>
+          <Selection> 
+            <SelectionIdentifier>2[bigben/img0329.jpg]</SelectionIdentifier>  
+            <Text>2: I think the viewpoint is fair</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>3[bigben/img0329.jpg]</SelectionIdentifier>  
+            <Text>3: I think the viewpoint is satisfactory</Text> 
+          </Selection> 
+          <Selection> 
+            <SelectionIdentifier>4[bigben/img0329.jpg]</SelectionIdentifier>  
+            <Text>4: I think the viewpoint is good</Text> 
+          </Selection>  
+          <Selection> 
+            <SelectionIdentifier>5[bigben/img0329.jpg]</SelectionIdentifier>  
+            <Text>5: I think the viewpoint is excellent</Text> 
+          </Selection> 
+        </Selections> 
+      </SelectionAnswer> 
+    </AnswerSpecification> 
+  </Question>
+
+</QuestionForm>

@@ -3,10 +3,11 @@
 clear
 clc
 addpath('../');
-sceneName = 'kxm';
-scorefile = ['/home/h005/Documents/vpDataSet/' sceneName '/score/' sceneName '.sc'];
-fea2Dfile = ['/home/h005/Documents/vpDataSet/' sceneName '/vpFea/' sceneName '.2df'];
-fea3Dfile = ['/home/h005/Documents/vpDataSet/' sceneName '/vpFea/' sceneName '.3df'];
+
+modelList = {
+    'bigben',...
+    'kxm'
+};
 
 anaMethodList = {
     'classify',...
@@ -15,21 +16,18 @@ anaMethodList = {
 
 anaMethod = 2;
 
-if strcmp(anaMethodListP{anaMethod},'classify')
-    
-    sc = scload(scorefile);
+if strcmp(anaMethodList{anaMethod},'classify')
+
+    sc = scload(scorefile,sceneName);
     % scc score classify
 %     scc = assScor
-    
-    
-elseif strcmp(anaMethodListP{anaMethod},'regress')
-    
-    sc = scload(scorefile);
-    % scr score regress
-    scr = assScore(sc,'ave');
 
-    fea2d = scload(fea2Dfile);
-    fea3d = scload(fea3Dfile);
+
+elseif strcmp(anaMethodList{anaMethod},'regress')
+
+    % scr score regress
+
+    [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 
     [fs,fname] = combine(fea2d,fea3d,scr);
     [fs2d,fname] = combine(fea2d,scr);
@@ -39,7 +37,7 @@ elseif strcmp(anaMethodListP{anaMethod},'regress')
         'svm regress', ...
         'ens regress'};
     % regress method
-    Rmethod = 3;
+    Rmethod = 1;
 
     [score,predictScore] = amtRegress(fs,titleText{Rmethod});
     showInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,1);
@@ -52,6 +50,5 @@ elseif strcmp(anaMethodListP{anaMethod},'regress')
     showErrInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,6);
 
 elseif strcmp(anaMethodListP{anaMethod},'LDL')
-    
-end
 
+end

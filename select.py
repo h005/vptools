@@ -5,9 +5,15 @@
 # output : selectedMatrix file
 import io
 
-matrixfilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameOriginal.matrix';
-scorefilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameScore.txt';
-extractfilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameSelected.matrix';
+# matrixfilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameOriginal.matrix';
+# scorefilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameScore.txt';
+# extractfilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameSelected.matrix';
+
+model = 'freeGodness'
+
+matrixfilePath = '/home/h005/Documents/vpDataSet/' + model +'/imgs/model/'+ model +'.matrix'
+scorefilePath = '/home/h005/Documents/vpDataSet/'+ model +'/imgs/model/filelist.txt'
+extractfilePath = '/home/h005/Documents/vpDataSet/'+ model +'/imgs/model/selectedMatrix.matrix'
 
 matrixfile = open(matrixfilePath,'r')
 selectfile = open(scorefilePath)
@@ -32,7 +38,7 @@ while fname :
 
 	fname = fname.strip()
 	spString = fname.split('/')
-	print spString
+	# print spString
 	if len(spString) <= 1 :
 		fname = spString[0];
 	else :
@@ -53,7 +59,11 @@ fname = selectfile.readline()
 while fname:
 	fname = fname.strip()
 	# print fname
-	fname = fname.split('/')[1]
+	spString = fname.split('/');
+	if len(spString) <= 1 :
+		fname = spString[0]
+	else :
+		fname = spString[1]
 	fname = fname.split('.')[0]
 	extractfile.write("%s.jpg\n" % (fname))
 	for para in mvp[fname]:

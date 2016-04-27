@@ -1,0 +1,46 @@
+projectArea 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+visSurfaceArea 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+viewPointEntropy 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+silhouetteLength 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+silhouetteCurvature 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+silhouetteCurvatureExtrema 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+maxDepth 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+depthDistribute 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+meanCurvature 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+gaussianCurvature 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+abovePreference 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+abovePreference 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+abovePreference 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+outlierCount 这不是归一化的问题，而是一个使不同模型的分布趋于相同的问题
+boundingBox 
+boundingBox
+boundingBox
+boundingBox
+boundingBox
+boundingBox
+boundingBox
+boundingBox
+boundingBox
+ballCoord 
+ballCoord
+HueCount rgb=>hsv [0.15 0.95] && s > 0.2 (这个是有问题，同上)
+contrast rgb2gray [0 255] 98% of distribution
+brightness average gray
+ruleOfThird 
+hogHist
+hogHist
+hogHist
+hogHist
+hogHist
+hogHist
+hogHist
+hogHist
+hogHist
+2DTheta 投影之后与屏幕坐标系y轴的最小夹角
+2DTheta 投影之后与屏幕坐标系x轴的最小夹角
+2DTheta 包围盒x与y轴之间的夹角
+2DTheta 包围盒x与z轴之间的夹角
+2DTheta 包围盒y与z轴之间的夹角
+EntropyVariance entropy
+EntropyVariance vairance
+EntropyVariance depthdistribution
