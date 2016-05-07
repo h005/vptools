@@ -1,3 +1,12 @@
+生成amt survery时，先在模型imgs下面的mask文件夹下进行筛选
+之后 ls > ../filelist.txt
+
+然后运行tools文件夹下的select.py脚本
+    在这个脚本里面修改模型参数即可
+    会将新的matrix文件输出到imgs/model文件夹下
+
+然后使用matlab进行聚类，进行进一步的筛选
+
 getFileName.py 这个脚本用来处理使用matlab聚类之后的结果，提取聚类之后cluster文件夹下的所有图像文件
 这个脚本生成的文件会作为AMT-survey的输入，生成用户调查
 Usage：

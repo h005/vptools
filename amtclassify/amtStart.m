@@ -6,7 +6,8 @@ addpath('../');
 
 modelList = {
     'bigben',...
-    'kxm'
+    'kxm',...
+    'notredame'
 };
 
 anaMethodList = {
@@ -39,15 +40,19 @@ elseif strcmp(anaMethodList{anaMethod},'regress')
     % regress method
     Rmethod = 1;
 
-    [score,predictScore] = amtRegress(fs,titleText{Rmethod});
-    showInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,1);
-    showErrInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,4);
-    [score,predictScore] = amtRegress(fs2d,titleText{Rmethod});
-    showInfo(titleText{Rmethod},score,predictScore,'2d',2,3,2);
-    showErrInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,5);
-    [score,predictScore] = amtRegress(fs3d,titleText{Rmethod});
-    showInfo(titleText{Rmethod},score,predictScore,'3d',2,3,3);
-    showErrInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,6);
+%     failed with gmm the features was not a gauss distribution
+%     idx = gmmClassify(fs(:,1:end-1),length(modelList));
+
+    generalRegress(fs,fs2d,fs3d,titleText{Rmethod});
+    % [score,predictScore] = amtRegress(fs,titleText{Rmethod});
+    % showInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,1);
+    % showErrInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,4);
+    % [score,predictScore] = amtRegress(fs2d,titleText{Rmethod});
+    % showInfo(titleText{Rmethod},score,predictScore,'2d',2,3,2);
+    % showErrInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,5);
+    % [score,predictScore] = amtRegress(fs3d,titleText{Rmethod});
+    % showInfo(titleText{Rmethod},score,predictScore,'3d',2,3,3);
+    % showErrInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,6);
 
 elseif strcmp(anaMethodListP{anaMethod},'LDL')
 

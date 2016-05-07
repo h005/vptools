@@ -19,12 +19,12 @@ predictScore = zeros(1,ncases);
 for i=1:nfold
     test = (indices == i);
     train = ~test;
-    
+
     trainFea = fea(:,train);
     testFea = fea(:,test);
-    
+
     trainScore = score(train);
-    
+
     % data scale
     scaler = dataScaler(trainFea,'minMax');
     trainFea = datascaling(scaler,trainFea);
