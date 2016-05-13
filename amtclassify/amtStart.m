@@ -45,11 +45,11 @@ if strcmp(anaMethodList{anaMethod},'classifyEach')
     classifyEach(fs2d,feaName,rate,fname,methodText{method});
     figure(2);
     title('fea2d ROC');
-        
+    
     feaName = loadFeaName('/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.3dfname');
     %% 3D feature
     [fs3d,fname] = combine(fea3d,scr);
-    
+   
     figure(3)
     classifyEach(fs3d,feaName,rate,fname,methodText{method});
     figure(3)
