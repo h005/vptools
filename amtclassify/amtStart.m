@@ -7,23 +7,54 @@ addpath('../');
 modelList = {
     'bigben',...
     'kxm',...
-    'notredame'
+    'notredame'...
+    'freeGodness'...
+    'tajMahal'
 };
 
 anaMethodList = {
-    'classify',...
+    'classifyEach',...
+    'classifyCombine',...
     'regress',...
     'LDL'};
 
-anaMethod = 2;
+anaMethod = 1;
 
-if strcmp(anaMethodList{anaMethod},'classify')
+if strcmp(anaMethodList{anaMethod},'classifyEach')
+    
+    % top rate pictures will be assign good
+    % last rate pictures will be assign bad
+    % this parameters shold be modified as you like
+    rate = 0.1;
+    
+    [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 
-    sc = scload(scorefile,sceneName);
+    methodText = {
+        'bayes classify',...
+        'svm classify'};
+    
+    feaName = loadFeaName('/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.2dfname');    
+    %% 2D feature
+    [fs2d,fname] = combine(fea2d,scr);
+    
+    
+    
+    
+    feaName = loadFeaName('/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.3dfname');
+    %% 3D feature
+    [fs3d,fname] = combine(fea3d,scr);
+    
+    
+    % sc = scload(scorefile,sceneName);
     % scc score classify
-%     scc = assScor
+	% scc = assScor
 
-
+elseif strcmp(anaMethodList{anaMethod},'classifyCombine')
+    
+    % sc = scload(scorefile,sceneName);
+    
+    
+    
 elseif strcmp(anaMethodList{anaMethod},'regress')
 
     % scr score regress
