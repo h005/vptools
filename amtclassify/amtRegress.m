@@ -8,7 +8,7 @@ fea = fs(:,1:end-1);
 
 % N fold
 nfold = 10;
-indices = crossvalind('Kfold',score,10);
+indices = crossvalind('Kfold',length(score),nfold);
 
 % transpose mfeatures * ncases
 fea = fea';
