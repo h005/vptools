@@ -1,11 +1,16 @@
 %%
 % fs: fea + sc; ncases * mfea
-% feaName: feature's name with its index in s
+% feaName: feature's name with its index in fs
 % rate: top rate will be labeled as positve
 %       last rate will be labeled as negative
 % fname: file name, ie image's names
 
-function classifyEach(fs,feaName,rate,fname,method)
+% output:
+% groundTruth, preLabel were used to plotroc curve
+% fN is the legend name on roc curve
+
+function [groundTruth, preLabel, fN] ...
+    = classifyEach(fs,feaName,rate,fname,method)
 sc = fs(:,end);
 % sort sc asscend
 [sortedSc,index] = sort(sc);
@@ -14,7 +19,7 @@ num = round(ncases*rate);
 negIdx = index(1:num);
 posIdx = index(end - num + 1 : end);
 
-goundTruth = zeros(length(feaName),2*num);
+groundTruth = zeros(length(feaName),2*num);
 preLabel = zeros(length(feaName),2*num);
 
 % construct new calssify data
@@ -79,10 +84,11 @@ end
 % fname = feaName(:).name;
 
 plotroc(groundTruth,preLabel);
-% for i=1:length(feaName)
-%     fN{i} = feaName{i}.name;
-% end
-% createlegend(axes,feaName);
-% legend(fN,'Location','southeast');
-% createlegend(feaName);
+% legend('test1','test2');
+fN = cells(1,length(feaName));
+for i=1:length(feaName)
+    fN{i} = feaName{i}.name;
+end
+
+
 
