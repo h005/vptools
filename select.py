@@ -9,7 +9,7 @@ import io
 # scorefilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameScore.txt';
 # extractfilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameSelected.matrix';
 
-model = 'freeGodness'
+model = 'cctv'
 
 matrixfilePath = '/home/h005/Documents/vpDataSet/' + model +'/imgs/model/'+ model +'.matrix'
 scorefilePath = '/home/h005/Documents/vpDataSet/'+ model +'/imgs/model/filelist.txt'

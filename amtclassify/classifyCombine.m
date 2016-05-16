@@ -5,10 +5,10 @@
 % fname: file name, ie image's names
 
 % output:
-% groundTruth, preLabel were used to plotroc curve
+% groundTruth, preScore were used to plotroc curve
 % fN is the legend name on roc curve
 
-function [groundTruth, preLabel] ... 
+function [groundTruth, preLabel, preScore] ... 
     = classifyCombine(fs,rate,fname,method)
 sc = fs(:,end);
 % sort sc asscend
@@ -21,6 +21,7 @@ posIdx = index(end - num + 1 : end);
 
 groundTruth = zeros(1, 2 * num);
 preLabel = zeros(1, 2 * num);
+preScore = zeros(1, 2 * num);
 
 % contrust combined dataSet
 cfs = zeros(2*num,mfeatures+1);
@@ -60,17 +61,19 @@ for j=1:nfold
     if strcmp(method,'bayes classify')
         mdl = bysClassify(trainFea, trainLabel);
         [tmppl,positerior,cost] = predict(mdl,testFea');
-        preLabel(test) = positerior(:,2);
+        preScore(test) = positerior(:,2);
+        preLabel(test) = tmppl;
     elseif strcmp(method,'svm classify')
         mdl = svmClassify(trainFea,trainLabel);
         [tmppl,score] = predict(mdl,testFea');
-        preLabel(test) = score(:,2);
+        preScore(test) = score(:,2);
+        preLabel(test) = tmppl;
     elseif strcmp(method,'ens classify')
         mdl = ensClassify(trainFea,trainLabel);
         [tmppl,score] = predict(mdl,testFea');
-        preLabel(test) = score(:,2);
+        preScore(test) = score(:,2);
+        preLabel(test) = tmppl;
     end
 end
 
-debug = 0;
 

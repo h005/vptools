@@ -10,7 +10,37 @@
 % fN is the legend name on roc curve
 
 function [groundTruth, preLabel, fN] ...
-    = classifyEach(fs,feaName,rate,fname,method)
+    = classifyEach(fs,feaName,rate,fname,method,titleLabel)
+
+plotMarker = {'o',...
+    '+',...
+    '*',...
+    '.',...
+    'x',...
+    's',...
+    'd',...
+    '^',...
+    'v',...
+    '>',...
+    '<',...
+    'p',...
+    'h',...
+    'o',...
+    '+',...
+    '*',...
+    '.',...
+    'x',...
+    's',...
+    'd',...
+    '^',...
+    'v',...
+    '>',...
+    '<',...
+    'p',...
+    'h'};
+
+
+prTitle = titleLabel;
 sc = fs(:,end);
 % sort sc asscend
 [sortedSc,index] = sort(sc);
@@ -21,7 +51,7 @@ posIdx = index(end - num + 1 : end);
 
 groundTruth = zeros(length(feaName),2*num);
 preLabel = zeros(length(feaName),2*num);
-
+titleLabel = [titleLabel 'ROC Curves for '];
 % construct new calssify data
 for i=1:length(feaName)
     ind = feaName{i}.ind;
@@ -65,30 +95,88 @@ for i=1:length(feaName)
             % there is kfoldLoss function should be tried
             mdl = bysClassify(trainFea,trainLabel);
             [tmppl,postierior,cost] = predict(mdl,testFea');
-            predictLabel(test) = postierior(:,2);        
+            predictLabel(test) = postierior(:,2); 
+            
         elseif strcmp(method,'svm classify')
             mdl = svmClassify(trainFea,trainLabel);
             [tmppl,score] = predict(mdl,testFea');
             predictLabel(test) = score(:,2);
+            
         elseif strcmp(method,'ens classify')
             mdl = ensClassify(trainFea,trainLabel);
             [tmppl,score] = predict(mdl,testFea');
             predictLabel(test) = score(:,2);
+            
         end
     end
     
     preLabel(i,:) = predictLabel;
     
 end
+
+if strcmp(method,'bayes classify')
+    titleLabel = [titleLabel 'Naive Bayes Classification'];
+elseif strcmp(method,'svm classify')
+    titleLabel = [titleLabel 'SVM Classification'];
+elseif strcmp(method,'ens classify')
+    titleLabel = [titleLabel 'Ensemble Learning Classification'];
+end
+
 % can not extract the name in cell array
 % fname = feaName(:).name;
 
-plotroc(groundTruth,preLabel);
+% use prefcurve is better
+% plotroc(groundTruth,preLabel);
 % legend('test1','test2');
-fN = cells(1,length(feaName));
+fN = cell(1,length(feaName));
 for i=1:length(feaName)
     fN{i} = feaName{i}.name;
 end
 
+X = cell(length(feaName),1);
+Y = cell(length(feaName),1);
 
+for i=1:length(feaName)
+   
+    [tmpx,tmpy,tmpt,tmpauc] = ...
+        perfcurve(groundTruth(i,:),preLabel(i,:),mdl.ClassNames(end));
+    X{i} = tmpx;
+    Y{i} = tmpy;
+    
+end
+
+%% plot roc curve
+figure
+plot(X{1},Y{1});
+hold on 
+for i=2:length(feaName)
+    plot(X{i},Y{i});
+end
+legend(fN,'Location','best');
+xlabel('False positive rate');
+ylabel('True positive rate');
+title(titleLabel);
+hold off
+
+%% plot Precision Recall curve
+X = cell(length(feaName),1);
+Y = cell(length(feaName),1);
+% [prec, tpr, fpr, thresh] = prec_rec(score, target, 'plotROC',0,'plotPR',0);
+
+for i=1:length(feaName)
+    [prec, tpr, fpr, thresh] = ...
+        prec_rec(preLabel(i,:), 1-groundTruth(i,:), 'plotROC',0,'plotPR',0);
+    X{i} = [0; tpr];
+    Y{i} = [1; prec];
+end
+figure
+plot(X{1},Y{1},'Marker',plotMarker{1})
+hold on
+for i=2:length(feaName)
+    plot(X{i},Y{i},'Marker',plotMarker{i});
+end
+legend(fN,'Location','best');
+xlabel('recall');
+ylabel('precision');
+title(['Performance of ' prTitle ' on the photos']);
 

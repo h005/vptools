@@ -6,6 +6,8 @@
     会将新的matrix文件输出到imgs/model文件夹下
 
 然后使用matlab进行聚类，进行进一步的筛选
+修改imgCluster下面的mvDist.m文件中的modelName
+得到聚类结果
 
 getFileName.py 这个脚本用来处理使用matlab聚类之后的结果，提取聚类之后cluster文件夹下的所有图像文件
 这个脚本生成的文件会作为AMT-survey的输入，生成用户调查
