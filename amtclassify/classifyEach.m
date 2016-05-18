@@ -9,38 +9,10 @@
 % groundTruth, preLabel were used to plotroc curve
 % fN is the legend name on roc curve
 
-function [groundTruth, preLabel, fN] ...
-    = classifyEach(fs,feaName,rate,fname,method,titleLabel)
-
-plotMarker = {'o',...
-    '+',...
-    '*',...
-    '.',...
-    'x',...
-    's',...
-    'd',...
-    '^',...
-    'v',...
-    '>',...
-    '<',...
-    'p',...
-    'h',...
-    'o',...
-    '+',...
-    '*',...
-    '.',...
-    'x',...
-    's',...
-    'd',...
-    '^',...
-    'v',...
-    '>',...
-    '<',...
-    'p',...
-    'h'};
-
-
-prTitle = titleLabel;
+% k-fold classify with each given feature and plot the ROC and 
+% Precision Recall curve
+function [groundTruth, preLabel, fN, sclabel] ...
+    = classifyEach(fs,feaName,rate,fname,method)
 sc = fs(:,end);
 % sort sc asscend
 [sortedSc,index] = sort(sc);
@@ -49,9 +21,10 @@ num = round(ncases*rate);
 negIdx = index(1:num);
 posIdx = index(end - num + 1 : end);
 
+sclabel = [];
+
 groundTruth = zeros(length(feaName),2*num);
 preLabel = zeros(length(feaName),2*num);
-titleLabel = [titleLabel 'ROC Curves for '];
 % construct new calssify data
 for i=1:length(feaName)
     ind = feaName{i}.ind;
@@ -111,16 +84,16 @@ for i=1:length(feaName)
     end
     
     preLabel(i,:) = predictLabel;
-    
+    sclabel = mdl.ClassNames(end);
 end
 
-if strcmp(method,'bayes classify')
-    titleLabel = [titleLabel 'Naive Bayes Classification'];
-elseif strcmp(method,'svm classify')
-    titleLabel = [titleLabel 'SVM Classification'];
-elseif strcmp(method,'ens classify')
-    titleLabel = [titleLabel 'Ensemble Learning Classification'];
-end
+% if strcmp(method,'bayes classify')
+%     titleLabel = [titleLabel 'Naive Bayes Classification'];
+% elseif strcmp(method,'svm classify')
+%     titleLabel = [titleLabel 'SVM Classification'];
+% elseif strcmp(method,'ens classify')
+%     titleLabel = [titleLabel 'Ensemble Learning Classification'];
+% end
 
 % can not extract the name in cell array
 % fname = feaName(:).name;
@@ -132,7 +105,7 @@ fN = cell(1,length(feaName));
 for i=1:length(feaName)
     fN{i} = feaName{i}.name;
 end
-
+%{
 X = cell(length(feaName),1);
 Y = cell(length(feaName),1);
 
@@ -179,4 +152,4 @@ legend(fN,'Location','best');
 xlabel('recall');
 ylabel('precision');
 title(['Performance of ' prTitle ' on the photos']);
-
+%}

@@ -8,7 +8,7 @@
 % groundTruth, preScore were used to plotroc curve
 % fN is the legend name on roc curve
 
-function [groundTruth, preLabel, preScore] ... 
+function [groundTruth, preLabel, preScore, scLabel] ... 
     = classifyCombine(fs,rate,fname,method)
 sc = fs(:,end);
 % sort sc asscend
@@ -43,6 +43,8 @@ indices = crossvalind('Kfold',length(label),nfold);
 fea = fea';
 label = label';
 
+scLabel = [];
+
 for j=1:nfold
     
     test = (indices == j);
@@ -74,6 +76,7 @@ for j=1:nfold
         preScore(test) = score(:,2);
         preLabel(test) = tmppl;
     end
+    scLabel = mdl.ClassNames(end);
 end
 
 

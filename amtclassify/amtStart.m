@@ -19,34 +19,7 @@ anaMethodList = {
     'LDL'};
 
 anaMethod = 2;
-
-plotMarker = {'o',...
-    'd',...
-    'x',...    
-    '.',...
-    '*',...
-    's',...
-    '+',...    
-    '^',...
-    'v',...
-    '>',...
-    '<',...
-    'p',...
-    'h',...
-    'o',...
-    '+',...
-    '*',...
-    '.',...
-    'x',...
-    's',...
-    'd',...
-    '^',...
-    'v',...
-    '>',...
-    '<',...
-    'p',...
-    'h'};
-
+%%
 if strcmp(anaMethodList{anaMethod},'classifyEach')
     
     % top rate pictures will be assign good
@@ -61,115 +34,73 @@ if strcmp(anaMethodList{anaMethod},'classifyEach')
         'svm classify',...
         'ens classify'
         };
-    
+    plotMethods = {'ROC','PR','ROC PR'};
+
     method = 2;
-    
-    feaName = loadFeaName('/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.2dfname');    
-    %% 2D feature
+    % 2D feature
     [fs2d,fname] = combine(fea2d,scr);
     
-    classifyEach(fs2d,feaName,rate,fname,methodText{method},'fea2D');
+    % general classify method
+    gcMethod = {anaMethodList{anaMethod},'2D',methodText{method}};
     
-    feaName = loadFeaName('/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.3dfname');
-    %% 3D feature
+    [gt,ps,ln,scl] = generalClassify(fs2d,rate,fname,gcMethod);
+    
+    plotMethodsId = 1;
+    
+    classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId});
+
+    % 3D feature
     [fs3d,fname] = combine(fea3d,scr);
-  
-    classifyEach(fs3d,feaName,rate,fname,methodText{method},'fea3D');
     
-    % sc = scload(scorefile,sceneName);
-    % scc score classify
-	% scc = assScor
+    % general classify method
+    gcMethod = {anaMethodList{anaMethod},'3D',methodText{method}};
+    
+    [gt,ps,ln] = generalClassify(fs3d,rate,fname,gcMethod);
+    
+    classifyPlotHelper(gt,ps,scl,ln,plotMethods{3});
 
 elseif strcmp(anaMethodList{anaMethod},'classifyCombine')
-    
+%%
     % top rate pictures will be assign good
     % last rate pictures will be assign bad
     % this parameters should bbe modified as needed
-    rate = 0.05;
-    %% load Data
+    rate = 0.1;
+    % load Data
     % sc = scload(scorefile,sceneName);
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
     [fs,fname] = combine(fea2d,fea3d,scr);
     [fs2d,fname] = combine(fea2d,scr);
     [fs3d,fname] = combine(fea3d,scr);
-    %% set Method 
+    % set Method 
     methodText = {
         'bayes classify',...
         'svm classify',...
         'ens classify'
         };
-    method = 1;
-    %% result preparing
+    method = 2;
+    % result preparing
     % gt  groundTruth
     % pl  preLabel
     % ln  plotroc legend name
-    %% features combine
-    [groundTruth, preLabel, preScore] ... 
-    = classifyCombine(fs2d,rate,fname,methodText{method});
-    gt(1,:) = groundTruth;
-    pl(1,:) = preLabel;
-    csc(1,:) = preScore;
-    ln{1} = '2D combine';
-    [groundTruth, preLabel, preScore] ...
-    = classifyCombine(fs3d,rate,fname,methodText{method});
-    gt(2,:) = groundTruth;
-    pl(2,:) = preLabel;
-    csc(2,:) = preScore;
-    ln{2} = '3D combine';
-    [groundTruth, preLabel, preScore] ...
-    = classifyCombine(fs,rate,fname,methodText{method});
-    gt(3,:) = groundTruth;
-    pl(3,:) = preLabel;
-    csc(3,:) = preScore;
-    ln{3} = '2D3D';
-    %% plot classify error rate
+    % general classify methods
+    gcMethod = {anaMethodList{anaMethod},'2D combine',methodText{method}};
+    [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
+    gcMethod = {anaMethodList{anaMethod},'3D combine',methodText{method}};
+    [gt2,pl2,ps2,ln2,scl2] = generalClassify(fs3d,rate,fname,gcMethod);
+    gcMethod = {anaMethodList{anaMethod},'2D3D combine',methodText{method}};
+    [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs3d,rate,fname,gcMethod);
+    
+    gt = [gt1;gt2;gt3];
+    ps = [ps1;ps2;ps3];
+    ln = [ln1;ln2;ln3];
+    pl = [pl1;pl2;pl3];
+    
+    scl = scl1;
+    
+    % plot classify error rate
     plotErrorRate(gt,pl,ln,[methodText{method} 'of different method on photos']);
-    
-    %% plot PR precision recall
-    X = cell(size(gt,1),1);
-    Y = cell(size(gt,1),1);
-    for i=1:size(gt,1)
-    [prec, tpr, fpr, thresh] = ...
-        prec_rec(csc(i,:), gt(i,:), 'plotROC',0,'plotPR',0);
-    X{i} = [0; tpr];
-    Y{i} = [1; prec];
-    end
-    figure
-    plot(X{1},Y{1},'Marker',plotMarker{1})
-    hold on
-    for i=2:size(gt,1)
-        plot(X{i},Y{i},'Marker',plotMarker{i});
-    end
-    fN = {'2D combine','3D combine','2D3D combine'};
-    legend(fN,'Location','best');
-    xlabel('recall');
-    ylabel('precision');
-    title('Performance of combined features on the photos');
-    hold off
-    
-    %% plot ROC
-    X = cell(size(gt,1),1);
-    Y = cell(size(gt,1),1);
-    
-    for i=1:size(gt,1)
-        [tmpx,tmpy,tmpt,tmpauc] = ...
-            perfcurve(gt(i,:),csc(i,:),1);
-        X{i} = tmpx(1:10:end);
-        Y{i} = tmpy(1:10:end);
-    end
-    
-    figure
-    plot(X{1},Y{1},'Marker',plotMarker{1});
-    hold on
-    for i=2:size(gt,1)
-        plot(X{i},Y{i},'Marker',plotMarker{i});
-    end
-    legend(fN,'Location','best');
-    xlabel('False positive rate');
-    ylabel('True positive rate');
-%     plotroc(gt,csc);
-    title(['fea combine ROC ',methodText{method}]);
-    
+    plotMethods = {'ROC','PR','ROC PR'};
+    classifyPlotHelper(gt,ps,scl,ln,plotMethods{3});
 elseif strcmp(anaMethodList{anaMethod},'regress')
 
     % scr score regress
