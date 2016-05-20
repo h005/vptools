@@ -6,7 +6,7 @@ imgSource = '/home/h005/Documents/vpDataSet/notredame/imgs';
 clusterDest = '/home/h005/Documents/vpDataSet/notredame/cluster';
 feaFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.fs';
 %}
-modelName = 'cctv';
+modelName = 'kxm';
 % matrixFile = '/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.matrix';
 matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/vpFea/selectedMatrix.matrix'];
 % imgSource = '/home/h005/Documents/vpDataSet/kxm/imgs';
@@ -27,6 +27,7 @@ method = 'meanshiftPCU'
         'kmedoidsMV'
 %}
 method = 'kmedoidsMV';
+% method = 'meanshiftMV';
 %%
 copyFlag = 1;
 output = 1;

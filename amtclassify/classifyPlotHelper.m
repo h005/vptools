@@ -5,17 +5,17 @@
 % scoreLabel is the label that score descripted by classifer
 % fN is the legend name on your curve
 
-function classifyPlotHelper(groundTruth,score,scoreLabel,fN,method)
+function classifyPlotHelper(groundTruth,score,scoreLabel,fN,method,titleLabel)
 
 plotMarker = {'o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h'};
 
 if strcmp(method,'ROC')
-    rocPlotHelper(groundTruth,score,scoreLabel,fN,'test',plotMarker);
+    rocPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker);
 elseif strcmp(method,'PR')
-    prPlotHelper(groundTruth,score,scoreLabel,fN,'test',plotMarker);
+    prPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker);
 elseif strcmp(method,'ROC PR')
-    rocPlotHelper(groundTruth,score,scoreLabel,fN,'test',plotMarker);
-    prPlotHelper(groundTruth,score,scoreLabel,fN,'test',plotMarker);
+    rocPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker);
+    prPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker);
 end
 end
 function rocPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker)
@@ -36,7 +36,7 @@ end
 legend(fN,'Location','best');
 xlabel('False positive rate');
 ylabel('True positive rate');
-title(titleLabel);
+title(titleLabel,'FontWeight','normal');
 hold off
 end
 
@@ -59,6 +59,6 @@ end
 legend(fN,'Location','best');
 xlabel('recall');
 ylabel('precision');
-title(titleLabel);
+title(titleLabel,'FontWeight','normal');
 hold off
 end

@@ -1,5 +1,6 @@
 %% plot classify error rate
 function plotErrorRate(gt, pl, fN, titleText)
+% ref http://slidewiki.org/slide/24197
 % gt ground truth
     % nFeatures * mItem
 % pl predict label
@@ -25,5 +26,5 @@ end
 set(gca, 'XTick', 1:numel(errRate), 'XTickLabel', fN)
 legend(fN);
 ylabel('Error Rate');
-title(titleText)
-    
+title(titleText,'FontWeight','normal')
+axis([0.5,3.5,0,0.5])
