@@ -1,3 +1,4 @@
+%% pic mean shift with position
 function [id,cluster,label,clusterCenter] = picMeanShiftPS(ps)
 % this function was created to cluster pics by camera
 % position first, then by camera direction and camera up direction
