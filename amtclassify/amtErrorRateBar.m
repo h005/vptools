@@ -17,7 +17,7 @@ modelList = {
 % top rate pictures will be assign good
 % last rate pictures will be assign bad
 % this parameters should bbe modified as needed
-rate = 0.08;
+rate = 0.10;
 % load Data
 % sc = scload(scorefile,sceneName);
 [sc,scr,fea2d,fea3d] = dataLoad(modelList);
@@ -39,11 +39,11 @@ for i=1:numel(methodText)
     % pl  preLabel
     % ln  plotroc legend name
     % general classify methods
-    gcMethod = {'classifyCombine','2D combine',methodText{method}};
+    gcMethod = {'classifyCombine','2D combine',methodText{i}};
     [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
-    gcMethod = {'classifyCombine','3D combine',methodText{method}};
+    gcMethod = {'classifyCombine','3D combine',methodText{i}};
     [gt2,pl2,ps2,ln2,scl2] = generalClassify(fs3d,rate,fname,gcMethod);
-    gcMethod = {'classifyCombine','2D3D combine',methodText{method}};
+    gcMethod = {'classifyCombine','2D3D combine',methodText{i}};
     [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs,rate,fname,gcMethod);
 
     gt{i} = [gt1;gt2;gt3];
@@ -59,6 +59,7 @@ for i=1:numel(methodText)
 %     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
 
 end
-methodN = {'bayes','svm','ens'};
-plotErrorRateGroup(gt,pl,methodN,'classification performance of different methods on photos');
+featuresN = {'2D combine','3D combine','2D3D combine'};
+methodsN = {'bayes','svm','ens'};
+plotErrorRateGroup(gt,pl,featuresN,methodsN,'classification performance of different methods on photos');
 

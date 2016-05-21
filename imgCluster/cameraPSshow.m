@@ -1,50 +1,32 @@
 %% Camera position shows
-clear;
-close all;
-clc
+function cameraPSshow(ps,cluster,modelName)
 
-modelName = 'notredame';
+clusters = unique(cluster);
+% one more color for the building
+colors = hsv(numel(clusters)+1);
 
-matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/vpFea/selectedMatrix.matrix'];
+plotMarker = {'o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h'};
 
-fid = fopen(matrixFile,'r');
-ind = 0;
-%% read in data
-while 1
-    tline = fgetl(fid);
-    if tline == -1
-        break;
-    end
-    ind = ind + 1;
-    fileName{ind} = tline;
-    tline = fgetl(fid);
-    arr0 = strread(tline);
-    tline = fgetl(fid);
-    arr1 = strread(tline);
-    tline = fgetl(fid);
-    arr2 = strread(tline);
-    tline = fgetl(fid);
-    arr3 = strread(tline);
-    mv(ind,:,:) = [arr0(1:4);arr1(1:4);arr2(1:4);arr3(1:4)];
-    tline = fgetl(fid);
-    tline = fgetl(fid);
-    tline = fgetl(fid);
-    tline = fgetl(fid);
-end
-fclose(fid);
-
-[ps,cad,upd] = extractCameraInfo(mv);
 psx = ps(:,1);
 psy = ps(:,2);
 psz = ps(:,3);
-[X,Y] = meshgrid(psx,psy);
-% Z = griddata(psx,psy,psz,X,Y,'cubic');
-% mesh(X,Y,Z)
+
+figure
 hold on
-plot3(psx,psy,psz,'.','MarkerSize',16);
+for i=1:numel(clusters)
+    id = cluster == clusters(i);
+    plot3(psx(id),psy(id),psz(id),...
+    'LineStyle','none',...    
+    'Marker',plotMarker{i},...
+    'MarkerSize',16,...
+    'MarkerFaceColor',colors(i+1,:));
+end
 xlabel('x axis')
 ylabel('y axis')
 zlabel('z axis')
-plot3(0,0,0,'.','MarkerSize',25);
+plot3(0,0,0,'s','MarkerSize',25,...
+    'LineStyle','none',...
+    'MarkerFaceColor',colors(1,:));
 hold off
-grid on
+% grid on
+text(0,0,0,modelName);

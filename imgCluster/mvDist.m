@@ -29,8 +29,8 @@ method = 'meanshiftPCU'
 method = 'meanshiftPcu';
 % method = 'meanshiftMV';
 %%
-copyFlag = 1;
-output = 1;
+copyFlag = 0;
+output = 0;
 showDistribution = 0;
 
 while 1

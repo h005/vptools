@@ -1,5 +1,5 @@
 %% plot classify error rate Group
-function plotErrorRateGroup(gt, pl, fN, titleText)
+function plotErrorRateGroup(gt, pl, fN, methodN, titleText)
 % ref http://slidewiki.org/slide/24197
 % gt ground truth
     % nFeatures * mItem
@@ -33,7 +33,7 @@ bar(errRate);
 % for i=1:numel(errRate)
 %     bar(i,errRate(i),'parent',aHand,'facecolor',colors(i,:));
 % end
-set(gca, 'XTick', 1:numel(errRate), 'XTickLabel', fN)
+set(gca, 'XTick', 1:numel(errRate), 'XTickLabel', methodN)
 ylabel('Error Rate');
 title(titleText,'FontWeight','normal')
 axis([0.5,3.5,0,0.5])
