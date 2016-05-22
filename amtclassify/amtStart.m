@@ -1,32 +1,27 @@
 %% this script was a start file
-%% for Regress
+%% for generalRegress
 clear
 close all
 clc
 addpath('../');
 
-modelList = {
-    'bigben',...
-    'kxm',...
-    'notredame',...
-    'freeGodness',...
-    'tajMahal'
-};
+modelList = {'bigben','kxm','notredame','freeGodness','tajMahal'};
 
 anaMethodList = {
-    'classifyEach',...
-    'classifyCombine',...
-    'regress',...
-    'regressVirtual'...
-    'classifyVirtual'...
+    'generalClassifyEach',...
+    'generalClassifyCombine',...
+    'generalRegress',...
+    'generalRegressVirtual'...
+    'generalClassifyVirtual'...
+    'encodingClassifyCombine',...
     'LDL'};
 
 anaMethod = 2;
 
-if strcmp(anaMethodList{anaMethod},'classifyEach')
+if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%    
-    % top rate pictures will be assign good
-    % last rate pictures will be assign bad
+    % top rate pictures will be assign as good
+    % last rate pictures will be assign as bad
     % this parameters shold be modified as you like
     rate = 0.1;
     
@@ -44,24 +39,23 @@ if strcmp(anaMethodList{anaMethod},'classifyEach')
     % 2D feature
     [fs2d,fname] = combine(fea2d,scr);
     
-    % general classify method
+    % general classify method paramenters
     gcMethod = {anaMethodList{anaMethod},'2D',methodText{method}};
     
     [gt,pl,ps,ln,scl] = generalClassify(fs2d,rate,fname,gcMethod);
-    
     titleLabel = ['2D feature ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
 
     % 3D feature
     [fs3d,fname] = combine(fea3d,scr);
     
-    % general classify method
+    % general classify method parameters
     gcMethod = {anaMethodList{anaMethod},'3D',methodText{method}};
     
     [gt,pl,ps,ln,scl] = generalClassify(fs3d,rate,fname,gcMethod);
     titleLabel = ['3D feature ' plotMethods{plotMethodsId}  ' curve of ' methodText{method}];
     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
-elseif strcmp(anaMethodList{anaMethod},'classifyVirtual')
+elseif strcmp(anaMethodList{anaMethod},'generalClassifyVirtual')
 %%
     % top rate pictures will be assign good
     % last rate pictures will be assign bad
@@ -93,8 +87,8 @@ elseif strcmp(anaMethodList{anaMethod},'classifyVirtual')
     ps = predict(mdl,testFea');
     
     
-elseif strcmp(anaMethodList{anaMethod},'classifyCombine')
-%%
+elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
+%% calssiyfCombine
     % top rate pictures will be assign good
     % last rate pictures will be assign bad
     % this parameters should bbe modified as needed
@@ -137,9 +131,21 @@ elseif strcmp(anaMethodList{anaMethod},'classifyCombine')
     plotMethodsId = 1;
     titleLabel = ['combine features ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
-elseif strcmp(anaMethodList{anaMethod},'regress')
-
-    % scr score regress
+elseif strcmp(anaMethodList{anaMethod},'encodingClassifyCombine')
+%% encoding classify by combined features
+    % top rate pictures will be assigned as good
+    % last rate pictures will be assigned as bad
+    % this paramenters should will be modified as needed
+    rate = 0.8;
+    % load Data
+    % sc = scload(scorefile,sceneName);
+    [sc,scr,fea2d,fea3d] = dataLoad(modelList);
+    [fs,fname] = combine(fea)
+    
+    
+elseif strcmp(anaMethodList{anaMethod},'generalRegress')
+%% generalRegress
+    % scr score generalRegress
 
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 
@@ -147,10 +153,10 @@ elseif strcmp(anaMethodList{anaMethod},'regress')
     [fs2d,fname] = combine(fea2d,scr);
     [fs3d,fname] = combine(fea3d,scr);
     titleText = {
-        'gaussian regress',...
-        'svm regress', ...
-        'ens regress'};
-    % regress method
+        'gaussian generalRegress',...
+        'svm generalRegress', ...
+        'ens generalRegress'};
+    % generalRegress method
     Rmethod = 1;
 
 %     failed with gmm the features was not a gauss distribution
@@ -169,17 +175,17 @@ elseif strcmp(anaMethodList{anaMethod},'regress')
     
 elseif strcmp(anaMethodList{anaMethod},'LDL')
 
-elseif strcmp(anaMethodList{anaMethod},'regressVirtual')
-    
+elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
+%% virtual generalRegress
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 
     [fs,fname] = combine(fea2d,fea3d,scr);
     
     titleText = {
-        'gaussian regress',...
-        'svm regress', ...
-        'ens regress'};
-    % regress method
+        'gaussian generalRegress',...
+        'svm generalRegress', ...
+        'ens generalRegress'};
+    % generalRegress method
     Rmethod = 1;
 
 %     failed with gmm the features was not a gauss distribution
