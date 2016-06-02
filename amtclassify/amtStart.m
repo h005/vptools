@@ -5,18 +5,19 @@ close all
 clc
 addpath('../');
 
-modelList = {'bigben','kxm','notredame','freeGodness','tajMahal'};
+modelList = {'bigben','kxm','notredame','freeGodness','tajMahal','cctv','tam'};
 
 anaMethodList = {
-    'generalClassifyEach',...
-    'generalClassifyCombine',...
-    'generalRegress',...
-    'generalRegressVirtual'...
-    'generalClassifyVirtual'...
-    'encodingClassifyCombine',...
-    'LDL'};
+    'generalClassifyEach',... % 1
+    'generalClassifyCombine',... % 2
+    'generalRegress',... % 3
+    'generalRegressVirtual'... % 4
+    'generalClassifyVirtual'... % 5
+    'encodingClassifyCombine',... % 6
+    'svm2kClassifyCombine',... % 7
+    'LDL'}; % 8
 
-anaMethod = 2;
+anaMethod = 4;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%    
@@ -74,7 +75,8 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyVirtual')
     method = 2;
     [mdl, scaler] = getClassifier(fs,rate,methodText{method});
     
-    virtualModel = {'teaHouse'};
+%     virtualModel = {'teaHouse'};
+    virtualModel = {'zb'};
     
     [vfea2d,vfea3d] = vdataLoad(virtualModel);
     
@@ -140,7 +142,7 @@ elseif strcmp(anaMethodList{anaMethod},'encodingClassifyCombine')
     % load Data
     % sc = scload(scorefile,sceneName);
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
-    [fs,fname] = combine(fea)
+    [fs,fname] = combine(fea);
     
     
 elseif strcmp(anaMethodList{anaMethod},'generalRegress')
@@ -175,6 +177,13 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegress')
     
 elseif strcmp(anaMethodList{anaMethod},'LDL')
 
+    
+elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombine')
+%% svm2k Classify combine
+    [gt,pl] = svm2kStart(modelList,rate);
+    ln = {'svm2k'};
+    plotErrorRate(gt,pl,ln,['svm2k of different method on photos']);
+    
 elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
 %% virtual generalRegress
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
@@ -182,9 +191,9 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
     [fs,fname] = combine(fea2d,fea3d,scr);
     
     titleText = {
-        'gaussian generalRegress',...
-        'svm generalRegress', ...
-        'ens generalRegress'};
+        'gaussian regress',...
+        'svm regress', ...
+        'ens regress'};
     % generalRegress method
     Rmethod = 1;
 
@@ -195,7 +204,8 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
     
     [mdl,scaler] = getRegresser(fs,titleText{Rmethod});
            
-    virtualModel = {'teaHouse'};
+%     virtualModel = {'zb'};
+    virtualModel = {'villa7'};
     
     [vfea2d,vfea3d] = vdataLoad(virtualModel);
     
@@ -205,6 +215,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
     
     testFea = datascaling(scaler,vf);
     
-    ps = predict(mdl,testFea');
+    [ps,score] = predict(mdl,testFea');
     
+    showColorMap;
 end

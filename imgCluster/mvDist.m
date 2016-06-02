@@ -25,12 +25,14 @@ method = 'meanshiftPCU'
         'meanshiftPcu'
         'meanshiftMV'
         'kmedoidsMV'
+        'meanshiftP'
+        'meanshiftCUp'
 %}
-method = 'meanshiftPcu';
-% method = 'meanshiftMV';
+% method = 'kmedoidsMV';
+method = 'kmedoidsMV';
 %%
-copyFlag = 0;
-output = 0;
+copyFlag = 1;
+output = 1;
 showDistribution = 0;
 
 while 1
@@ -63,23 +65,45 @@ ps = ps(1:num,:);
 cad = cad(1:num,:);
 upd = upd(1:num,:);
 
+
+validIndex = clearOutLiers(ps);
+ps = ps(validIndex,:);
+cad = cad(validIndex,:);
+upd = upd(validIndex,:);
+% copy fileName
+for i=1:numel(validIndex)
+    fileList{i} = fileName{validIndex(i)};
+end
+fileName = fileList;
+mv = mv(validIndex,:,:);
+ind = numel(validIndex);
 % mv = mv(1:100,:,:);
 
 switch method
     case 'kmedoidsMV'
         [cluster,clusterCenter] = picKmedoidsMV(mv);
+%         cameraPSshow(ps,cluster,modelName);
+%         plotModel;
+%         cameraPSshow(ps,cluster,modelName);
     case 'meanshiftMV'
         [cluster,label,clusterCenter] = picMeanShiftMV(mv);
     case 'meanshiftPCU'
         [id,cluster,label,clusterCenter] = picMeanShift(ps,cad,upd);
+    case 'meanshiftP'
+        [id,cluster,label,clusterCenter] = picMeanShiftPS(ps);
+        clusterCenter = [clusterCenter,clusterCenter,clusterCenter];
+        cameraPSshow(ps,cluster,modelName);
     case 'meanshiftPcu'
+        
         ncases = size(ps,1);
         id = zeros(ncases,1);
         cluster = zeros(ncases,1);
         label = cell(ncases,1);
+        
     %     clusterCenter = zeros(ncases,9);
         [idPS,clusterPS,labelPS,clusterCenterPS] = picMeanShiftPS(ps);
         numClusterPS = size(clusterCenterPS,1);
+        cameraPSshow(ps,clusterPS,modelName);
         % num of cluster
         ncl = 0;
         pcCluster = zeros(2,numClusterPS);
@@ -97,6 +121,31 @@ switch method
             end
             pcCluster(2,i) = ncl;
         end
+    case 'meanshiftCUp'
+        ncases = size(ps,1);
+        id = zeros(ncases,1);
+        cluster = zeros(ncases,1);
+        label = cell(ncases,1);
+
+        [idcu,clustercu,labelcu,clusterCentercu] = picMeanShiftCU(cad,upd);
+        numClustercu = size(clusterCentercu,1);
+        ncl = 0;
+        pcCluster = zeros(2,numClustercu);
+
+        for i=1:numClustercu
+            clSet = find(clustercu == i);
+            [idPS,clusterPS,labelPS,clusterCenterPS] = picMeanShiftPS(ps(clSet,:));
+            pcCluster(1,i) = ncl+1;
+            % sub clusters
+            for j=1:size(clusterCenterPS,1)
+                ncl = ncl + 1;
+                cuSet = find(clusterPS == j);
+                cluster(clSet(cuSet)) = ncl;
+                clusterCenter(ncl,:) = [clusterCenterPS(j,:),clusterCentercu(i,:)];
+            end
+            pcCluster(2,i) = ncl;
+        end
+        
 end
 %% plot the result
 % histogram(cluster,max(cluster));

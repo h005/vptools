@@ -11,13 +11,15 @@ modelList = {
     'kxm',...
     'notredame'...
     'freeGodness'...
-    'tajMahal'
+    'tajMahal',...
+    'cctv'
+%     'tam'
 };
 
 % top rate pictures will be assign good
 % last rate pictures will be assign bad
 % this parameters should bbe modified as needed
-rate = 0.10;
+rate = 0.08;
 % load Data
 % sc = scload(scorefile,sceneName);
 [sc,scr,fea2d,fea3d] = dataLoad(modelList);
@@ -39,11 +41,11 @@ for i=1:numel(methodText)
     % pl  preLabel
     % ln  plotroc legend name
     % general classify methods
-    gcMethod = {'classifyCombine','2D combine',methodText{i}};
+    gcMethod = {'generalClassifyCombine','2D combine',methodText{i}};
     [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
-    gcMethod = {'classifyCombine','3D combine',methodText{i}};
+    gcMethod = {'generalClassifyCombine','3D combine',methodText{i}};
     [gt2,pl2,ps2,ln2,scl2] = generalClassify(fs3d,rate,fname,gcMethod);
-    gcMethod = {'classifyCombine','2D3D combine',methodText{i}};
+    gcMethod = {'generalClassifyCombine','2D3D combine',methodText{i}};
     [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs,rate,fname,gcMethod);
 
     gt{i} = [gt1;gt2;gt3];

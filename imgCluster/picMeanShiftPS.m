@@ -14,8 +14,21 @@ for i = 1:ncases
     disGraph(i,:) = disVec;
 end
 minDis = min(min(disGraph));
-maxDis = max(max(disGraph));
-r = (maxDis - minDis) * 0.05 + minDis;
+% maxDis = max(max(disGraph));
+
+[N,edges] = histcounts(disGraph);
+rMax = edges(end);
+total = sum(N);
+acc = 0;
+for i = 1 : N
+    if acc / total > 0.95
+        rMax = edges(i);
+        break;
+    end
+    acc = N(i) + acc;  
+end
+
+r = (rMax - minDis) * 0.1 + minDis;
 clear disGraph;
 
 for i = 1:ncases

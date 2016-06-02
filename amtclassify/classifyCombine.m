@@ -74,7 +74,7 @@ for j=1:nfold
         mdl = ensClassify(trainFea,trainLabel);
         [tmppl,score] = predict(mdl,testFea');
         preScore(test) = score(:,2);
-        preLabel(test) = tmppl;
+        preLabel(test) = tmppl;        
     end
     scLabel = mdl.ClassNames(end);
 end
