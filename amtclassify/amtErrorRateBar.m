@@ -19,7 +19,7 @@ modelList = {
 % top rate pictures will be assign good
 % last rate pictures will be assign bad
 % this parameters should bbe modified as needed
-rate = 0.08;
+rate = 0.10;
 % load Data
 % sc = scload(scorefile,sceneName);
 [sc,scr,fea2d,fea3d] = dataLoad(modelList);
@@ -61,7 +61,7 @@ for i=1:numel(methodText)
 %     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
 
 end
-featuresN = {'2D combine','3D combine','2D3D combine'};
-methodsN = {'bayes','svm','ens'};
-plotErrorRateGroup(gt,pl,featuresN,methodsN,'classification performance of different methods on photos');
+featuresN = {'2D','3D','2D&3D'};
+methodsN = {'Bayes','SVM','Ens'};
+plotErrorRateGroup(gt,pl,featuresN,methodsN,'Classification performance of different methods on photos');
 

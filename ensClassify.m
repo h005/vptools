@@ -4,4 +4,4 @@ function mdl = ensClassify(trainFea,trainLabel)
 trainFea = trainFea';
 trainLabel = trainLabel';
 % details see doc fitensemble
-mdl = fitensemble(trainFea,trainLabel,'AdaBoostM1',100,'Tree');
+mdl = fitensemble(trainFea,trainLabel,'AdaBoostM1',80,'Tree');

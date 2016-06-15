@@ -5,7 +5,7 @@ close all
 clc
 addpath('../');
 
-modelList = {'bigben','kxm','notredame','freeGodness','tajMahal','cctv','tam'};
+modelList = {'bigben','kxm','notredame','freeGodness','tajMahal','cctv'};
 
 anaMethodList = {
     'generalClassifyEach',... % 1

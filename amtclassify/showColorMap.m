@@ -19,8 +19,9 @@ ylabel('y label');
 fig = figure;
 image(img,'CDataMapping','scaled')
 colormap jet
+colorbar
 axis off
-savePath = ['/home/h005/Documents/vpDataSet/' virtualModel{1} '/colormap90_360' virtualModel{1} '.jpg'];
+savePath = ['/home/h005/Documents/vpDataSet/' virtualModel{1} '/colormap90_360svm' virtualModel{1} '.jpg'];
 disp(savePath)
 saveas(fig,savePath);
 % grid off
