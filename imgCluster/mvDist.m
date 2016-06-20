@@ -6,7 +6,7 @@ imgSource = '/home/h005/Documents/vpDataSet/notredame/imgs';
 clusterDest = '/home/h005/Documents/vpDataSet/notredame/cluster';
 feaFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.fs';
 %}
-modelName = 'notredame';
+modelName = 'cctv3';
 % matrixFile = '/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.matrix';
 matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/vpFea/selectedMatrix.matrix'];
 % imgSource = '/home/h005/Documents/vpDataSet/kxm/imgs';
@@ -67,6 +67,8 @@ upd = upd(1:num,:);
 
 
 validIndex = clearOutLiers(ps);
+% do not clear outliers
+validIndex = 1:num;
 ps = ps(validIndex,:);
 cad = cad(validIndex,:);
 upd = upd(validIndex,:);

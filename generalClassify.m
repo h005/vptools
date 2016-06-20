@@ -39,6 +39,26 @@ else
                 = classifyCombine(fs,rate,fname,method{3});
             ln = {'2D3D combine'};
         end
+    elseif strcmp(method{1},'generalGMMClassifyCombine')
+        if strcmp(method{2},'2D combine')
+            disp('2D combine')
+%             if strcmp(method{3},'ens classify')
+%                 disp('debug')
+%             end
+            [gt,pl,ps,scl] ...
+                = gmmClassifyCombine(fs,rate,fname,method{3});
+            ln = {'2D combine'};
+        elseif strcmp(method{2},'3D combine')
+            disp('3D combine')
+            [gt,pl,ps,scl] ...
+                = gmmClassifyCombine(fs,rate,fname,method{3});
+            ln = {'3D combine'};
+        elseif strcmp(method{2},'2D3D combine')
+            disp('2D3D combine')
+            [gt,pl,ps,scl] ...
+                = gmmClassifyCombine(fs,rate,fname,method{3});
+            ln = {'2D3D combine'};
+        end
     elseif strcmp(method{1},'svm2kClassifyCombine')
         if ~strcmp(method{2},'2D3D combine')
             disp('general calssify paramenter error');
