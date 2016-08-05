@@ -1,0 +1,19 @@
+%% fea2d start
+% this script was created to compute deep visual features for each model
+
+modelList = {
+    'bigben',...
+    'kxm',...
+    'notredame',...
+    'freeGodness',...
+    'tajMahal',...
+    'cctv3'...
+    };
+
+% load filename list
+for i=1:numel(modelList)
+    fileList = fileLoad(modelList{i});
+    flieList = {fileList{1},fileList{2}};
+    fea = visFea(fileList{1});
+end
+

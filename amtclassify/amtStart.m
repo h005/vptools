@@ -5,7 +5,14 @@ close all
 clc
 addpath('../');
 
-modelList = {'bigben','kxm','notredame','freeGodness','tajMahal','cctv'};
+modelList = {
+    'bigben',...
+    'kxm',...
+    'notredame',...
+    'freeGodness',...
+    'tajMahal',...
+    'cctv3'...
+    };
 
 anaMethodList = {
     'generalClassifyEach',... % 1
@@ -17,7 +24,7 @@ anaMethodList = {
     'svm2kClassifyCombine',... % 7
     'LDL'}; % 8
 
-anaMethod = 4;
+anaMethod = 2;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%    
@@ -101,6 +108,13 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
     [fs,fname] = combine(fea2d,fea3d,scr);
     [fs2d,fname] = combine(fea2d,scr);
     [fs3d,fname] = combine(fea3d,scr);
+    % select for some features
+    % details was showed in feaNameLoad.m
+%     [visualFea, geometricFea,validVisIndex, validGeoIndex] = feaNameLoad();
+%     fs2d = fs2d(:,[validVisIndex,size(fs2d,2)]);
+%     fs3d = fs3d(:,[validGeoIndex,size(fs3d,2)]);
+%     fs = fs(:,[validVisIndex,visualFea{end}.index(end)+validGeoIndex, size(fs,2)]);
+    
     % set Method 
     methodText = {
         'bayes classify',...
@@ -201,21 +215,34 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
 %     idx = gmmClassify(fs(:,1:end-1),length(modelList));
 
 %     generalRegress(fs,fs2d,fs3d,titleText{Rmethod});
-    
+
+%     Train without direction features
+%     boundingBox 13:21, ballCoord 22:23, 2DTheta ,37:41
+    directionIndex = [];
+    allIndex = 1:size(fs,2);
+    unDirIndex = setdiff(allIndex,directionIndex);
+    fs = fs(:,unDirIndex);
+
     [mdl,scaler] = getRegresser(fs,titleText{Rmethod});
            
 %     virtualModel = {'zb'};
-    virtualModel = {'villa7'};
+    virtualModel = {'njuGuLou2'};
     
     [vfea2d,vfea3d] = vdataLoad(virtualModel);
     
     [vf,vfname] = combine(vfea2d,vfea3d);
     
+    allIndex = 1:size(vf,2);
+    unDirIndex = setdiff(allIndex,directionIndex);
+    vf = vf(:,unDirIndex);
+    
     vf = vf';
     
     testFea = datascaling(scaler,vf);
     
-    [ps,score] = predict(mdl,testFea');
+%     [ps,score] = predict(mdl,testFea');
+    ps = predict(mdl,testFea');
     
+%     videoResult
     showColorMap;
 end

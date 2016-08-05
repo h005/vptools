@@ -28,15 +28,15 @@ for i=1:numel(fN)
     Y{i} = tmpy;
 end
 figure
-plot(X{1},Y{1},'Marker',plotMarker{1});
+plot(X{1},Y{1},'Marker',plotMarker{1},'MarkerSize',2);
 hold on
 for i=2:length(fN)
-    plot(X{i},Y{i},'Marker',plotMarker{i});
+    plot(X{i},Y{i},'Marker',plotMarker{i},'MarkerSize',2);
 end
 legend(fN,'Location','best');
 xlabel('False positive rate');
 ylabel('True positive rate');
-title(titleLabel,'FontWeight','normal');
+% title(titleLabel,'FontWeight','normal');
 hold off
 end
 

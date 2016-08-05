@@ -15,17 +15,24 @@ modelList = {
     'cctv3'
 %     'tam'
 };
+% this code was created for some selected features
+[visualFea, geometricFea,validVisIndex, validGeoIndex] = feaNameLoad();
 
 % top rate pictures will be assign good
 % last rate pictures will be assign bad
 % this parameters should bbe modified as needed
-rate = 0.10;
+rate = 0.1;
 % load Data
 % sc = scload(scorefile,sceneName);
 [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 [fs,fname] = combine(fea2d,fea3d,scr);
 [fs2d,fname] = combine(fea2d,scr);
 [fs3d,fname] = combine(fea3d,scr);
+
+% fs2d = fs2d(:,[validVisIndex,size(fs2d,2)]);
+% fs3d = fs3d(:,[validGeoIndex,size(fs3d,2)]);
+% % this code was created for some selected features
+% fs = fs(:,[validVisIndex,visualFea{end}.index(end)+validGeoIndex, size(fs,2)]);
 % set Method
 methodText = {
     'bayes classify',...
