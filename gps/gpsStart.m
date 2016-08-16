@@ -1,10 +1,13 @@
 %% this script was created to test gps coordinate
-path = '/media/h005/h005_D/viewpoint/20160723/njnuIpad';
-imgFile = [path '/IMG_' '0925' '.JPG'];
+path = '/media/h005/h005_D/viewpoint/nju2';
+% path = '.';
+imgFile = [path '/IMG_0' '917' '.JPG'];
 
 imInfo1 = imfinfo(imgFile);
-imgFile = [path '/IMG_' '0924' '.JPG'];
+imgFile = [path '/IMG_0' '918' '.JPG'];
 imInfo2 = imfinfo(imgFile);
+imInfo1.GPSInfo
+imInfo2.GPSInfo
 lat1 = imInfo1.GPSInfo.GPSLatitude;
 lat2 = imInfo2.GPSInfo.GPSLatitude;
 lon1 = imInfo1.GPSInfo.GPSLongitude;

@@ -4,4 +4,4 @@ function regTreeEns = ensRegress(trainFea,trainScore)
 trainFea = trainFea';
 trainScore = trainScore';
 regTreeTemp = templateTree('Surrogate','On');
-regTreeEns = fitensemble(trainFea,trainScore,'LSBoost',100,regTreeTemp);
+regTreeEns = fitensemble(trainFea,trainScore,'Bag',50,regTreeTemp,'Type','regression');

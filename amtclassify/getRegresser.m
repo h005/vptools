@@ -15,5 +15,5 @@ if strcmp(method,'gaussian regress')
 elseif strcmp(method,'svm regress')
     mdl = svmRegress(trainFea,score);
 elseif strcmp(method,'ens regress')
-    mdl = svmRegress(trainFea,score);
+    mdl = ensRegress(trainFea,score);
 end

@@ -1,6 +1,10 @@
 %% plot classify error rate Group
 function plotErrorRateGroup(gt, pl, fN, methodN, titleText)
 % ref http://slidewiki.org/slide/24197
+%     Classifier Accuracy, or recognition rate: percentage of test set tuples that are correctly classified
+%     Accuracy = (TP + TN)/All
+%     Error rate: 1 – accuracy, or
+%     Error rate = (FP + FN)/All
 % gt ground truth
     % nFeatures * mItem
 % pl predict label

@@ -24,7 +24,7 @@ anaMethodList = {
     'svm2kClassifyCombine',... % 7
     'LDL'}; % 8
 
-anaMethod = 2;
+anaMethod = 4;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%    
@@ -209,7 +209,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
         'svm regress', ...
         'ens regress'};
     % generalRegress method
-    Rmethod = 1;
+    Rmethod = 3;
 
 %     failed with gmm the features was not a gauss distribution
 %     idx = gmmClassify(fs(:,1:end-1),length(modelList));
@@ -226,7 +226,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
     [mdl,scaler] = getRegresser(fs,titleText{Rmethod});
            
 %     virtualModel = {'zb'};
-    virtualModel = {'njuGuLou2'};
+    virtualModel = {'njuSample'};
     
     [vfea2d,vfea3d] = vdataLoad(virtualModel);
     
