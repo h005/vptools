@@ -5,6 +5,7 @@ close all
 clc
 
 addpath('../');
+addpath('../fisherVector/')
 
 modelList = {
     'bigben',...
@@ -48,12 +49,17 @@ for i=1:numel(methodText)
     % pl  preLabel
     % ln  plotroc legend name
     % general classify methods
-    gcMethod = {'generalClassifyCombine','2D combine',methodText{i}};
+    
+    
+    gcMethod = {'FVclassifyCombine','2D combine',methodText{i}};
     [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
-    gcMethod = {'generalClassifyCombine','3D combine',methodText{i}};
-    [gt2,pl2,ps2,ln2,scl2] = generalClassify(fs3d,rate,fname,gcMethod);
-    gcMethod = {'generalClassifyCombine','2D3D combine',methodText{i}};
-    [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs,rate,fname,gcMethod);
+    
+%     gcMethod = {'generalClassifyCombine','2D combine',methodText{i}};
+%     [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
+%     gcMethod = {'generalClassifyCombine','3D combine',methodText{i}};
+%     [gt2,pl2,ps2,ln2,scl2] = generalClassify(fs3d,rate,fname,gcMethod);
+%     gcMethod = {'generalClassifyCombine','2D3D combine',methodText{i}};
+%     [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs,rate,fname,gcMethod);
 
     gt{i} = [gt1;gt2;gt3];
 %     ps = [ps1;ps2;ps3];

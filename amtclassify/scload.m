@@ -24,7 +24,7 @@ while 1
     % just load base name
     [pathstr,name,ext] = fileparts(tline);
     % add this as prefix
-    sc{ind}.fname = [sceneName '_' name ext];
+    sc{ind}.fname = [sceneName '/' name ext];
     tline = fgetl(fid);
     tline = strtrim(tline);
     score = strread(tline);

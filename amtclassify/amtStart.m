@@ -22,16 +22,17 @@ anaMethodList = {
     'generalClassifyVirtual'... % 5
     'encodingClassifyCombine',... % 6
     'svm2kClassifyCombine',... % 7
-    'LDL'}; % 8
+    'generalClassifyCombineFisherVector',... % 8
+    'LDL'}; % 9
 
-anaMethod = 4;
+anaMethod = 1;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%    
     % top rate pictures will be assign as good
     % last rate pictures will be assign as bad
     % this parameters shold be modified as you like
-    rate = 0.1;
+    rate = 0.08;
     
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 
@@ -63,6 +64,26 @@ if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
     [gt,pl,ps,ln,scl] = generalClassify(fs3d,rate,fname,gcMethod);
     titleLabel = ['3D feature ' plotMethods{plotMethodsId}  ' curve of ' methodText{method}];
     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
+elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombineFisherVector')
+    rate = 0.08;
+    [sc,scr,fea2d,fea3d] = dataLoad(modelList);
+    [fs,fname] = combine(fea2d,fea3d,scr);
+    [fs3d,fname] = combine(fea3d,scr);
+    % set Method
+    methodText = {
+    'bayes classify',...
+    'svm classify',...
+    'ens classify'
+    };
+    for i = 1:numel(methodText)
+        gcMethod = {'generalClassifyCombineFV','2D combine',methodText{i}};
+        [gt1,pl1,ps1,ln1,scl1] = 
+        gcMethod = {'generalClassifyCombineFV','2D combine',methodText{i}};
+        
+        gcMethod = {'generalClassifyCombineFV','2D combine',methodText{i}};
+    end
+    
+    
 elseif strcmp(anaMethodList{anaMethod},'generalClassifyVirtual')
 %%
     % top rate pictures will be assign good

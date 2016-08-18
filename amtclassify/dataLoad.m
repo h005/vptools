@@ -9,9 +9,9 @@ fea3d = {};
 % visit models
 for i = 1 : length(models)
     sceneName = models{i};
-    scorefile = ['/home/h005/Documents/vpDataSet/' sceneName '/score/' sceneName '.sc'];
-    fea2Dfile = ['/home/h005/Documents/vpDataSet/' sceneName '/vpFea/' sceneName '.2df'];
-    fea3Dfile = ['/home/h005/Documents/vpDataSet/' sceneName '/vpFea/' sceneName '.3df'];
+    scorefile = ['../vpData/' sceneName '/score/' sceneName '.sc'];
+    fea2Dfile = ['../vpData/' sceneName '/vpFea/' sceneName '.2df'];
+    fea3Dfile = ['../vpData/' sceneName '/vpFea/' sceneName '.3df'];
 
     sctmp = scload(scorefile,sceneName);
     scrtmp = assScore(sctmp,'ave');
