@@ -13,7 +13,7 @@ function plotErrorRateGroup(gt, pl, fN, methodN, titleText)
     % nFeatures with names
 mMethods = numel(gt);
 [nFeatures,mItem] = size(gt{1});
-errRate = zeros(nFeatures,mMethods);
+errRate = zeros(mMethods,nFeatures);
 
 for i=1:mMethods
     for j=1:nFeatures

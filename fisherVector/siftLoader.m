@@ -4,7 +4,10 @@ function fea = siftLoader(fileList)
 % what we load is a matrix d mfeaturs * ncases
 fea = [];
 for i=1:numel(fileList)
-    load(fileList{i})
-    d = single(d);
+    load(fileList{i})                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+%     d = single(d);
     fea = [fea,d];
+    if rem(i,1000) == 0
+        disp(['load ' num2str(i) ' done']);
+    end
 end

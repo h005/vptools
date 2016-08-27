@@ -79,7 +79,7 @@ else
             ln = {'3D combine'};
         elseif strcmp(method{2},'2D3D combine')
             [gt, pl, ps, scl]...
-                = classifyCombineFV(fs,rate,fname,method{3});
+                = classifyCombineFV2d3d(fs,rate,fname,method{3});
             ln = {'2D3D combine'};
         end
     else

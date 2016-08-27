@@ -77,7 +77,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombineFisherVector')
     };
     for i = 1:numel(methodText)
         gcMethod = {'generalClassifyCombineFV','2D combine',methodText{i}};
-        [gt1,pl1,ps1,ln1,scl1] = 
+%         [gt1,pl1,ps1,ln1,scl1] = 
         gcMethod = {'generalClassifyCombineFV','2D combine',methodText{i}};
         
         gcMethod = {'generalClassifyCombineFV','2D combine',methodText{i}};

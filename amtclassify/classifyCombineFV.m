@@ -33,14 +33,29 @@ preScore = zeros(1, 2 * num);
 % assume that our generate data is dict
 % dict is mfeatures * ncases
 siftFname = convertFname(fname);
-dict = siftLoader(siftFname);
+dict1 = siftLoader(siftFname(negIdx));
+dict2 = siftLoader(siftFname(posIdx));
+dict = [dict1,dict2];
+clear dict1 dict2;
+% pack;
+dict = single(dict);
 numClusters = 30;
 [means, covariances, priors] = vl_gmm(dict,numClusters);
-fea1 = siftLoader(siftFname{negIdx});
-fea2 = siftLoader(siftFname{posIdx});
-fea = [fea1,fea2];
-fea = vl_fisher(fea, means, covariances, priors);
+clear dict
+fea = [];
+for i = 1:numel(negIdx)
+    fea1 = siftLoader(siftFname(negIdx(i)));
+    fea1 = single(fea1);
+    fea1 = vl_fisher(fea1, means, covariances, priors);
+    fea = [fea,fea1];
+end
 
+for i = 1:numel(posIdx)
+    fea1 = siftLoader(siftFname(posIdx(i)));
+    fea1 = single(fea1);
+    fea1 = vl_fisher(fea1, means, covariances, priors);
+    fea= [fea,fea1];
+end
 
 % N fold
 nfold = 10;

@@ -1,3 +1,4 @@
+%% this function was created to load feaname and corresponding index
 function feaName = loadFeaName(file)
 fid = fopen(file,'r');
 ind = 0;
@@ -11,6 +12,9 @@ while 1
     end
     
     tline = strtrim(tline);
+    if strcmp(tline,'')
+        continue;
+    end
     ind = ind + 1;
     exist = strcmp(name,tline);
     if sum(exist)
