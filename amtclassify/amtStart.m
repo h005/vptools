@@ -25,7 +25,7 @@ anaMethodList = {
     'generalClassifyCombineFisherVector',... % 8
     'LDL'}; % 9
 
-anaMethod = 1;
+anaMethod = 7;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%    
@@ -215,6 +215,7 @@ elseif strcmp(anaMethodList{anaMethod},'LDL')
     
 elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombine')
 %% svm2k Classify combine
+    rate = 0.08;
     [gt,pl] = svm2kStart(modelList,rate);
     ln = {'svm2k'};
     plotErrorRate(gt,pl,ln,['svm2k of different method on photos']);

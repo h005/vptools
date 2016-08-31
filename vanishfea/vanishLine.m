@@ -4,6 +4,7 @@
 % angles(1) the minimum angle between vanishline and horizon
 % angles(2:4) are angels between them sorted small to large
 function angles = vanishLine(points)
+
 angles = zeros(1,4);
 line = zeros(3,2);
 line(1,:) = points(2,:) - points(1,:);
