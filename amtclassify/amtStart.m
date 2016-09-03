@@ -22,18 +22,19 @@ anaMethodList = {
     'generalClassifyVirtual'... % 5
     'encodingClassifyCombine',... % 6
     'svm2kClassifyCombine',... % 7
-    'generalClassifyCombineFisherVector',... % 8
-    'LDL'}; % 9
+    'svm2kClassifyCombineCCA',... % 8
+    'generalClassifyCombineFisherVector',... % 9
+    'LDL'}; % 10
 
-anaMethod = 7;
+anaMethod = 8;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
-%%    
+%%
     % top rate pictures will be assign as good
     % last rate pictures will be assign as bad
     % this parameters shold be modified as you like
     rate = 0.08;
-    
+
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 
     methodText = {
@@ -43,24 +44,24 @@ if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
         };
     method = 2;
     plotMethods = {'ROC','PR','ROC PR'};
-    plotMethodsId = 1;   
-    
+    plotMethodsId = 1;
+
     % 2D feature
     [fs2d,fname] = combine(fea2d,scr);
-    
+
     % general classify method paramenters
     gcMethod = {anaMethodList{anaMethod},'2D',methodText{method}};
-    
+
     [gt,pl,ps,ln,scl] = generalClassify(fs2d,rate,fname,gcMethod);
     titleLabel = ['2D feature ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
 
     % 3D feature
     [fs3d,fname] = combine(fea3d,scr);
-    
+
     % general classify method parameters
     gcMethod = {anaMethodList{anaMethod},'3D',methodText{method}};
-    
+
     [gt,pl,ps,ln,scl] = generalClassify(fs3d,rate,fname,gcMethod);
     titleLabel = ['3D feature ' plotMethods{plotMethodsId}  ' curve of ' methodText{method}];
     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
@@ -77,13 +78,13 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombineFisherVector')
     };
     for i = 1:numel(methodText)
         gcMethod = {'generalClassifyCombineFV','2D combine',methodText{i}};
-%         [gt1,pl1,ps1,ln1,scl1] = 
+%         [gt1,pl1,ps1,ln1,scl1] =
         gcMethod = {'generalClassifyCombineFV','2D combine',methodText{i}};
-        
+
         gcMethod = {'generalClassifyCombineFV','2D combine',methodText{i}};
     end
-    
-    
+
+
 elseif strcmp(anaMethodList{anaMethod},'generalClassifyVirtual')
 %%
     % top rate pictures will be assign good
@@ -93,7 +94,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyVirtual')
     % load Data
     % sc = scload(scorefile,sceneName);
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
-    [fs,fname] = combine(fea2d,fea3d,scr);  
+    [fs,fname] = combine(fea2d,fea3d,scr);
     % set Method
     methodText = {
         'bayes classify',...
@@ -102,21 +103,21 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyVirtual')
         };
     method = 2;
     [mdl, scaler] = getClassifier(fs,rate,methodText{method});
-    
+
 %     virtualModel = {'teaHouse'};
     virtualModel = {'zb'};
-    
+
     [vfea2d,vfea3d] = vdataLoad(virtualModel);
-    
+
     [vf,vfname] = combine(vfea2d,vfea3d);
-    
+
     vf = vf';
-    
+
     testFea = datascaling(scaler,vf);
-    
+
     ps = predict(mdl,testFea');
-    
-    
+
+
 elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
 %% calssiyfCombine
     % top rate pictures will be assign good
@@ -135,8 +136,8 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
 %     fs2d = fs2d(:,[validVisIndex,size(fs2d,2)]);
 %     fs3d = fs3d(:,[validGeoIndex,size(fs3d,2)]);
 %     fs = fs(:,[validVisIndex,visualFea{end}.index(end)+validGeoIndex, size(fs,2)]);
-    
-    % set Method 
+
+    % set Method
     methodText = {
         'bayes classify',...
         'svm classify',...
@@ -154,14 +155,14 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
     [gt2,pl2,ps2,ln2,scl2] = generalClassify(fs3d,rate,fname,gcMethod);
     gcMethod = {anaMethodList{anaMethod},'2D3D combine',methodText{method}};
     [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs,rate,fname,gcMethod);
-    
+
     gt = [gt1;gt2;gt3];
     ps = [ps1;ps2;ps3];
     ln = [ln1;ln2;ln3];
     pl = [pl1;pl2;pl3];
-    
+
     scl = scl1;
-    
+
     % plot classify error rate
     plotErrorRate(gt,pl,ln,[methodText{method} ' of different method on photos']);
     plotMethods = {'ROC','PR','ROC PR'};
@@ -178,8 +179,8 @@ elseif strcmp(anaMethodList{anaMethod},'encodingClassifyCombine')
     % sc = scload(scorefile,sceneName);
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
     [fs,fname] = combine(fea);
-    
-    
+
+
 elseif strcmp(anaMethodList{anaMethod},'generalRegress')
 %% generalRegress
     % scr score generalRegress
@@ -209,23 +210,32 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegress')
     % [score,predictScore] = amtRegress(fs3d,titleText{Rmethod});
     % showInfo(titleText{Rmethod},score,predictScore,'3d',2,3,3);
     % showErrInfo(titleText{Rmethod},score,predictScore,'2d+3d',2,3,6);
-    
+
 elseif strcmp(anaMethodList{anaMethod},'LDL')
 
-    
+
 elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombine')
 %% svm2k Classify combine
     rate = 0.08;
     [gt,pl] = svm2kStart(modelList,rate);
     ln = {'svm2k'};
     plotErrorRate(gt,pl,ln,['svm2k of different method on photos']);
-    
+elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombineCCA')
+%% CCA with svm2k combine
+    rate = 0.08;
+    % for valid both 2d and 3d features
+    % valid 2d or 3d featurs by modeList.
+    modeList  = {'2d3d','2d','3d'};
+    [gt,pl] = svm2kCCAStart(modelList,rate,modeList{1});
+    ln = {'svm2k'};
+    titleText = {'svm2k of different method on photos'};
+    plotErrorRate(gt,pl,ln,titleText);
 elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
 %% virtual generalRegress
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 
     [fs,fname] = combine(fea2d,fea3d,scr);
-    
+
     titleText = {
         'gaussian regress',...
         'svm regress', ...
@@ -246,25 +256,25 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
     fs = fs(:,unDirIndex);
 
     [mdl,scaler] = getRegresser(fs,titleText{Rmethod});
-           
+
 %     virtualModel = {'zb'};
     virtualModel = {'njuSample'};
-    
+
     [vfea2d,vfea3d] = vdataLoad(virtualModel);
-    
+
     [vf,vfname] = combine(vfea2d,vfea3d);
-    
+
     allIndex = 1:size(vf,2);
     unDirIndex = setdiff(allIndex,directionIndex);
     vf = vf(:,unDirIndex);
-    
+
     vf = vf';
-    
+
     testFea = datascaling(scaler,vf);
-    
+
 %     [ps,score] = predict(mdl,testFea');
     ps = predict(mdl,testFea');
-    
+
 %     videoResult
     showColorMap;
 end

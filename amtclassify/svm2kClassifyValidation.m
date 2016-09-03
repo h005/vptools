@@ -1,5 +1,5 @@
 %% this function was careted to run svm2k
-function [groundTruth, preLabel] = svm2kClassifyValidation(fs2d, fs3d, rate)
+function [groundTruth, preLabel] = svm2kClassifyValidation(fs2d, fs3d, rate, mode)
 nfold = 10;
 sc = fs2d(:,end);
 % sort sc asscend
@@ -40,6 +40,9 @@ for j=1:nfold
     test2d = fea2d(test,:);
     test3d = fea3d(test,:);
     
+    
+    %% these code may be recoded
+    % coded features by CCA
     % compute CCA
     [A,B,r,U,V] = canoncorr(tf2d,tf3d);
     % define a threshold here to control the cca features.
@@ -49,10 +52,22 @@ for j=1:nfold
     tf2d = U(:,ind);
     tf3d = V(:,ind);
     % map to another space
-    N = size(test2d,1);
-    test2d = (test2d - repmat(mean(test2d),N,1)) * A;
-    test3d = (test3d - repmat(mean(test3d),N,1)) * B;
+    if strcmp(mode,'2d3d')
+        N = size(test2d,1);
+        test2d = (test2d - repmat(mean(test2d),N,1)) * A;
+        test3d = (test3d - repmat(mean(test3d),N,1)) * B;
+    elseif strcmp(mode,'2d')
+        N = size(test2d,1);
+        test2d = (test2d - repmat(mean(test2d),N,1)) * A;
+        test3d = getFeaturesCCA(test2d,V,tf3d,B);
+    elseif strcmp(mode,'3d')
+        N = size(test3d,1);
+        test3d = (test3d - repmat(mean(test3d),N,1)) * B;
+        test2d = getFeaturesCCA(test3d,U,tf2d,A);
+    end
+        
     
+    %%
     % data scale
     [tf2d, ps] = mapminmax(tf2d',0,1);
     tf2d = tf2d';
@@ -87,4 +102,33 @@ for j=1:nfold
     preLabel(test) = pre;
     
 end
+end
+
+
+%% this function was created to compute features in another view
+% where ccaFea is the features of one view projected by CCA
+% ccaFeaDataSet is the features of another view projected by CCA
+% feaDataSet is the features of another view
+% convertPara is the convertParameters used to convert the features
+
+% ccaFea, ccaFeaDataSet and feaDataSet are all ncases * mfeatures
+
+function fea = getFeaturesCCA(ccaFea, ccaFeaDataSet, feaDataSet, convertPara)
+    N = size(ccaFea,1);
+    % compute distance by pdist2 and define the distance with cosine
+    dis = pdist2(ccaFea, ccaFeaDataSet,'cosine');
+    K = 1; % define K as 5
+    [dis,index] = sort(dis,2);
+    % construct feaData original just compute all nearest the features
+    feaDataOriginal = zeros(size(ccaFea,1),size(feaDataSet,2));
+    % alloc some space
+%     fea = zeros(size(ccaFea,1),);
+    for i=1:size(feaDataOriginal,1)
+        tmpFea = feaDataSet(index(1:K),:);
+        feaDataOriginal(i,:) = mean(tmpFea);
+    end
+    fea = (feaDataOriginal - repmat(mean(feaDataOriginal),N,1)) * convertPara;    
+end
+
+
 
