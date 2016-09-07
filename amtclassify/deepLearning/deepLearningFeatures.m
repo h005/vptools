@@ -48,14 +48,14 @@ fea = cfs;
 indices = crossvalind('Kfold',2 * num, nfold);
 
 % here we define the fold which index is 1 as the test dataSet
-test = (indices == 1);
-train = ~test;
+testIdx = (indices == 1);
+trainIdx = ~testIdx;
 
 % so our net input is
 % mapminmax 是按照行来归一化的，所以传入的参数要转置一下
-xTrain = fea(train,:);
+xTrain = fea(trainIdx,:);
 [xTrain, ps] = mapminmax(xTrain', 0, 1);
-xTest = fea(test,:);
+xTest = fea(testIdx,:);
 xTest = xTest';
 xTest = mapminmax('apply',xTest,ps);
 % 神经网络中输入的参数是按照ncases × mfeatures的，所以还需转置
@@ -78,7 +78,7 @@ feat1 = encode(autoenc1,xTrain);
 
 hiddenSize2 = 50;
 autoenc2 = trainAutoencoder(feat1,hiddenSize2,...
-    'MaxEpochs',100, ...
+    'MaxEpochs',400, ...
     'L2WeightRegularization',0.002, ...
     'SparsityRegularization',4, ...
     'SparsityProportion',0.1, ...
@@ -86,13 +86,37 @@ autoenc2 = trainAutoencoder(feat1,hiddenSize2,...
 
 feat2 = encode(autoenc2,feat1);
 
-softnet = trainSoftmaxLayer(feat2,groundTruth(train,:)','MaxEpochs',400);
+hiddenSize3 = 30;
+autoenc3 = trainAutoencoder(feat2,hiddenSize3,...
+    'MaxEpochs',400, ...
+    'L2WeightRegularization',0.002, ...
+    'SparsityRegularization',4, ...
+    'SparsityProportion',0.1, ...
+    'ScaleData', false);
+
+feat3 = encode(autoenc3,feat2);
+
+hiddenSize4 = 20;
+autoenc4 = trainAutoencoder(feat3,hiddenSize4,...
+    'MaxEpochs',400, ...
+    'L2WeightRegularization',0.002, ...
+    'SparsityRegularization',4, ...
+    'SparsityProportion',0.1, ...
+    'ScaleData', false);
+
+feat4 = encode(autoenc4,feat3);
+
+
+softnet = trainSoftmaxLayer(feat2,groundTruth(trainIdx,:)','MaxEpochs',400);
+
+% deepnet = stack(autoenc1,autoenc2,autoenc3,autoenc4,softnet);
 
 deepnet = stack(autoenc1,autoenc2,softnet);
 
+deepnet = train(deepnet,xTrain,groundTruth(trainIdx,:)');
 
 y = deepnet(xTest);
-plotconfusion(groundTruth(test,:)',y);
+plotconfusion(groundTruth(testIdx,:)',y);
 
 
 

@@ -18,7 +18,19 @@ hogHist
 2DTheta
 EntropyVariance
 EntropyVariance
-
+color blue mean
+color green mean
+color red mean
+HueHist
+HueHist
+HueHist
+HueHist
+HueHist
+HueEntropy
+SaturationHist
+SaturationHist
+SaturationHist
+SaturationEntropy
 vanish Line
 vanish Line
 vanish Line

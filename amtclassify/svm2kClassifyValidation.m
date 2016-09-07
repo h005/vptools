@@ -15,7 +15,7 @@ fea2d = zeros( 2 * num ,mfeatures - 1);
 fea2d(1:num,:) = fs2d(negIdx,1:end-1);
 fea2d(num+1:2*num,:) = fs2d(posIdx,1:end-1);
 
-[ncases, mfeaturs] = size(fs3d);
+[ncases, mfeatures] = size(fs3d);
 % ths last column of fs3d is score
 fea3d = zeros(2 * num, mfeatures - 1);
 fea3d(1:num,:) = fs3d(negIdx, 1:end-1);
@@ -46,12 +46,6 @@ for j=1:nfold
     % coded features by CCA
     % compute CCA
     [A,B,r,U,V] = canoncorr(tf2d,tf3d);
-    % define a threshold here to control the cca features.
-    % threshold is the features' coefficient of correlation
-    threshold = 0;
-    ind = r > threshold;
-    tf2d = U(:,ind);
-    tf3d = V(:,ind);
     % map to another space
     if strcmp(mode,'2d3d')
         N = size(test2d,1);
@@ -68,7 +62,13 @@ for j=1:nfold
 %         test2d = getFeaturesCCA(test3d,U,tf2d,A);
         test2d = getFeaturesCCA(test3d,U,r,0.8);
     end
-        
+    
+    % define a threshold here to control the cca features.
+    % threshold is the features' coefficient of correlation
+    threshold = 0;
+    ind = r > threshold;
+    tf2d = U(:,ind);
+    tf3d = V(:,ind);    
     
     %%
     % data scale

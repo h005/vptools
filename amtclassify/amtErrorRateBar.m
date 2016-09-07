@@ -59,6 +59,9 @@ for i=1:numel(methodText)
     
 %     gcMethod = {'generalClassifyCombine','2D combine',methodText{i}};
 %     [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
+    
+    gcMethod = {'generalClassifyCombine','2D combine',methodText{i}};
+    [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
 
     gcMethod = {'generalClassifyCombine','3D combine',methodText{i}};
     [gt2,pl2,ps2,ln2,scl2] = generalClassify(fs3d,rate,fname,gcMethod);
@@ -70,8 +73,8 @@ for i=1:numel(methodText)
     [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs,rate,fname,gcMethod);
     
     gt{i} = [gt1;gt2;gt3];
-%     ps = [ps1;ps2;ps3];
-%     ln{i} = [ln1;ln2;ln3];
+    ps = [ps1;ps2;ps3];
+    ln{i} = [ln1;ln2;ln3];
     pl{i} = [pl1;pl2;pl3];
 %     scl = scl1;
 

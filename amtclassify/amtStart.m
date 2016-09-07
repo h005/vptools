@@ -162,9 +162,9 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
     pl = [pl1;pl2;pl3];
 
     scl = scl1;
-
+    titleText = {[methodText{method} ' of different method on photos']};
     % plot classify error rate
-    plotErrorRate(gt,pl,ln,[methodText{method} ' of different method on photos']);
+    plotErrorRate(gt,pl,ln,titleText);
     plotMethods = {'ROC','PR','ROC PR'};
     plotMethodsId = 1;
     titleLabel = ['combine features ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
@@ -217,19 +217,31 @@ elseif strcmp(anaMethodList{anaMethod},'LDL')
 elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombine')
 %% svm2k Classify combine
     rate = 0.08;
-    [gt,pl] = svm2kStart(modelList,rate);
-    ln = {'svm2k'};
-    plotErrorRate(gt,pl,ln,['svm2k of different method on photos']);
+    [gt1,pl1] = svm2kStart(modelList,rate,0.8);
+    [gt2,pl2] = svm2kStart(modelList,rate,0.6);
+    [gt3,pl3] = svm2kStart(modelList,rate,0);
+    gt = [gt1;gt2;gt3];
+    pl = [pl1;pl2;pl3];    
+    ln = {'svm2kCoorRate 0.8','svm2kCoorRate 0.6','svm2kCoorRate 0'};
+    titleText = {'Svm2k of different method on photos'};
+    plotErrorRate(gt,pl,ln,titleText);
 elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombineCCA')
 %% CCA with svm2k combine
-    rate = 0.08;
+    rate = 0.1;
     % for valid both 2d and 3d features
     % valid 2d or 3d featurs by modeList.
     modeList  = {'2d3d','2d','3d'};
-    [gt,pl] = svm2kCCAStart(modelList,rate,modeList{1});
-    ln = {'svm2k'};
-    titleText = {'svm2k of different method on photos'};
+    % valid all the methods
+    [gt1,pl1] = svm2kCCAStart(modelList,rate,modeList{1});
+    [gt2,pl2] = svm2kCCAStart(modelList,rate,modeList{2});
+    [gt3,pl3] = svm2kCCAStart(modelList,rate,modeList{3});
+    gt = [gt1;gt2;gt3];
+    pl = [pl1;pl2;pl3];
+    ln = {'2d3d','2d','3d'};
+%     ln = {'svm2k'};
+    titleText = {'Svm2k of different method on photos'};
     plotErrorRate(gt,pl,ln,titleText);
+
 elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
 %% virtual generalRegress
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
