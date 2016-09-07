@@ -22,7 +22,7 @@ modelList = {
 % top rate pictures will be assign good
 % last rate pictures will be assign bad
 % this parameters should bbe modified as needed
-rate = 0.08;
+rate = 0.1;
 % load Data
 % sc = scload(scorefile,sceneName);
 [sc,scr,fea2d,fea3d] = dataLoad(modelList);
@@ -42,7 +42,7 @@ methodText = {
     };
 method = 2;
 tic
-for i=1:numel(methodText)
+for i=2:numel(methodText)
     
     % result preparing
     % gt  groundTruth
@@ -50,12 +50,10 @@ for i=1:numel(methodText)
     % ln  plotroc legend name
     % general classify methods
 
-    gcMethod = {'generalClassifyCombine','2D combine',methodText{i}};
-    [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
-
     
-%     gcMethod = {'FVclassifyCombine','2D combine',methodText{i}};
-%     [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
+    
+    gcMethod = {'FVclassifyCombine','2D combine',methodText{i}};
+    [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
     
 %     gcMethod = {'generalClassifyCombine','2D combine',methodText{i}};
 %     [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
@@ -66,8 +64,8 @@ for i=1:numel(methodText)
 %     gcMethod = {'FVclassifyCombine','2D3D combine',methodText{i}};
 %     [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs3d,rate,fname,gcMethod);
 
-    gcMethod = {'generalClassifyCombine','2D3D combine',methodText{i}};
-    [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs,rate,fname,gcMethod);
+    gcMethod = {'FVclassifyCombine','2D3D combine',methodText{i}};
+    [gt3,pl3,ps3,ln3,scl3] = generalClassify(fs3d,rate,fname,gcMethod);
     
     gt{i} = [gt1;gt2;gt3];
 %     ps = [ps1;ps2;ps3];

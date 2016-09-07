@@ -60,13 +60,11 @@ for j=1:nfold
     elseif strcmp(mode,'2d')
         N = size(test2d,1);
         test2d = (test2d - repmat(mean(test2d),N,1)) * A;
-%         test3d = getFeaturesCCA(test2d,V,tf3d,B);
-        test3d = getFeaturesCCASpace(test2d,V,r,0.8);
+        test3d = getFeaturesCCA(test2d,V,tf3d,B);
     elseif strcmp(mode,'3d')
         N = size(test3d,1);
         test3d = (test3d - repmat(mean(test3d),N,1)) * B;
-%         test2d = getFeaturesCCA(test3d,U,tf2d,A);
-        test2d = getFeaturesCCA(test3d,U,r,0.8);
+        test2d = getFeaturesCCA(test3d,U,tf2d,A);
     end
         
     
@@ -153,7 +151,8 @@ function fea = getFeaturesCCASpace(ccaFea, ccaFeaDataSet, corrRate, threshold)
     fea = zeros(N,len);
     for i=1:size(feaDataOriginal,1)
         tmpFea = feaDataSet(index(i,1:K),:);
-        fea(i,:) = mean(tmpFea);
+        
     end
+    
 end
 
