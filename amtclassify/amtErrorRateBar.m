@@ -49,10 +49,6 @@ for i=1:numel(methodText)
     % pl  preLabel
     % ln  plotroc legend name
     % general classify methods
-
-    gcMethod = {'generalClassifyCombine','2D combine',methodText{i}};
-    [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
-
     
 %     gcMethod = {'FVclassifyCombine','2D combine',methodText{i}};
 %     [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);

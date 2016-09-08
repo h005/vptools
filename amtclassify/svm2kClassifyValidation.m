@@ -25,8 +25,8 @@ groundTruth(1:num) = -1;
 groundTruth(num+1:2*num) = 1;
 label = groundTruth';
 
-% indices = crossvalind('Kfold',length(label),nfold);
-load('indices.mat');
+indices = crossvalind('Kfold',length(label),nfold);
+% load('indices.mat');
 
 scLabel = [];
 preLabel = zeros(2 * num, 1);
@@ -60,7 +60,7 @@ for j=1:nfold
         N = size(test3d,1);
         test3d = (test3d - repmat(mean(test3d),N,1)) * B;
 %         test2d = getFeaturesCCA(test3d,U,tf2d,A);
-        test2d = getFeaturesCCA(test3d,U,r,0.8);
+        test2d = getFeaturesCCASpace(test3d,U,r,0.8);
     end
     
     % define a threshold here to control the cca features.
@@ -136,24 +136,53 @@ end
 
 %% this function was created to compute features in another view
 % where ccaFea is the features of one view projected by CCA
-% ccaFeaDataSet is the featuers of another view projected by CCA
+% ccaFeaDataSet is the featuers of another view projected by CCA by mean
 % corrRate is the corrRelation rate from high to low
 % fea is another view projected by CCA
 function fea = getFeaturesCCASpace(ccaFea, ccaFeaDataSet, corrRate, threshold)
     N = size(ccaFea,1);
     mfeatures = size(ccaFeaDataSet,2);
-    % we just use first largest corrRate features as to compute KNN
+    % we just use first num largest corrRate features as to compute KNN
     index = corrRate > threshold;
-    len = sum(index);
+%     num = sum(index);
     % compute distance by pdist2 and define the distance with cosine
-    dis = pdist2(ccaFea(index,:), ccaFeaDataSet(index,:), 'cosine');
-    K = 5; % define K as 5
-    [dis, index] = sort(dis,2);
+    K = 3; % define KNN's K
+    [dis,idx] = pdist2(ccaFeaDataSet(:,index), ccaFea(:,index), 'cosine','Smallest',K);    
+%     [dis, ids] = sort(dis,2);
+    % dis is K * num and idx K * num
     % construct feaData original just compute all nearest the features
-    fea = zeros(N,len);
-    for i=1:size(feaDataOriginal,1)
-        tmpFea = feaDataSet(index(i,1:K),:);
+    fea = zeros(N,mfeatures);
+    for i=1:size(ccaFea,1)
+        tmpFea = ccaFeaDataSet(idx,:);
         fea(i,:) = mean(tmpFea);
     end
 end
 
+%% this function was created to compute features in another view by weighting mean
+% where ccaFea is the features of one vieprojected by CCA
+% ccaFeaDataSet is the features of another view projected by CCa
+% fea is another view projected by CCA
+function fea = getFeaturesCCASpaceWeighting(ccaFea, ccaFeaDataSet, corrRate, threshold)
+    N = size(ccaFea,1);
+    mfeatures = size(ccaFeaDataSet,2);
+    % we jsut use first num largest corrRate features as to compute KNN
+    index = corrRate > threshold;
+    % compute distance by pdist2 and define  the distance with cosine
+    K = 3; % define KNN's K
+    [dis,idx] = pdist2(ccaFeaDataSet(:,index), ccaFea(:,index), 'cosine','Smallest',K);
+    % dis is K * num and idx K * num
+    weights = dis;
+    for i=1:size(weights,2)
+        tmpSum = sum(weights(:,i));
+        weights(:,i) = weights(:,i)/tmpSum;
+    end
+    fea = zeros(N,mfeatures);
+    % construct features
+    for i = 1:N
+        tmpFea = zeros(1,mfeatures);
+        for j = 1:K
+            tmpFea = tmpFea + weights(j,i) * ccaFeaDataSet(idx(j,i),:);
+        end
+    end
+    
+end
