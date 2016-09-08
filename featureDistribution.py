@@ -11,7 +11,7 @@ destPath = '/home/h005/Documents/vpDataSet/tools/vpData/'
 
 if len(sys.argv) > 2:
 	print 'para error'
-	
+
 
 modelList = {
     'bigben',

@@ -12,6 +12,15 @@ modelList = {
     'cctv3'...
     };
 
+suffix = {
+    '.vnf',...
+    '.2dvnf',...
+    '.2dvnfname'...
+    };
+
+clearFiles(modelList,suffix);
+disp('clear done');
+
 % load filename first
 for i = 1:numel(modelList)
     fileList = fileLoad(modelList{i});

@@ -14,15 +14,15 @@ horizon = [1,0];
 horValue = [getAngle(line(1,:),horizon),...
     getAngle(line(2,:),horizon),...
     getAngle(line(3,:),horizon)];
-angles(1) = min(horValue);
+angles(1) = min(abs(horValue));
 angle = [getAngle(-line(1,:),line(2,:)),...
     getAngle(line(1,:),-line(3,:)),...
     getAngle(-line(2,:),line(3,:))];
 angle = sort(angle);
 angles(2:end) = angle;
 
-angles = zeros(1,3);
-angles = angle;
+% angles = zeros(1,3);
+% angles = angle;
 end
 
 function angle = getAngle(u,v)
