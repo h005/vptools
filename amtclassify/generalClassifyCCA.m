@@ -1,5 +1,23 @@
-%% this function was careted to run svm2k
-function [groundTruth, preLabel] = svm2kClassifyValidation(fs2d, fs3d, rate, mode)
+%% this function was created to make generalClassifyCCA
+% function [gt,pl,ps,ln,scl] = generalClassify(fs,rate,fname,method)
+
+% method is a cell array contains 2 values
+% method{2} is {'bayes classify','svm classify','ens classify'}
+% for 'classifyEach'
+% method{1} can be one of {'2d', '3d', '2d3d'}
+% for 'calssifyCombine'
+% method{2} can be one of {'2D combine','3D combine','2D3D combine'}
+
+% method can be one of {'2D','3D','2D3D'}
+
+% return para gt is ground truth
+% pl predict label
+% ps predict score i.e. positerior
+function [gt,preLabel,ps] = generalClassifyCCA(fs2d, fs3d, rate, method)
+%% prepare data
+% ten fold seperate data
+classifier = method{2};
+mode = method{1};
 nfold = 10;
 sc = fs2d(:,end);
 % sort sc asscend
@@ -21,16 +39,17 @@ fea3d = zeros(2 * num, mfeatures - 1);
 fea3d(1:num,:) = fs3d(negIdx, 1:end-1);
 fea3d(num+1:2*num,:) = fs3d(posIdx,1:end-1);
 
-groundTruth(1:num) = -1;
+groundTruth(1:num) = 0;
 groundTruth(num+1:2*num) = 1;
 label = groundTruth';
 
 indices = crossvalind('Kfold',length(label),nfold);
 % load('indices.mat');
-
 scLabel = [];
 preLabel = zeros(2 * num, 1);
 
+
+%% ten fold cross valind
 for j=1:nfold
     test = (indices == j);
     train = ~test;
@@ -84,30 +103,46 @@ for j=1:nfold
     
     trainLabel = label(train);
     testLabel = label(test);   
-       
-    CA = 0.2;
-    CB = 0.2;
-    D = 0.1;
-    eps = 0.001;
-    % this parameter is about kernel
-    ifeature = 1;
-    
-    [acorr,acorr1,acorr2,...
-        pre,pre1,pre2,...
-        hit,hit1,hit2,...
-        tpre,tpre1,tpre2,...
-        ga,gb,bam,bbm,...
-        alpha_A,alpha_B]= ...
-        mc_svm_2k_lava2(tf2d,tf3d,trainLabel,...
-        test2d,test3d,testLabel,...
-        CA,CB,D,eps,ifeature);
-        
-    preLabel(test) = pre;
+   
+    if strcmp(classifier,'bayes classify')
+        mdl1 = bysClassify(tf2d', trainLabel);
+        [tmppl1,positerior1,cost1] = predict(mdl1,test2d);
+        mdl2 = bysClassify(tf3d', trainLabel);
+        [tmppl2,positerior2,cost2] = predict(mdl2,test3d);
+        preScore1(test) = 0.5 * positerior1(:,2) + 0.5 * positerior2(:,2);
+        preScore2(test) = 0.5 * positerior1(:,1) + 0.5 * positerior2(:,2);
+%         preLabel(test) = tmppl;
+    elseif strcmp(classifier,'svm classify')
+        mdl1 = svmClassify(tf2d',trainLabel);
+        [tmppl1,positerior1] = predict(mdl1,test2d);
+        mdl2 = svmClassify(tf3d',trainLabel);
+        [tmppl2,positerior2] = predict(mdl2,test3d);
+        preScore1(test) = 0.5 * positerior1(:,2) + 0.5 * positerior2(:,2);
+        preScore2(test) = 0.5 * positerior1(:,1) + 0.5 * positerior2(:,1);
+%         preLabel(test) = tmppl;
+    elseif strcmp(classifier,'ens classify')
+        mdl1 = ensClassify(tf2d',trainLabel);
+        [tmppl1,positerior1] = predict(mdl1,test2d);
+        mdl2 = ensClassify(tf3d',trainLabel);
+        [tmppl2,positerior2] = predict(mdl2,test3d);
+        preScore1(test) = 0.5 * positerior1(:,2) + 0.5 * positerior2(:,2);
+        preScore2(test) = 0.5 * positerior1(:,1) + 0.5 * positerior2(:,1);
+%         [tmppl,score] = predict(mdl,testFea');
+%         preScore(test) = score(:,2);
+%         preLabel(test) = tmppl;
+    else
+        disp('parameter error')
+    end
     
 end
+    gt = groundTruth;
+    preLabelInd = preScore1 > preScore2;
+    preLabel(preLabelInd) = 1;
+    preLabelInd = preScore1 <= preScore2;
+    preLabel(preLabelInd) = 0;
+    ps = preScore1;
 
 end
-
 
 %% this function was created to compute features in another view
 % where ccaFea is the features of one view projected by CCA
@@ -186,3 +221,6 @@ function fea = getFeaturesCCASpaceWeighting(ccaFea, ccaFeaDataSet, corrRate, thr
     end
     
 end
+
+
+

@@ -23,10 +23,11 @@ anaMethodList = {
     'encodingClassifyCombine',... % 6
     'svm2kClassifyCombine',... % 7
     'svm2kClassifyCombineCCA',... % 8
-    'generalClassifyCombineFisherVector',... % 9
-    'LDL'}; % 10
+    'combineCCA',... % 9
+    'generalClassifyCombineFisherVector',... % 10
+    'LDL'}; % 11
 
-anaMethod = 8;
+anaMethod = 9;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -169,8 +170,64 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
     plotMethodsId = 1;
     titleLabel = ['combine features ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
+elseif strcmp(anaMethodList{anaMethod},'combineCCA')
+    %% calssiyfCombine
+    % top rate pictures will be assign good
+    % last rate pictures will be assign bad
+    % this parameters should bbe modified as needed
+    rate = 0.08;
+    % load Data
+    % sc = scload(scorefile,sceneName);
+    [sc,scr,fea2d,fea3d] = dataLoad(modelList);
+    [fs,fname] = combine(fea2d,fea3d,scr);
+    [fs2d,fname] = combine(fea2d,scr);
+    [fs3d,fname] = combine(fea3d,scr);
+    % select for some features
+    % details was showed in feaNameLoad.m
+%     [visualFea, geometricFea,validVisIndex, validGeoIndex] = feaNameLoad();
+%     fs2d = fs2d(:,[validVisIndex,size(fs2d,2)]);
+%     fs3d = fs3d(:,[validGeoIndex,size(fs3d,2)]);
+%     fs = fs(:,[validVisIndex,visualFea{end}.index(end)+validGeoIndex, size(fs,2)]);
+
+    % set Method
+    methodText = {
+        'bayes classify',...
+        'svm classify',...
+        'ens classify'
+        };
+    method = 2;
+    % result preparing
+    % gt  groundTruth
+    % pl  preLabel
+    % ln  plotroc legend name
+    % general cca classify methods
+    gccaMethod = {'2d',methodText{method}};
+%     [gt,pl,ps,ln,scl] = generalClassifyCCA(fs2d, fs3d, rate, method)
+    [gt1,pl1,ps1] = generalClassifyCCA(fs2d,fs3d,rate,gccaMethod);
+    gccaMethod = {'3d',methodText{method}};
+    [gt2,pl2,ps2] = generalClassifyCCA(fs2d,fs3d,rate,gccaMethod);
+    gccaMethod = {'2d3d',methodText{method}};
+    [gt3,pl3,ps3] = generalClassifyCCA(fs2d,fs3d,rate,gccaMethod);
+
+    gt = [gt1;gt2;gt3];
+    ps = [ps1;ps2;ps3];
+    ln = {'2d','3d','2d3d'};
+    pl = [pl1;pl2;pl3];
+
+    
+    titleText = {'Combine cca of different method on photos'};
+    plotErrorRate(gt,pl,ln,titleText);
+    
+%     scl = scl1;
+%     titleText = {[methodText{method} ' of different method on photos']};
+%     % plot classify error rate
+%     plotErrorRate(gt,pl,ln,titleText);
+%     plotMethods = {'ROC','PR','ROC PR'};
+%     plotMethodsId = 1;
+%     titleLabel = ['combine features ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
+%     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
 elseif strcmp(anaMethodList{anaMethod},'encodingClassifyCombine')
-%% encoding classify by combined features
+%% encoding classify by combined features CCA
     % top rate pictures will be assigned as good
     % last rate pictures will be assigned as bad
     % this paramenters should will be modified as needed

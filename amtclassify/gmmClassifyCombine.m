@@ -41,7 +41,7 @@ groundTruth(:) = label';
 % for debug
 % indices = crossvalind('Kfold',length(label),nfold);
 % save('indices.mat','indices');
-load('indices.mat');
+% load('indices.mat');
 % transpose to mfeatures * ncases;
 fea = fea';
 label = label';
