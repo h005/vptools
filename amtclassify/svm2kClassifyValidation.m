@@ -82,10 +82,14 @@ for j=1:nfold
     trainLabel = label(train);
     testLabel = label(test);
 
-    CA = 0.2;
-    CB = 0.2;
+%     CA = 0.2;
+%     CB = 0.2;
+%     D = 0.1;
+%     eps = 0.01;
+    CA = 3.5;
+    CB = 3.5;
     D = 0.1;
-    eps = 0.001;
+    eps = 0.01;
     % this parameter is about kernel
     ifeature = 1;
 
