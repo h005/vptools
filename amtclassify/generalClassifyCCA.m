@@ -1,23 +1,21 @@
 %% this function was created to make generalClassifyCCA
 % function [gt,pl,ps,ln,scl] = generalClassify(fs,rate,fname,method)
 
-% method is a cell array contains 2 values
-% method{2} is {'bayes classify','svm classify','ens classify'}
-% for 'classifyEach'
+% method is a cell array contains 3 values
 % method{1} can be one of {'2d', '3d', '2d3d'}
-% for 'calssifyCombine'
-% method{2} can be one of {'2D combine','3D combine','2D3D combine'}
+% method{2} is {'bayes classify','svm classify','ens classify'}
+% method{3} is one of {'weight', 'stack'}
 
-% method can be one of {'2D','3D','2D3D'}
 
 % return para gt is ground truth
 % pl predict label
 % ps predict score i.e. positerior
-function [gt,preLabel,ps] = generalClassifyCCA(fs2d, fs3d, rate, method)
+function [gt,preLabel,preScore] = generalClassifyCCA(fs2d, fs3d, rate, method)
 %% prepare data
 % ten fold seperate data
 classifier = method{2};
 mode = method{1};
+combineMethod = method{3};
 nfold = 10;
 sc = fs2d(:,end);
 % sort sc asscend
@@ -46,8 +44,10 @@ label = groundTruth';
 indices = crossvalind('Kfold',length(label),nfold);
 % load('indices.mat');
 scLabel = [];
-preLabel = zeros(2 * num, 1);
-
+preLabel = zeros(1,2 * num);
+preScore1 = zeros(1,2 * num);
+preScore2 = zeros(1,2 * num);
+preScore = zeros(1, 2*num);
 
 %% ten fold cross valind
 for j=1:nfold
@@ -105,28 +105,64 @@ for j=1:nfold
     testLabel = label(test);   
    
     if strcmp(classifier,'bayes classify')
-        mdl1 = bysClassify(tf2d', trainLabel);
-        [tmppl1,positerior1,cost1] = predict(mdl1,test2d);
-        mdl2 = bysClassify(tf3d', trainLabel);
-        [tmppl2,positerior2,cost2] = predict(mdl2,test3d);
-        preScore1(test) = 0.5 * positerior1(:,2) + 0.5 * positerior2(:,2);
-        preScore2(test) = 0.5 * positerior1(:,1) + 0.5 * positerior2(:,2);
+        if strcmp(combineMethod,'weight')
+            mdl1 = bysClassify(tf2d', trainLabel);
+            [tmppl1,positerior1,cost1] = predict(mdl1,test2d);
+            mdl2 = bysClassify(tf3d', trainLabel);
+            [tmppl2,positerior2,cost2] = predict(mdl2,test3d);
+            preScore1(test) = 0.5 * positerior1(:,2) + 0.5 * positerior2(:,2);
+            preScore2(test) = 0.5 * positerior1(:,1) + 0.5 * positerior2(:,1);
+        elseif strcmp(combineMethod,'stack')
+            trainFea = [tf2d,tf3d];
+            mdl = bysClassify(trainFea',trainLabel);
+            testFea = [test2d,test3d];
+            [pl,score] = predict(mdl,testFea);
+            preLabel(test) = pl;
+            preScore(test) = score(:,2);
+        else
+            disp('parameter error')
+            return
+        end
 %         preLabel(test) = tmppl;
     elseif strcmp(classifier,'svm classify')
-        mdl1 = svmClassify(tf2d',trainLabel);
-        [tmppl1,positerior1] = predict(mdl1,test2d);
-        mdl2 = svmClassify(tf3d',trainLabel);
-        [tmppl2,positerior2] = predict(mdl2,test3d);
-        preScore1(test) = 0.5 * positerior1(:,2) + 0.5 * positerior2(:,2);
-        preScore2(test) = 0.5 * positerior1(:,1) + 0.5 * positerior2(:,1);
+        if strcmp(combineMethod,'weight')
+            mdl1 = svmClassify(tf2d',trainLabel);
+            [tmppl1,positerior1] = predict(mdl1,test2d);
+            mdl2 = svmClassify(tf3d',trainLabel);
+            [tmppl2,positerior2] = predict(mdl2,test3d);
+            preScore1(test) = 0.5 * positerior1(:,2) + 0.5 * positerior2(:,2);
+            preScore2(test) = 0.5 * positerior1(:,1) + 0.5 * positerior2(:,1);
+        elseif strcmp(combineMethod,'stack')
+            trainFea = [tf2d,tf3d];
+            mdl = svmClassify(trainFea',trainLabel);
+            testFea = [test2d,test3d];
+            [pl,score] = predict(mdl,testFea);
+            preLabel(test) = pl;
+            preScore(test) = score(:,2);
+        else
+            disp('parameter error')
+            return
+        end
 %         preLabel(test) = tmppl;
     elseif strcmp(classifier,'ens classify')
-        mdl1 = ensClassify(tf2d',trainLabel);
-        [tmppl1,positerior1] = predict(mdl1,test2d);
-        mdl2 = ensClassify(tf3d',trainLabel);
-        [tmppl2,positerior2] = predict(mdl2,test3d);
-        preScore1(test) = 0.5 * positerior1(:,2) + 0.5 * positerior2(:,2);
-        preScore2(test) = 0.5 * positerior1(:,1) + 0.5 * positerior2(:,1);
+        if strcmp(combineMethod,'weight')
+            mdl1 = ensClassify(tf2d',trainLabel);
+            [tmppl1,positerior1] = predict(mdl1,test2d);
+            mdl2 = ensClassify(tf3d',trainLabel);
+            [tmppl2,positerior2] = predict(mdl2,test3d);
+            preScore1(test) = 0.5 * positerior1(:,2) + 0.5 * positerior2(:,2);
+            preScore2(test) = 0.5 * positerior1(:,1) + 0.5 * positerior2(:,1);
+        elseif strcmp(combineMethod,'stack')
+            trainFea = [tf2d,tf3d];
+            mdl = ensClassify(trainFea',trainLabel);
+            testFea = [test2d,test3d]; 
+            [pl,score] = predict(mdl,testFea);
+            preLabel(test) = pl;
+            preScore(test) = score(:,2);
+        else
+            disp('parameter error')
+            return
+        end
 %         [tmppl,score] = predict(mdl,testFea');
 %         preScore(test) = score(:,2);
 %         preLabel(test) = tmppl;
@@ -136,10 +172,12 @@ for j=1:nfold
     
 end
     gt = groundTruth;
-    preLabelInd = preScore1 > preScore2;
-    preLabel(preLabelInd) = 1;
-    preLabelInd = preScore1 <= preScore2;
-    preLabel(preLabelInd) = 0;
+    if strcmp(combineMethod,'weight')
+        preLabelInd = preScore1 > preScore2;
+        preLabel(preLabelInd) = 1;
+        preLabelInd = preScore1 <= preScore2;
+        preLabel(preLabelInd) = 0;       
+    end
     ps = preScore1;
 
 end

@@ -27,6 +27,11 @@ kxm.sc file will appear in folder /home/h005/Documents/vpDataSet/kxm/score
 
 paraTest.py 仅仅是一个关于python输入参数的测试文件
 
+rename.py 用来将某个目录下的所有jpg文件前加前缀
+"Usage: python rename.py imgFolder prefixName"
+"eg. python rename.py /home/h005/Documents/vpDataSet/potalaPalace/imgs/scImg/ potalaPalace"
+
+
 imgScale.py 将输入的图像等比例缩放到某个尺寸范围以内
 "Usage: pyton imgScale.py imgFolder filename.list"
 例子：python imgScale.py ~/Documents/vpDataSet/notredame/imgs/ ~/Documents/vpDataSet/tools/scTool/survey/notredame/notredame.survey

@@ -2150,3 +2150,719 @@ You may see your HIT(s) with HITTypeId '3IKWVMAP3FVIICSW69XN4W4LXS20EJ' here:
 [2016-06-20 16:32:06] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
 [2016-06-20 16:32:06] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
 [2016-06-20 16:32:06] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-09 20:22:30] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 20:22:31] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 20:22:31] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.input
+[2016-09-09 20:22:31] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.properties
+[2016-09-09 20:22:31] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.question
+[2016-09-09 20:22:31] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 20:22:34] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: 3239f869-39fa-44b3-b8b8-6151dae91223 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473423752045 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 3239f869-39fa-44b3-b8b8-6151dae91223 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473423752045 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 20:29:11] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 20:29:13] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 20:29:13] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.input
+[2016-09-09 20:29:13] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.properties
+[2016-09-09 20:29:13] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.question
+[2016-09-09 20:29:13] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 20:29:16] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: 078e558e-8ae3-4b43-a9a3-80577f22c945 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473424153386 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 078e558e-8ae3-4b43-a9a3-80577f22c945 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473424153386 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 20:51:23] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 20:51:24] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 20:51:24] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.input
+[2016-09-09 20:51:24] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.properties
+[2016-09-09 20:51:24] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.question
+[2016-09-09 20:51:24] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 20:51:27] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: ebcd0f29-c995-468c-b1bf-390d2d02c9aa - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473425485035 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: ebcd0f29-c995-468c-b1bf-390d2d02c9aa - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473425485035 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 20:51:45] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 20:51:45] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 20:51:45] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.input
+[2016-09-09 20:51:45] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.properties
+[2016-09-09 20:51:45] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.question
+[2016-09-09 20:51:45] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 20:51:48] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: e2fdd411-aec9-4dbe-b79f-2a5d6f3c3978 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473425505673 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: e2fdd411-aec9-4dbe-b79f-2a5d6f3c3978 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473425505673 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 20:57:30] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 20:57:30] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 20:57:30] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.input
+[2016-09-09 20:57:30] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.properties
+[2016-09-09 20:57:30] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.question
+[2016-09-09 20:57:30] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 20:57:33] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: 990cad49-c6d3-4f38-b241-15758001ef27 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473425850638 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 990cad49-c6d3-4f38-b241-15758001ef27 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473425850638 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 20:58:00] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 20:58:01] ERROR (LoadHITs.java: 133) - Error loading HITs: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_60-99.input (No such file or directory)
+java.io.FileNotFoundException: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_60-99.input (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileInputStream.<init>(FileInputStream.java:101)
+	at com.amazonaws.mturk.addon.HITDataCSVReader.<init>(HITDataCSVReader.java:46)
+	at com.amazonaws.mturk.addon.HITDataCSVReader.<init>(HITDataCSVReader.java:41)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:183)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 20:59:21] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 20:59:21] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 20:59:21] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.input
+[2016-09-09 20:59:21] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.properties
+[2016-09-09 20:59:21] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.question
+[2016-09-09 20:59:21] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 20:59:24] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: 33bd9fdc-f6df-46f7-86c6-27d3a964c142 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473425961539 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 33bd9fdc-f6df-46f7-86c6-27d3a964c142 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473425961539 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 21:05:56] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 21:05:56] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 21:05:56] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.input
+[2016-09-09 21:05:56] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.properties
+[2016-09-09 21:05:56] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.question
+[2016-09-09 21:05:56] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 21:05:58] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: b8017ba9-f183-4ee1-87ca-5a44bec765c6 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473426356304 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: b8017ba9-f183-4ee1-87ca-5a44bec765c6 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473426356304 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 21:18:04] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 21:18:05] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 21:18:05] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.input
+[2016-09-09 21:18:05] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.properties
+[2016-09-09 21:18:05] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.question
+[2016-09-09 21:18:05] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 21:18:07] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: 9127c0e2-2d8a-44b5-af5c-490feb7ca29e - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473427084923 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 9127c0e2-2d8a-44b5-af5c-490feb7ca29e - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473427084923 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 21:42:30] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 21:42:31] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 21:42:31] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.input
+[2016-09-09 21:42:31] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.properties
+[2016-09-09 21:42:31] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.question
+[2016-09-09 21:42:31] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 21:42:34] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: d68b8368-985f-430b-b140-a89660456c93 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473428551779 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: d68b8368-985f-430b-b140-a89660456c93 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473428551779 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-09 21:47:44] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-09 21:47:45] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-09 21:47:45] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.input
+[2016-09-09 21:47:45] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.properties
+[2016-09-09 21:47:45] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/notredame/notredame_0-29.question
+[2016-09-09 21:47:45] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-09 21:47:47] ERROR (LoadHITs.java: 133) - Error loading HITs: Error #1 for RequestId: 1f19000e-2fd3-476b-8678-8bf4fe3f6b9a - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473428865013 s)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 1f19000e-2fd3-476b-8678-8bf4fe3f6b9a - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1473428865013 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-12 19:30:51] INFO  (GetBalance.java: 51) - Your account balance: $0.00
+[2016-09-12 20:51:40] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-12 20:51:41] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 20:51:41] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.input
+[2016-09-12 20:51:41] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.properties
+[2016-09-12 20:51:41] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.question
+[2016-09-12 20:51:41] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 20:51:44] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 20:51:44] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 20:51:44 CST 2016
+[2016-09-12 20:51:44] ERROR (LoadHITs.java: 133) - Error loading HITs: Error executing operation: Error #1 for RequestId: 4033aa96-ab35-486f-b969-bf5b94d4ab60 - AWS.MechanicalTurk.MustRegister: Please log in to https://requestersandbox.mturk.com/ and complete registration. (1473684704394 s)
+com.amazonaws.mturk.service.exception.InternalServiceException: Error executing operation: Error #1 for RequestId: 4033aa96-ab35-486f-b969-bf5b94d4ab60 - AWS.MechanicalTurk.MustRegister: Please log in to https://requestersandbox.mturk.com/ and complete registration. (1473684704394 s)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:158)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.registerHITType(RequesterServiceRaw.java:440)
+	at com.amazonaws.mturk.service.axis.RequesterService.createHITs(RequesterService.java:1512)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:236)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+[2016-09-12 20:59:41] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-12 20:59:41] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 20:59:41] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.input
+[2016-09-12 20:59:41] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.properties
+[2016-09-12 20:59:41] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.question
+[2016-09-12 20:59:41] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 20:59:43] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 20:59:43] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 20:59:43 CST 2016
+[2016-09-12 20:59:43] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-09-12 20:59:45] ERROR (RequesterService.java: 1570) - [ERROR] Error creating HIT 1 (test is good): [-1,-1] cvc-pattern-valid: Value 'od7ug0i83.bkt.clouddn.com/potalaPalace_00000144.jpg' is not facet-valid with respect to pattern '(http|https)://.*' for type 'URLType'.
+[2016-09-12 20:59:45] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 20:59:45 CST 2016
+[2016-09-12 20:59:45] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 20:59:45] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 20:59:45] INFO  (LoadHITs.java: 243) -   Successfully loaded 0 HITs.
+[2016-09-12 20:59:45] ERROR (LoadHITs.java: 254) -   Failed to load 1 HITs.
+[2016-09-12 21:02:46] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-12 21:02:47] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 21:02:47] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.input
+[2016-09-12 21:02:47] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.properties
+[2016-09-12 21:02:47] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.question
+[2016-09-12 21:02:47] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 21:02:49] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 21:02:49] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 21:02:49 CST 2016
+[2016-09-12 21:02:49] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-09-12 21:02:51] ERROR (RequesterService.java: 1570) - [ERROR] Error creating HIT 1 (test is good): [-1,-1] cvc-pattern-valid: Value 'od7ug0i83.bkt.clouddn.com/potalaPalace_00000144.jpg' is not facet-valid with respect to pattern '(http|https)://.*' for type 'URLType'.
+[2016-09-12 21:02:51] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 21:02:51 CST 2016
+[2016-09-12 21:02:51] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 21:02:51] INFO  (LoadHITs.java: 241) -   Total load time: 2 seconds.
+[2016-09-12 21:02:51] INFO  (LoadHITs.java: 243) -   Successfully loaded 0 HITs.
+[2016-09-12 21:02:51] ERROR (LoadHITs.java: 254) -   Failed to load 1 HITs.
+[2016-09-12 21:09:25] INFO  (AbstractCmd.java: 138) - Sandbox override
+[2016-09-12 21:09:25] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 21:09:25] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.input
+[2016-09-12 21:09:25] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.properties
+[2016-09-12 21:09:25] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.question
+[2016-09-12 21:09:25] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 21:09:28] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 21:09:28] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 21:09:28 CST 2016
+[2016-09-12 21:09:28] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-09-12 21:09:30] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3TRB893CSJ08HWH5O0L68B486XO7G7
+[2016-09-12 21:09:30] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3TE066M5FJJ2SYCER8UN5S0O1LSII3' here: 
+[2016-09-12 21:09:30] INFO  (RequesterService.java: 1593) - 
+  https://workersandbox.mturk.com/mturk/preview?groupId=3TE066M5FJJ2SYCER8UN5S0O1LSII3
+
+[2016-09-12 21:09:30] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 21:09:30 CST 2016
+[2016-09-12 21:09:30] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 21:09:30] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 21:09:30] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:03:15] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:03:15] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.input
+[2016-09-12 22:03:15] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.properties
+[2016-09-12 22:03:15] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_0-29.question
+[2016-09-12 22:03:15] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:03:17] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:03:17] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:03:17 CST 2016
+[2016-09-12 22:03:18] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:03:19] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=31J7RYECZLGAS2G4AB1C6XK4ISE1LT
+[2016-09-12 22:03:19] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3CGY4DPHZTA4IZKKCBRYJCUJRRBILH' here: 
+[2016-09-12 22:03:19] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3CGY4DPHZTA4IZKKCBRYJCUJRRBILH
+
+[2016-09-12 22:03:19] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:03:19 CST 2016
+[2016-09-12 22:03:19] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:03:19] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:03:19] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:14] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:14] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_510-539.input
+[2016-09-12 22:42:14] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_510-539.properties
+[2016-09-12 22:42:14] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_510-539.question
+[2016-09-12 22:42:14] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:17] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:17] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:17 CST 2016
+[2016-09-12 22:42:17] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:19] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3J06WJ78HNATAJ8WVTN70UPMYUOVVW
+[2016-09-12 22:42:19] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3YSXL10HW6OVG6HC27Y7EK851HMB7S' here: 
+[2016-09-12 22:42:19] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3YSXL10HW6OVG6HC27Y7EK851HMB7S
+
+[2016-09-12 22:42:19] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:19 CST 2016
+[2016-09-12 22:42:19] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:19] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:19] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:19] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:19] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_540-569.input
+[2016-09-12 22:42:19] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_540-569.properties
+[2016-09-12 22:42:19] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_540-569.question
+[2016-09-12 22:42:19] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:21] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:21] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:21 CST 2016
+[2016-09-12 22:42:21] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:23] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=341H3G5YF04UQ2CQTTOL07CSS9I0ZA
+[2016-09-12 22:42:23] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3QF1Y7D04XJNAO4YKXQNSFE6ZM3LDI' here: 
+[2016-09-12 22:42:23] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3QF1Y7D04XJNAO4YKXQNSFE6ZM3LDI
+
+[2016-09-12 22:42:23] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:23 CST 2016
+[2016-09-12 22:42:23] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:23] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:23] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:23] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:23] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_180-209.input
+[2016-09-12 22:42:23] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_180-209.properties
+[2016-09-12 22:42:23] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_180-209.question
+[2016-09-12 22:42:23] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:25] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:25] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:25 CST 2016
+[2016-09-12 22:42:26] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:27] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=336OE47KI2A6P881L3S3MW8053QVW6
+[2016-09-12 22:42:27] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '35VV2X3DQZ5U6ZN5OO7DW4Y8WMBINJ' here: 
+[2016-09-12 22:42:27] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=35VV2X3DQZ5U6ZN5OO7DW4Y8WMBINJ
+
+[2016-09-12 22:42:27] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:27 CST 2016
+[2016-09-12 22:42:27] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:27] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:27] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:28] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:28] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_120-149.input
+[2016-09-12 22:42:28] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_120-149.properties
+[2016-09-12 22:42:28] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_120-149.question
+[2016-09-12 22:42:28] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:30] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:30] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:30 CST 2016
+[2016-09-12 22:42:30] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:31] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=39O6Z4JLX2NLE8DRV8OPOFM7E5WVXZ
+[2016-09-12 22:42:31] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '35RL0GHNS8ICG24X514RL5RJ3HIEGY' here: 
+[2016-09-12 22:42:31] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=35RL0GHNS8ICG24X514RL5RJ3HIEGY
+
+[2016-09-12 22:42:31] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:31 CST 2016
+[2016-09-12 22:42:31] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:31] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:31] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:32] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:32] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_210-239.input
+[2016-09-12 22:42:32] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_210-239.properties
+[2016-09-12 22:42:32] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_210-239.question
+[2016-09-12 22:42:32] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:34] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:34] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:34 CST 2016
+[2016-09-12 22:42:34] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:35] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3J9UN9O9J3I4QN7MB7LZCDO29B4J07
+[2016-09-12 22:42:35] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3MLSU5JHHUWC8SXOJJK080EVCD26TE' here: 
+[2016-09-12 22:42:35] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3MLSU5JHHUWC8SXOJJK080EVCD26TE
+
+[2016-09-12 22:42:35] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:35 CST 2016
+[2016-09-12 22:42:35] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:35] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:35] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:36] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:36] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_390-419.input
+[2016-09-12 22:42:36] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_390-419.properties
+[2016-09-12 22:42:36] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_390-419.question
+[2016-09-12 22:42:36] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:38] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:38] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:38 CST 2016
+[2016-09-12 22:42:38] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:40] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3BAKUKE49H2LV0BHFVY8S9T3OK4R1A
+[2016-09-12 22:42:40] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '30E4L8P2E27ZGKMVCCQDSK40C1SB8F' here: 
+[2016-09-12 22:42:40] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=30E4L8P2E27ZGKMVCCQDSK40C1SB8F
+
+[2016-09-12 22:42:40] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:40 CST 2016
+[2016-09-12 22:42:40] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:40] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:40] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:40] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:40] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_360-389.input
+[2016-09-12 22:42:40] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_360-389.properties
+[2016-09-12 22:42:40] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_360-389.question
+[2016-09-12 22:42:40] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:42] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:42] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:42 CST 2016
+[2016-09-12 22:42:42] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:44] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3R6RZGK0XF2AED3104AR7TTGGBQVY5
+[2016-09-12 22:42:44] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3HN4348L0DSCW9XRBHHCRS6P03M3SG' here: 
+[2016-09-12 22:42:44] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3HN4348L0DSCW9XRBHHCRS6P03M3SG
+
+[2016-09-12 22:42:44] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:44 CST 2016
+[2016-09-12 22:42:44] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:44] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:44] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:45] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:45] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_150-179.input
+[2016-09-12 22:42:45] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_150-179.properties
+[2016-09-12 22:42:45] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_150-179.question
+[2016-09-12 22:42:45] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:46] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:46] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:46 CST 2016
+[2016-09-12 22:42:47] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:48] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=386659BNTL7XV6RILIFT8DSGFU510M
+[2016-09-12 22:42:48] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3HWC0N12H6XR85CDJOAADW0XVR96U5' here: 
+[2016-09-12 22:42:48] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3HWC0N12H6XR85CDJOAADW0XVR96U5
+
+[2016-09-12 22:42:48] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:48 CST 2016
+[2016-09-12 22:42:48] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:48] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:48] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:49] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:49] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_30-59.input
+[2016-09-12 22:42:49] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_30-59.properties
+[2016-09-12 22:42:49] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_30-59.question
+[2016-09-12 22:42:49] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:51] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:51] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:51 CST 2016
+[2016-09-12 22:42:51] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:52] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3IVEC1GSLPP4XCS47QPZQI7CE3AJ1A
+[2016-09-12 22:42:52] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3SGII5M2T7CRLK1DOEKF9I2G9YI6VU' here: 
+[2016-09-12 22:42:52] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3SGII5M2T7CRLK1DOEKF9I2G9YI6VU
+
+[2016-09-12 22:42:52] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:52 CST 2016
+[2016-09-12 22:42:52] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:52] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:52] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:53] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:53] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_240-269.input
+[2016-09-12 22:42:53] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_240-269.properties
+[2016-09-12 22:42:53] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_240-269.question
+[2016-09-12 22:42:53] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:55] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:55] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:55 CST 2016
+[2016-09-12 22:42:55] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:42:56] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=34F34TZU7WPBMXA0QUPDV1HH69OJ2R
+[2016-09-12 22:42:56] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3W850VB9FT4IYN64J4URCD0ILPV1K5' here: 
+[2016-09-12 22:42:56] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3W850VB9FT4IYN64J4URCD0ILPV1K5
+
+[2016-09-12 22:42:56] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:42:56 CST 2016
+[2016-09-12 22:42:56] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:42:56] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:42:56] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:42:57] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:42:57] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_90-119.input
+[2016-09-12 22:42:57] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_90-119.properties
+[2016-09-12 22:42:57] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_90-119.question
+[2016-09-12 22:42:57] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:42:59] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:42:59] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:42:59 CST 2016
+[2016-09-12 22:42:59] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:01] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=39RRBHZ0AURAJ3D6WQCAL02IM5UVZW
+[2016-09-12 22:43:01] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3DIFNAQ3LD4DB9A60HM21X2B2M03T5' here: 
+[2016-09-12 22:43:01] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3DIFNAQ3LD4DB9A60HM21X2B2M03T5
+
+[2016-09-12 22:43:01] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:01 CST 2016
+[2016-09-12 22:43:01] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:01] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:01] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:43:01] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:43:01] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_480-509.input
+[2016-09-12 22:43:01] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_480-509.properties
+[2016-09-12 22:43:01] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_480-509.question
+[2016-09-12 22:43:01] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:43:03] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:43:03] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:43:03 CST 2016
+[2016-09-12 22:43:03] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:05] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3YGE63DIN8NQW77LI64E13IAB7DW0F
+[2016-09-12 22:43:05] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '31RF5NHNFPZTITOM446SRDDXAP01L8' here: 
+[2016-09-12 22:43:05] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=31RF5NHNFPZTITOM446SRDDXAP01L8
+
+[2016-09-12 22:43:05] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:05 CST 2016
+[2016-09-12 22:43:05] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:05] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:05] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:43:05] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:43:05] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_420-449.input
+[2016-09-12 22:43:05] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_420-449.properties
+[2016-09-12 22:43:05] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_420-449.question
+[2016-09-12 22:43:05] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:43:07] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:43:07] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:43:07 CST 2016
+[2016-09-12 22:43:07] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:09] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3O4VWC1GEWW07F6JUU3IEBM9CNOJ32
+[2016-09-12 22:43:09] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3CM00QMEUMC4091IEOPBVKLUG7K6W4' here: 
+[2016-09-12 22:43:09] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3CM00QMEUMC4091IEOPBVKLUG7K6W4
+
+[2016-09-12 22:43:09] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:09 CST 2016
+[2016-09-12 22:43:09] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:09] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:09] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:43:09] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:43:09] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_450-479.input
+[2016-09-12 22:43:09] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_450-479.properties
+[2016-09-12 22:43:09] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_450-479.question
+[2016-09-12 22:43:09] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:43:11] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:43:11] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:43:11 CST 2016
+[2016-09-12 22:43:12] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:13] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=379OL9DBSS4CH6QYX35VFB4JPJ7Y9S
+[2016-09-12 22:43:13] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3OVLEL0XX0OQGYZ8P7M9653KIHVEHX' here: 
+[2016-09-12 22:43:13] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3OVLEL0XX0OQGYZ8P7M9653KIHVEHX
+
+[2016-09-12 22:43:13] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:13 CST 2016
+[2016-09-12 22:43:13] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:13] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:13] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:43:14] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:43:14] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_600-629.input
+[2016-09-12 22:43:14] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_600-629.properties
+[2016-09-12 22:43:14] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_600-629.question
+[2016-09-12 22:43:14] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:43:15] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:43:15] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:43:15 CST 2016
+[2016-09-12 22:43:16] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:17] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3E9VAUV7BW4QMP03P9JVB6F3V1PYA7
+[2016-09-12 22:43:17] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3I4ILQYF9MPJP968OTLXX3Z1P9Q6XX' here: 
+[2016-09-12 22:43:17] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3I4ILQYF9MPJP968OTLXX3Z1P9Q6XX
+
+[2016-09-12 22:43:17] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:17 CST 2016
+[2016-09-12 22:43:17] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:17] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:17] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:43:18] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:43:18] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_60-89.input
+[2016-09-12 22:43:18] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_60-89.properties
+[2016-09-12 22:43:18] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_60-89.question
+[2016-09-12 22:43:18] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:43:20] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:43:20] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:43:20 CST 2016
+[2016-09-12 22:43:20] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:21] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3ZZAYRN1I6HJ77VAPM1E4K7T5GBOT7
+[2016-09-12 22:43:21] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3SVZJ4A2P62QCTASVP4U6H4ZIUAEIQ' here: 
+[2016-09-12 22:43:21] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3SVZJ4A2P62QCTASVP4U6H4ZIUAEIQ
+
+[2016-09-12 22:43:21] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:21 CST 2016
+[2016-09-12 22:43:21] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:21] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:21] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:43:22] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:43:22] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_570-599.input
+[2016-09-12 22:43:22] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_570-599.properties
+[2016-09-12 22:43:22] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_570-599.question
+[2016-09-12 22:43:22] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:43:24] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:43:24] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:43:24 CST 2016
+[2016-09-12 22:43:24] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:26] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=36D1BWBEHNR1N5GLTR25BT9YA3JM2Y
+[2016-09-12 22:43:26] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3K1KXTVNBKADOB674G77RQSMAUQ1MA' here: 
+[2016-09-12 22:43:26] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3K1KXTVNBKADOB674G77RQSMAUQ1MA
+
+[2016-09-12 22:43:26] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:26 CST 2016
+[2016-09-12 22:43:26] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:26] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:26] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:43:26] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:43:26] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_270-299.input
+[2016-09-12 22:43:26] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_270-299.properties
+[2016-09-12 22:43:26] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_270-299.question
+[2016-09-12 22:43:26] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:43:28] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:43:28] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:43:28 CST 2016
+[2016-09-12 22:43:29] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:30] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3X2YVV51PUUQ3WS3EP8EF81KGZJW1I
+[2016-09-12 22:43:30] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3AN1GXZ81JBCOKNHP37QBTYDMWGIOY' here: 
+[2016-09-12 22:43:30] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3AN1GXZ81JBCOKNHP37QBTYDMWGIOY
+
+[2016-09-12 22:43:30] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:30 CST 2016
+[2016-09-12 22:43:30] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:30] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:30] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:43:31] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:43:31] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_330-359.input
+[2016-09-12 22:43:31] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_330-359.properties
+[2016-09-12 22:43:31] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_330-359.question
+[2016-09-12 22:43:31] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:43:32] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:43:32] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:43:32 CST 2016
+[2016-09-12 22:43:33] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:34] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3JMNNNO3B1UXSHAZXT8SKRBP85XW2Z
+[2016-09-12 22:43:34] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3S942EFUVK2M74UYD7PUIIJZV9ZEJ2' here: 
+[2016-09-12 22:43:34] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=3S942EFUVK2M74UYD7PUIIJZV9ZEJ2
+
+[2016-09-12 22:43:34] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:34 CST 2016
+[2016-09-12 22:43:34] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:34] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:34] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-09-12 22:43:35] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-09-12 22:43:35] INFO  (LoadHITs.java: 194) -  Input: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_300-329.input
+[2016-09-12 22:43:35] INFO  (LoadHITs.java: 195) -  Properties: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_300-329.properties
+[2016-09-12 22:43:35] INFO  (LoadHITs.java: 196) -  Question File: /home/h005/Documents/vpDataSet/tools/scTool/survey/potalaPalace/potalaPalace_300-329.question
+[2016-09-12 22:43:35] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-09-12 22:43:37] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-09-12 22:43:37] INFO  (LoadHITs.java: 231) -   Start time: Mon Sep 12 22:43:37 CST 2016
+[2016-09-12 22:43:37] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-09-12 22:43:38] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3Q2T3FD0ONYQ8NC4XRGAU3EQGHJM39
+[2016-09-12 22:43:38] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '38TZTS8OLP5SBMPV0MCC6TODL073UW' here: 
+[2016-09-12 22:43:38] INFO  (RequesterService.java: 1593) - 
+  https://www.mturk.com/mturk/preview?groupId=38TZTS8OLP5SBMPV0MCC6TODL073UW
+
+[2016-09-12 22:43:38] INFO  (LoadHITs.java: 239) -   End time: Mon Sep 12 22:43:38 CST 2016
+[2016-09-12 22:43:38] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-09-12 22:43:38] INFO  (LoadHITs.java: 241) -   Total load time: 1 seconds.
+[2016-09-12 22:43:38] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.

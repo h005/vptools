@@ -12,53 +12,54 @@ class Question:
     def __init__(self, item, answer_id, idx):
         self.item = item
         self.answer_id = answer_id
-        self.url = 'http://7xoro6.com1.z0.glb.clouddn.com/' + item
+        # self.url = 'http://7xoro6.com1.z0.glb.clouddn.com/' + item
+        self.url = 'http://od7ug0i83.bkt.clouddn.com/' + item
         self.idx = idx
 
     def resp(self):
         template = \
 u'''
-  <Question> 
-    <QuestionIdentifier>{0}</QuestionIdentifier>  
+  <Question>
+    <QuestionIdentifier>{0}</QuestionIdentifier>
     <IsRequired>true</IsRequired>
-    <QuestionContent> 
-      <Text>Progress {1}/{2}: {0}</Text>  
-      <Binary> 
-        <MimeType> 
-          <Type>image</Type>  
-          <SubType>jpg</SubType> 
-        </MimeType>  
-        <DataURL>{3}</DataURL>  
-        <AltText>Focus on the viewpoint of this photo</AltText> 
-      </Binary> 
-    </QuestionContent>  
-    <AnswerSpecification> 
-      <SelectionAnswer> 
-        <StyleSuggestion>radiobutton</StyleSuggestion>  
-        <Selections> 
-          <Selection> 
-            <SelectionIdentifier>1[{4}]</SelectionIdentifier>  
-            <Text>1: I think the viewpoint is poor</Text> 
+    <QuestionContent>
+      <Text>Progress {1}/{2}: {0}</Text>
+      <Binary>
+        <MimeType>
+          <Type>image</Type>
+          <SubType>jpg</SubType>
+        </MimeType>
+        <DataURL>{3}</DataURL>
+        <AltText>Focus on the viewpoint of this photo</AltText>
+      </Binary>
+    </QuestionContent>
+    <AnswerSpecification>
+      <SelectionAnswer>
+        <StyleSuggestion>radiobutton</StyleSuggestion>
+        <Selections>
+          <Selection>
+            <SelectionIdentifier>1[{4}]</SelectionIdentifier>
+            <Text>1: I think the viewpoint is poor</Text>
           </Selection>
-          <Selection> 
-            <SelectionIdentifier>2[{4}]</SelectionIdentifier>  
-            <Text>2: I think the viewpoint is fair</Text> 
-          </Selection> 
-          <Selection> 
-            <SelectionIdentifier>3[{4}]</SelectionIdentifier>  
-            <Text>3: I think the viewpoint is satisfactory</Text> 
-          </Selection> 
-          <Selection> 
-            <SelectionIdentifier>4[{4}]</SelectionIdentifier>  
-            <Text>4: I think the viewpoint is good</Text> 
-          </Selection>  
-          <Selection> 
-            <SelectionIdentifier>5[{4}]</SelectionIdentifier>  
-            <Text>5: I think the viewpoint is excellent</Text> 
-          </Selection> 
-        </Selections> 
-      </SelectionAnswer> 
-    </AnswerSpecification> 
+          <Selection>
+            <SelectionIdentifier>2[{4}]</SelectionIdentifier>
+            <Text>2: I think the viewpoint is fair</Text>
+          </Selection>
+          <Selection>
+            <SelectionIdentifier>3[{4}]</SelectionIdentifier>
+            <Text>3: I think the viewpoint is satisfactory</Text>
+          </Selection>
+          <Selection>
+            <SelectionIdentifier>4[{4}]</SelectionIdentifier>
+            <Text>4: I think the viewpoint is good</Text>
+          </Selection>
+          <Selection>
+            <SelectionIdentifier>5[{4}]</SelectionIdentifier>
+            <Text>5: I think the viewpoint is excellent</Text>
+          </Selection>
+        </Selections>
+      </SelectionAnswer>
+    </AnswerSpecification>
   </Question>
 '''
         # answer_id在陷阱图片中，和item会有不同
@@ -81,7 +82,7 @@ u'''<?xml version="1.0" encoding="utf-8"?>
     <Text>Feel free to give us your opinions about these photos, focus on its' viewpoints</Text>
     <Text>Each HIT has %d pictures :)</Text>
   </Overview>
-  
+
   %s
 </QuestionForm>
 '''
@@ -92,7 +93,7 @@ u'''<?xml version="1.0" encoding="utf-8"?>
         template = \
 u'''title:%s
 description:We need your opinions whether the viewpoints of photos are good or bad.
-keywords:viewpoint, evaluation 
+keywords:viewpoint, evaluation
 reward:%f
 assignments:%d
 annotation:sample#command
@@ -114,7 +115,7 @@ autoapprovaldelay:1296000'''
 
 if __name__ == '__main__':
     import optparse
-    usage = 'Usage: %prog --prefix=kxm_ [--matrix-in] < kxm.txt'  
+    usage = 'Usage: %prog --prefix=kxm_ [--matrix-in] < kxm.txt'
     parser = optparse.OptionParser(usage = usage)
     parser.add_option('--matrix-in', dest='matrix_in', default=False, action='store_true', help='using matrix format')
     parser.add_option('--prefix', dest='prefix', default='kxm_', help='survey prefix')

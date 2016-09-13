@@ -27,7 +27,7 @@ anaMethodList = {
     'generalClassifyCombineFisherVector',... % 10
     'LDL'}; % 11
 
-anaMethod = 9;
+anaMethod = 8;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -195,18 +195,22 @@ elseif strcmp(anaMethodList{anaMethod},'combineCCA')
         'svm classify',...
         'ens classify'
         };
-    method = 2;
+    method = 3;
+    
+    combineMethod = {'stack','weight'};
+    combineMethodInd = 1;
+    
     % result preparing
     % gt  groundTruth
     % pl  preLabel
     % ln  plotroc legend name
     % general cca classify methods
-    gccaMethod = {'2d',methodText{method}};
+    gccaMethod = {'2d',methodText{method},combineMethod{combineMethodInd}};
 %     [gt,pl,ps,ln,scl] = generalClassifyCCA(fs2d, fs3d, rate, method)
     [gt1,pl1,ps1] = generalClassifyCCA(fs2d,fs3d,rate,gccaMethod);
-    gccaMethod = {'3d',methodText{method}};
+    gccaMethod = {'3d',methodText{method},combineMethod{combineMethodInd}};
     [gt2,pl2,ps2] = generalClassifyCCA(fs2d,fs3d,rate,gccaMethod);
-    gccaMethod = {'2d3d',methodText{method}};
+    gccaMethod = {'2d3d',methodText{method},combineMethod{combineMethodInd}};
     [gt3,pl3,ps3] = generalClassifyCCA(fs2d,fs3d,rate,gccaMethod);
 
     gt = [gt1;gt2;gt3];
