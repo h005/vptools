@@ -7,7 +7,8 @@
 
 import io
 
-modelList = {'bigben','kxm','notredame','freeGodness','tajMahal','cctv3'};
+# modelList = {'bigben','kxm','notredame','freeGodness','tajMahal','cctv3'};
+modelList = {'villa7s'}
 
 for ele in modelList:
 	originPath1 = '/home/h005/Documents/vpDataSet/tools/vpData/' + ele + '/vpFea/' + ele + '.2df';
@@ -37,7 +38,7 @@ for ele in modelList:
 		fname = fea1.readline();
 
 	fname = fea2.readline();
-	
+
 	while fname:
 		tmpfea = fea2.readline();
 		tmpfea = tmpfea.strip();
@@ -69,4 +70,3 @@ for ele in modelList:
 	fout.close();
 	feaReader.close();
 	feaWriter.close();
-

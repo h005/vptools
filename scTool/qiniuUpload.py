@@ -6,13 +6,13 @@ import qiniu.config
 access_key = 'SNGdXwQN-In0uJ5q0X8B39cQzkTM-I6uw5fXB71c'
 secret_key = 'mad0PMzGwH9QgoiNQrbSgmMTz4yVwi8SvrcY-pm7'
 
-# 
+#
 q = Auth(access_key, secret_key)
 
-# 
+#
 bucket_name = 'vpdataset'
 
-model = 'potalaPalace'
+model = 'BuckinghamPalace'
 
 dir = '/home/h005/Documents/vpDataSet/' + model + '/imgs/scImg/'
 
@@ -25,6 +25,7 @@ fname = file.readline()
 while fname:
 	fname = fname.strip()
 	key = fname
+	print key
 	token = q.upload_token(bucket_name,key,3600)
 	localfile = dir + key
 	ret, info = put_file(token, key, localfile)

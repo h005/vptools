@@ -9,11 +9,11 @@ import io
 # scorefilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameScore.txt';
 # extractfilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameSelected.matrix';
 
-model = 'videoCut1'
+model = 'BuckinghamPalace'
 
-matrixfilePath = '/home/h005/Documents/vpDataSet/' + model +'/imgs/model/'+ model +'.matrix'
-scorefilePath = '/home/h005/Documents/vpDataSet/'+ model +'/imgs/model/filelist.txt'
-extractfilePath = '/home/h005/Documents/vpDataSet/'+ model +'/imgs/model/selectedMatrix.matrix'
+matrixfilePath = '/home/h005/Documents/vpDataSet/' + model +'/model/'+ model +'.matrix'
+scorefilePath = '/home/h005/Documents/vpDataSet/'+ model +'/model/filelist.txt'
+extractfilePath = '/home/h005/Documents/vpDataSet/'+ model +'/model/selectedMatrix.matrix'
 
 matrixfile = open(matrixfilePath,'r')
 selectfile = open(scorefilePath)
@@ -73,3 +73,5 @@ while fname:
 matrixfile.close()
 selectfile.close()
 extractfile.close()
+
+print model + ' select done'
