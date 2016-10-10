@@ -13,6 +13,7 @@ for i = 1 : length(models)
     fea2Dfile = ['../vpData/' sceneName '/vpFea/' sceneName '.2dvnf'];
     fea3Dfile = ['../vpData/' sceneName '/vpFea/' sceneName '.3df'];
 
+    disp(scorefile)
     sctmp = scload(scorefile,sceneName);
     scrtmp = assScore(sctmp,'ave');
 

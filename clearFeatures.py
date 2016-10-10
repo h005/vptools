@@ -13,7 +13,16 @@ modelList = {
     'notredame',
     'freeGodness',
     'tajMahal',
-    'cctv3'
+    'cctv3',
+    'BrandenburgGate',
+    'BritishMuseum',
+    'potalaPalace',
+    'capitol',
+    'Sacre',
+    'TengwangPavilion',
+    'mont',
+    'HelsinkiCathedral',
+    'BuckinghamPalace'
     }
 
 path = '/home/h005/Documents/vpDataSet/'

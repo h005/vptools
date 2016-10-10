@@ -21,6 +21,7 @@ getFileName.py 这个脚本用来处理使用matlab聚类之后的结果，提�
     python getFileName.py model > model.survey
 
 csv2score.py 这个脚本用来处理从AMT扒下来，做完调查的数据，并且转化为matlab可以使用的文件格式
+csv2Score_.py 这个脚本和scv2score.py的作用一样，只是后来发布的数据和第一批发布的数据格式不一样（之前发布的为[model]/[image].jpg，而后来发布的是[model]_[image].jpg格式 需要增加一步将'_'替换成'/',和maltab处理的数据格式统一起来）
 
 convert csv files 2 score file
 dir para and outputFile para is needed

@@ -8,7 +8,25 @@
 import io
 
 # modelList = {'bigben','kxm','notredame','freeGodness','tajMahal','cctv3'};
-modelList = {'villa7s'}
+# modelList = {'villa7s'}
+# modelList = {'BrandenburgGate','BritishMuseum','potalaPalace','capitol','Sacre','TengwangPavilion','mont','HelsinkiCathedral','BuckinghamPalace'}
+modelList = {
+    'bigben',
+    'kxm',
+    'notredame',
+    'freeGodness',
+    'tajMahal',
+    'cctv3',
+    'BrandenburgGate',
+    'BritishMuseum',
+    'potalaPalace',
+    'capitol',
+    'Sacre',
+    'TengwangPavilion',
+    'mont',
+    'HelsinkiCathedral',
+    'BuckinghamPalace'
+    }
 
 for ele in modelList:
 	originPath1 = '/home/h005/Documents/vpDataSet/tools/vpData/' + ele + '/vpFea/' + ele + '.2df';

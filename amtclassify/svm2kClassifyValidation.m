@@ -86,8 +86,8 @@ for j=1:nfold
 %     CB = 0.2;
 %     D = 0.1;
 %     eps = 0.01;
-    CA = 3.5;
-    CB = 3.5;
+    CA = 4.0;
+    CB = 4.0;
     D = 0.1;
     eps = 0.01;
     % this parameter is about kernel
