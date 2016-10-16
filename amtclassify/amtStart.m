@@ -17,10 +17,10 @@ modelList = {
     'TengwangPavilion',...
     'mont',...
     'HelsinkiCathedral',...
-    'BuckinghamPalace'
-%     'BritishMuseum',...
-%     'BrandenburgGate'
-%     'potalaPalace'
+    'BuckinghamPalace',...
+    'BritishMuseum',...
+    'BrandenburgGate',...
+    'potalaPalace'
     };
 
 anaMethodList = {
@@ -298,7 +298,7 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombine')
     plotErrorRate(gt,pl,ln,titleText);
 elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombineCCA')
 %% CCA with svm2k combine
-    rate = 0.1;
+    rate = 0.10;
     % for valid both 2d and 3d features
     % valid 2d or 3d featurs by modeList.
     modeList  = {'2d3d','2d','3d'};
