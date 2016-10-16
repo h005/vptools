@@ -27,7 +27,7 @@ anaMethodList = {
     'generalClassifyCombineFisherVector',... % 10
     'LDL'}; % 11
 
-anaMethod = 9;
+anaMethod = 8;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%

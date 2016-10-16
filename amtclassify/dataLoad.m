@@ -40,4 +40,5 @@ for i = 1 : length(models)
     scr = {scr{:}, scrtmp{:}};
     fea2d = {fea2d{:},fea2dtmp{index}};
     fea3d = {fea3d{:},fea3dtmp{index}};
+    disp([sceneName ' ' num2str(sum(index)) ' pictures loaded'])
 end
