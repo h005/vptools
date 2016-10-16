@@ -122,7 +122,7 @@ mc_svm_2k_lava2(XTrain1,XTrain2,YTrain,XTest1,XTest2,YTest,CA,CB,D,eps,ifeature)
                 ytrsum=sum(YTrain);
 %                 isxA=(mtrain-ytrsum)/2;
 % modified by h005
-% (mtrain - ytrsum)/2 can be a float number crazy! sb
+% (mtrain - ytrsum)/2 can be a float number
                 isxA = floor((mtrain-ytrsum)/2);
                 ba=(sxA(isxA)+sxA(isxA+1))/2;
                 bb=(sxB(isxA)+sxB(isxA+1))/2;

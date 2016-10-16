@@ -19,7 +19,16 @@ modelList = {
     'notredame',
     'freeGodness',
     'tajMahal',
-    'cctv3'
+    'cctv3',
+    'BrandenburgGate',
+    'BritishMuseum',
+    'potalaPalace',
+    'capitol',
+    'Sacre',
+    'TengwangPavilion',
+    'mont',
+    'HelsinkiCathedral',
+    'BuckinghamPalace'
     }
 
 suffix = {'.2df',

@@ -46,7 +46,7 @@ def submit(filepath, in_sandbox):
 def walker(dir_path, in_sandbox):
     if len(dir_path) == 0:
         dir_path = '.'
-    
+
     for root, dirs, files in os.walk(dir_path):
         for name in files:
             fname, ext = os.path.splitext(name)
@@ -60,12 +60,12 @@ if __name__ == '__main__':
     # For more details about optparser, Please visit:
     # https://docs.python.org/2/library/optparse.html#default-values
 
-    usage = 'Usage: %prog --dir=. [--production]' 
+    usage = 'Usage: %prog --dir=. [--production]'
     parser = optparse.OptionParser(usage = usage)
     parser.add_option('-d', '--dir', dest='dir', default = '.', help="source file's dir")
     parser.add_option('--production', dest='sandbox', default=True, action='store_false', help='run in production model')
     parser.add_option('--single', dest='single', help='push a single task')
-    
+
     (options, args) = parser.parse_args()
 
     prepare_env()

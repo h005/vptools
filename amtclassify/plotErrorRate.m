@@ -28,7 +28,8 @@ legend(fN);
 ylabel('Error Rate');
 title(titleText,'FontWeight','normal')
 axis([0.5,3.5,0,0.5])
-for i = 1:numel(titleText)
-    disp(titleText{i})
+
+for i=1:numel(fN)
+    disp(fN{i})
     disp(errRate(i));
 end

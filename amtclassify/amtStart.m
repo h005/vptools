@@ -11,7 +11,16 @@ modelList = {
     'notredame',...
     'freeGodness',...
     'tajMahal',...
-    'cctv3'...
+    'cctv3',...
+    'capitol',...
+    'Sacre',...
+    'TengwangPavilion',...
+    'mont',...
+    'HelsinkiCathedral',...
+    'BuckinghamPalace'
+%     'BritishMuseum',...
+%     'BrandenburgGate'
+%     'potalaPalace'
     };
 
 anaMethodList = {
@@ -23,9 +32,10 @@ anaMethodList = {
     'encodingClassifyCombine',... % 6
     'svm2kClassifyCombine',... % 7
     'svm2kClassifyCombineCCA',... % 8
-    'combineCCA',... % 9
-    'generalClassifyCombineFisherVector',... % 10
-    'LDL'}; % 11
+    'svm2kRegressCombineCCA',... %9
+    'combineCCA',... % 10
+    'generalClassifyCombineFisherVector',... % 11
+    'LDL'}; % 12
 
 anaMethod = 8;
 
@@ -195,18 +205,22 @@ elseif strcmp(anaMethodList{anaMethod},'combineCCA')
         'svm classify',...
         'ens classify'
         };
-    method = 2;
+    method = 3;
+    
+    combineMethod = {'stack','weight'};
+    combineMethodInd = 1;
+    
     % result preparing
     % gt  groundTruth
     % pl  preLabel
     % ln  plotroc legend name
     % general cca classify methods
-    gccaMethod = {'2d',methodText{method}};
+    gccaMethod = {'2d',methodText{method},combineMethod{combineMethodInd}};
 %     [gt,pl,ps,ln,scl] = generalClassifyCCA(fs2d, fs3d, rate, method)
     [gt1,pl1,ps1] = generalClassifyCCA(fs2d,fs3d,rate,gccaMethod);
-    gccaMethod = {'3d',methodText{method}};
+    gccaMethod = {'3d',methodText{method},combineMethod{combineMethodInd}};
     [gt2,pl2,ps2] = generalClassifyCCA(fs2d,fs3d,rate,gccaMethod);
-    gccaMethod = {'2d3d',methodText{method}};
+    gccaMethod = {'2d3d',methodText{method},combineMethod{combineMethodInd}};
     [gt3,pl3,ps3] = generalClassifyCCA(fs2d,fs3d,rate,gccaMethod);
 
     gt = [gt1;gt2;gt3];
@@ -298,7 +312,27 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombineCCA')
 %     ln = {'svm2k'};
     titleText = {'Svm2k of different method on photos'};
     plotErrorRate(gt,pl,ln,titleText);
-
+elseif strcmp(anaMethodList{anaMethod},'svm2kRegressCombineCCA')
+%% CCA regress with svm2k combine just apply sigmod function active the distance to hyper plane
+    rate = 0.1;
+    addpath('./svm2k/')
+    [sc,scr,fea2d,fea3d] = dataLoad(modelList);
+    [fs,fname] = combine(fea2d,fea3d,scr);
+    [fs2d,fname] = combine(fea2d,scr);
+    [fs3d,fname] = combine(fea3d,scr);
+    % set Method
+    methodText = {'Svm2k regress'};
+    virtualModel = {'villa7s'};
+    
+    [vfea2d,vfea3d] = vdataLoad(virtualModel);
+    len2d = numel(vfea2d{1}.fs);
+    [vf, vfname] = combine(vfea2d,vfea3d);
+    vf2d = vf(:,1:len2d);
+    vf3d = vf(:,len2d+1:end);
+    
+    ps = svm2kRegress(fs2d,fs3d,rate,vf2d,vf3d);
+    showColorMap;
+    
 elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
 %% virtual generalRegress
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
@@ -328,6 +362,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
 
 %     virtualModel = {'zb'};
     virtualModel = {'njuSample'};
+%     virtualModel = {'njuGuLou'};
 
     [vfea2d,vfea3d] = vdataLoad(virtualModel);
 
