@@ -44,7 +44,7 @@ if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
     % top rate pictures will be assign as good
     % last rate pictures will be assign as bad
     % this parameters shold be modified as you like
-    rate = 0.08;
+    rate = 0.10;
 
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 

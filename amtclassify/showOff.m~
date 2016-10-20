@@ -1,0 +1,17 @@
+%% show off model
+%% this function load a .off model file and return 
+% points with color
+function [pt,color] = showOff(file)
+
+fid = fopen(file,'r');
+ind = 0;
+while 1
+    tline = fgetl(fid);
+    if tline == -1
+        break;
+    end
+    ind = ind + 1;
+    
+end
+
+

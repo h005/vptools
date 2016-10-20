@@ -51,10 +51,10 @@ for i=1:numel(fN)
     Y{i} = prec;
 end
 figure
-plot(X{1},Y{1},'Marker',plotMarker{1});
+plot([0; X{1}],[1; Y{1}],'Marker',plotMarker{1});
 hold on;
 for i=2:numel(fN)
-    plot(X{i},Y{i},'Marker',plotMarker{i});
+    plot([0; X{i}],[1; Y{i}],'Marker',plotMarker{i});
 end
 legend(fN,'Location','best');
 xlabel('recall');
