@@ -1,0 +1,20 @@
+%% this function was created to generate a classifier
+
+function [mdl,scaler] = getClassifier(fs,rate)
+
+sc = fs(:,end);
+[sortedSc,index] = sort(sc);
+[ncases,mfeatures] = size(fs);
+mfeatuers = mfeatures - 1;
+num = round(ncases * rate);
+negIdx = index(1:num);
+posIdx = index(end - num + 1 : end);
+
+% contrust combined dataSet
+cfs = zeros(2*num,mfeatures+1);
+cfs(1:num,1:end-1) = fs(negIdx,1:end-1);
+cfs(1:num,end) = 0;
+cfs(num+1:2*num,1:end-1) = fs(posIdx,1:end-1);
+cfs(num+1:2*num,end) = 1;
+
+
