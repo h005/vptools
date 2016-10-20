@@ -17,10 +17,10 @@ modelList = {
     'TengwangPavilion',...
     'mont',...
     'HelsinkiCathedral',...
-    'BuckinghamPalace'
-%     'BritishMuseum',...
-%     'BrandenburgGate'
-%     'potalaPalace'
+    'BuckinghamPalace',...
+    'BritishMuseum',...
+    'BrandenburgGate',...
+    'potalaPalace'
     };
 
 anaMethodList = {
@@ -134,7 +134,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
     % top rate pictures will be assign good
     % last rate pictures will be assign bad
     % this parameters should bbe modified as needed
-    rate = 0.08;
+    rate = 0.1;
     % load Data
     % sc = scload(scorefile,sceneName);
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
@@ -154,7 +154,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
         'svm classify',...
         'ens classify'
         };
-    method = 2;
+    method = 3;
     % result preparing
     % gt  groundTruth
     % pl  preLabel
