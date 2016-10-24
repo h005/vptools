@@ -1,5 +1,5 @@
 %% this script was created to apply svm2k to classify
-function [gt,pl,ps] = svm2kStart(modelList,rate)
+function [gt,pl,ps] = svm2kStart(modelList,rate,mode)
 addpath('./svm2k/');
 [sc,scr,fea2d,fea3d] = dataLoad(modelList);
 [fs,fname] = combine(fea2d,fea3d,scr);
@@ -17,13 +17,15 @@ addpath('./svm2k/');
 % [gt,ps] = svm2kClassify(f2d,f3d,rate);
 
 % % this was added for CCA preprocess
-[A,B,r,U,V] = canoncorr(fs2d(:,1:end-1),fs3d(:,1:end-1));
-ind = r > 0;
-fs2d = [U(:,ind),fs2d(:,end)];
-fs3d = [V(:,ind),fs3d(:,end)];
+% [A,B,r,U,V] = canoncorr(fs2d(:,1:end-1),fs3d(:,1:end-1));
+% ind = r > 0;
+% fs2d = [U(:,ind),fs2d(:,end)];
+% fs3d = [V(:,ind),fs3d(:,end)];
 
 
-[gt,ps] = svm2kClassify(fs2d,fs3d,rate);
+
+
+[gt,ps] = svm2kClassify(fs2d,fs3d,rate,mode);
 pl = ps>0;
 pl = 2 * pl - 1;
 pl = pl';

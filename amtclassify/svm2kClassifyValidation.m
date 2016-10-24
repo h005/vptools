@@ -25,7 +25,9 @@ groundTruth(1:num) = -1;
 groundTruth(num+1:2*num) = 1;
 label = groundTruth';
 
-indices = crossvalind('Kfold',length(label),nfold);
+% indices = crossvalind('Kfold',length(label),nfold);
+% save('indices.mat','indices');
+load indices
 
 scLabel = [];
 preLabel = zeros(2 * num, 1);

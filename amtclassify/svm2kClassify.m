@@ -1,5 +1,5 @@
 %% this function was created to run svm2k
-function [groundTruth,preLabel] = svm2kClassify(fs2d,fs3d,rate)
+function [groundTruth,preLabel] = svm2kClassify(fs2d,fs3d,rate,mode)
 nfold = 10;
 sc = fs2d(:,end);
 % sort sc asscend
@@ -64,10 +64,10 @@ for j=1:nfold
     test2d = test2d';
     test3d = test3d';
     
-    CA = 0.2;
-    CB = 0.2;
+    CA = 4.0;
+    CB = 4.0;
     D = 0.1;
-    eps = 0.001;
+    eps = 0.01;
     % this parameter about kernel
     ifeature = 1;
     [acorr,acorr1,acorr2,...
@@ -79,8 +79,14 @@ for j=1:nfold
         mc_svm_2k_lava2(tf2d,tf3d,trainLabel,...
         test2d,test3d,testLabel,...
         CA,CB,D,eps,ifeature);
-        
-    preLabel(test) = pre;
+    
+    if strcmp(mode,'2D3D')
+        preLabel(test) = pre;
+    elseif strcmp(mode,'2D')
+        preLabel(test) = pre1;
+    elseif strcmp(mode,'3D')
+        preLabel(test) = pre2;
+    end
 end
 
 

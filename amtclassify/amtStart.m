@@ -37,7 +37,7 @@ anaMethodList = {
     'generalClassifyCombineFisherVector',... % 11
     'LDL'}; % 12
 
-anaMethod = 8;
+anaMethod = 7;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -134,7 +134,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
     % top rate pictures will be assign good
     % last rate pictures will be assign bad
     % this parameters should bbe modified as needed
-    rate = 0.08;
+    rate = 0.10;
     % load Data
     % sc = scload(scorefile,sceneName);
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
@@ -287,17 +287,27 @@ elseif strcmp(anaMethodList{anaMethod},'LDL')
 
 elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombine')
 %% svm2k Classify combine
-    rate = 0.08;
-    [gt1,pl1] = svm2kStart(modelList,rate,0.8);
-    [gt2,pl2] = svm2kStart(modelList,rate,0.6);
-    [gt3,pl3] = svm2kStart(modelList,rate,0);
+    rate = 0.1;
+%     [gt1,pl1] = svm2kStart(modelList,rate,0.8);
+%     [gt2,pl2] = svm2kStart(modelList,rate,0.6);
+%     [gt3,pl3] = svm2kStart(modelList,rate,0);
+%     gt = [gt1;gt2;gt3];
+%     pl = [pl1;pl2;pl3];    
+    mode = {'2D','3D','2D3D'};
+    
+    [gt1,pl1] = svm2kStart(modelList,rate,mode{1});
+    [gt2,pl2] = svm2kStart(modelList,rate,mode{2});
+    [gt3,pl3] = svm2kStart(modelList,rate,mode{3});
     gt = [gt1;gt2;gt3];
-    pl = [pl1;pl2;pl3];    
-    ln = {'svm2kCoorRate 0.8','svm2kCoorRate 0.6','svm2kCoorRate 0'};
+    pl = [pl1;pl2;pl3];
+    ln = {'2D','3D','2D3D'};
     titleText = {'Svm2k of different method on photos'};
     plotErrorRate(gt,pl,ln,titleText);
 elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombineCCA')
 %% CCA with svm2k combine
+    delete indices.mat
+    indices = crossvalind('Kfold',1002,10);
+    save('indices.mat','indices');
     rate = 0.10;
     % for valid both 2d and 3d features
     % valid 2d or 3d featurs by modeList.

@@ -1,14 +1,17 @@
-clear
-clc
+function mvDist(modelName)
+% clear
+% clc
 %{
 matrixFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.matrix';
 imgSource = '/home/h005/Documents/vpDataSet/notredame/imgs';
 clusterDest = '/home/h005/Documents/vpDataSet/notredame/cluster';
 feaFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.fs';
 %}
-modelName = 'BuckinghamPalace';
+% modelName = 'notredame';
 % matrixFile = '/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.matrix';
-matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/model/selectedMatrix.matrix'];
+
+% matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/model/selectedMatrix.matrix'];
+matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/model/' modelName 'Cluster.matrix'];
 % imgSource = '/home/h005/Documents/vpDataSet/kxm/imgs';
 imgSource = ['/home/h005/Documents/vpDataSet/' modelName '/imgs'];
 % clusterDest = '/home/h005/Documents/vpDataSet/kxm/cluster';
@@ -31,7 +34,7 @@ method = 'meanshiftPCU'
 % method = 'kmedoidsMV';
 method = 'kmedoidsMV';
 %%
-copyFlag = 1;
+copyFlag = 0;
 output = 1;
 showDistribution = 0;
 
@@ -40,7 +43,15 @@ while 1
     if tline == -1
         break;
     end
+    tline = strtrim(tline);
+    if isempty(tline)
+        break;
+    end
     ind = ind + 1;
+%     disp(num2str(ind))
+%     if ind == 125
+%         disp('debug')
+%     end
     fileName{ind} = tline;
     tline = fgetl(fid);
     arr0 = strread(tline);
@@ -68,7 +79,7 @@ upd = upd(1:num,:);
 
 validIndex = clearOutLiers(ps);
 % do not clear outliers
-validIndex = 1:num;
+% validIndex = 1:num;
 ps = ps(validIndex,:);
 cad = cad(validIndex,:);
 upd = upd(validIndex,:);
@@ -174,22 +185,39 @@ if output
             cluster(i));
     end
 
-    for i=1:size(clusterCenter,1)
+    % this is error for KMedoids method
+%     for i=1:size(clusterCenter,1)
+% 
+%         fprintf(fid,'%f %f %f %f %f %f %f %f %f\n',clusterCenter(i,1),...
+%             clusterCenter(i,2),...
+%             clusterCenter(i,3),...
+%             clusterCenter(i,4),...
+%             clusterCenter(i,5),...
+%             clusterCenter(i,6),...
+%             clusterCenter(i,7),...
+%             clusterCenter(i,8),...
+%             clusterCenter(i,9));
+% 
+%     end
 
-        fprintf(fid,'%f %f %f %f %f %f %f %f %f\n',clusterCenter(i,1),...
-            clusterCenter(i,2),...
-            clusterCenter(i,3),...
+    for i=1:size(clusterCenter,1)
+       index = cluster == i;
+       tmpPs = ps(index,:);
+       psCenter = mean(tmpPs,1);
+        fprintf(fid,'%f %f %f %f %f %f %f %f %f\n',psCenter(1),...
+            psCenter(2),...
+            psCenter(3),...
             clusterCenter(i,4),...
             clusterCenter(i,5),...
             clusterCenter(i,6),...
             clusterCenter(i,7),...
             clusterCenter(i,8),...
             clusterCenter(i,9));
-
     end
 
+
     fclose(fid);
-    disp('write done');
+    disp([modelName 'write done']);
 end
 %% copy images to folder with name as clusterId
 if copyFlag
