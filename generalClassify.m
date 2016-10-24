@@ -25,6 +25,19 @@ else
             pl = [];
 
         end
+    elseif strcmp(method{1},'comparisonClassifyCombine')
+        if strcmp(method{2},'2D3D combine')
+%             if strcmp('svm2k',method{3})
+%                 [gt, pl, ps, scl]...
+%                     = svm2kClassifyComparisonValidation
+%             else
+            [gt, pl, ps, scl]...
+                = comparisonClassifyCombine(fs,rate,fname,method{3},method{4});
+            ln = method{4};
+%             end
+        else
+            disp('parameter error for comparisonClassifyCombine')
+        end
     elseif strcmp(method{1},'generalClassifyCombine')
         if strcmp(method{2},'2D combine')
             [gt, pl, ps, scl]...

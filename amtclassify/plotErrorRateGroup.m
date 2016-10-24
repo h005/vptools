@@ -20,10 +20,11 @@ for i=1:mMethods
         % compute error rate
         errRate(i,j) = sum(gt{i}(j,:) == pl{i}(j,:));
 %         errRate(i) = sum(gt(i,:) == pl(i,:));
-    end      
+    end
+    mItem = size(gt{i},2);
+    errRate(i,:) = errRate(i,:) / mItem;
 end
 
-errRate = errRate / mItem;
 errRate = 1 - errRate;
 
 
@@ -40,5 +41,5 @@ bar(errRate);
 set(gca, 'XTick', 1:numel(errRate), 'XTickLabel', methodN)
 ylabel('Error Rate');
 title(titleText,'FontWeight','normal')
-axis([0.5,3.5,0,0.5])
+axis([0.5,3.5,0,1.0])
 legend(fN,'Location','best');
