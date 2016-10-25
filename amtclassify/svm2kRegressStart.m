@@ -1,6 +1,6 @@
 %% this file was created for svm2k regress start
 % classification with svm2k and activated by sigmode function
-function [gt,score] = svm2kRegressStart(fs2d,fs3d,rate,vf2d,vf3d,mode)
+function score = svm2kRegressStart(fs2d,fs3d,rate,vf2d,vf3d,mode)
 
 sc = fs2d(:,end);
 % sort sc asscend
@@ -37,14 +37,16 @@ label = label';
 
 
 [tf2d, ps] = mapminmax(fea2d,0,1);
-vf2d = mapminmax('apply', vf2d', ps);
+test2d = mapminmax('apply', vf2d', ps);
 [tf3d, ps] = mapminmax(fea3d,0,1);
-vf3d = mapminmax('apply', vf3d', ps);
+test3d = mapminmax('apply', vf3d', ps);
 
 tf2d = tf2d';
 tf3d = tf3d';
 test2d = test2d';
 test3d = test3d';
+
+testLabel = zeros(size(test3d,1),1);
 
 CA = 4.0;
 CB = 4.0;
@@ -58,7 +60,7 @@ ifeature = 1;
     tpre,tpre1,tpre2,...
     ga,gb,bam,bbm,...
     alpha_A,alpha_B]= ...
-    mc_svm_2k_lava2(tf2d,tf3d,trainLabel,...
+    mc_svm_2k_lava2(tf2d,tf3d,label,...
     test2d,test3d,testLabel,...
     CA,CB,D,eps,ifeature);
 
@@ -72,3 +74,7 @@ end
 
 
 score = sigmod(score);
+end
+function val = sigmod(x)
+    val = 1 ./ (1 + exp(-x));
+end

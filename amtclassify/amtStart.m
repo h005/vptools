@@ -38,7 +38,7 @@ anaMethodList = {
     'generalClassifyCombineFisherVector',... % 12
     'LDL'}; % 13
 
-anaMethod = 10;
+anaMethod = 8;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -336,16 +336,17 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
     methodText = {'SVM-2K regress'};
     virtualModel = {'villa7s'};
     
-    [vfea2d,vfea3d] = vdataLoad(vritualModel);
+    [vfea2d,vfea3d] = vdataLoad(virtualModel);
     len2d = numel(vfea2d{1}.fs);
     [vf, vfname] = combine(vfea2d,vfea3d);
     vf2d = vf(:,1:len2d);
-    vf3d = vf(:,lend2d+1:end);
+    vf3d = vf(:,len2d+1:end);
     
     mode = {'2D','3D','2D3D'};
     method = 3;
     
     ps = svm2kRegressStart(fs2d,fs3d,rate,vf2d,vf3d,mode{method});
+    showColorMap;
     
 elseif strcmp(anaMethodList{anaMethod},'svm2kRegressCombineCCA')
 %% CCA regress with svm2k combine just apply sigmod function active the distance to hyper plane
