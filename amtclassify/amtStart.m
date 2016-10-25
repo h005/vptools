@@ -31,13 +31,14 @@ anaMethodList = {
     'generalClassifyVirtual'... % 5
     'encodingClassifyCombine',... % 6
     'svm2kClassifyCombine',... % 7
-    'svm2kClassifyCombineCCA',... % 8
-    'svm2kRegressCombineCCA',... %9
-    'combineCCA',... % 10
-    'generalClassifyCombineFisherVector',... % 11
-    'LDL'}; % 12
+    'svm2kRegresssCombine',... % 8
+    'svm2kClassifyCombineCCA',... % 9
+    'svm2kRegressCombineCCA',... % 10
+    'combineCCA',... % 11
+    'generalClassifyCombineFisherVector',... % 12
+    'LDL'}; % 13
 
-anaMethod = 7;
+anaMethod = 10;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -324,6 +325,28 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombineCCA')
 %     ln = {'svm2k'};
     titleText = {'Svm2k of different method on photos'};
     plotErrorRate(gt,pl,ln,titleText);
+elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
+%% SVM-2K with Regress
+    rate = 0.1;
+    addpath('./svm2k/')
+    [sc,scr,fea2d,fea3d] = dataLoad(modelList);
+    [fs2d,fname] = combine(fea2d,scr);
+    [fs3d,fname] = combine(fea3d,scr);
+    % set Method
+    methodText = {'SVM-2K regress'};
+    virtualModel = {'villa7s'};
+    
+    [vfea2d,vfea3d] = vdataLoad(vritualModel);
+    len2d = numel(vfea2d{1}.fs);
+    [vf, vfname] = combine(vfea2d,vfea3d);
+    vf2d = vf(:,1:len2d);
+    vf3d = vf(:,lend2d+1:end);
+    
+    mode = {'2D','3D','2D3D'};
+    method = 3;
+    
+    ps = svm2kRegressStart(fs2d,fs3d,rate,vf2d,vf3d,mode{method});
+    
 elseif strcmp(anaMethodList{anaMethod},'svm2kRegressCombineCCA')
 %% CCA regress with svm2k combine just apply sigmod function active the distance to hyper plane
     rate = 0.1;

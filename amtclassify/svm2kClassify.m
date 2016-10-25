@@ -50,14 +50,12 @@ for j=1:nfold
     
     trainLabel = label(train);
     testLabel = label(test);
-    scaler2d = dataScaler(tf2d,'minMax');
-    scaler3d = dataScaler(tf3d,'minMax');
     
-    tf2d = datascaling(scaler2d,tf2d);
-    tf3d = datascaling(scaler3d,tf3d);
-    
-    test2d = datascaling(scaler2d,test2d);
-    test3d = datascaling(scaler3d,test3d);
+    [tf2d, ps] = mapminmax(tf2d,0,1);
+    test2d = mapminmax('apply',test2d, ps);
+ 
+    [tf3d, ps] = mapminmax(tf3d,0,1);
+    test3d = mapminmax('apply',test3d,ps);
     
     tf2d = tf2d';
     tf3d = tf3d';
