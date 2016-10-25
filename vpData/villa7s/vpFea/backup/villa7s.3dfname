@@ -9,7 +9,6 @@ depthDistribute
 meanCurvature
 gaussianCurvature
 abovePreference
-ztitleAngle
 outlierCount
 boundingBox
 boundingBox
