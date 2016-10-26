@@ -89,8 +89,31 @@ for i=1:numel(methodText)
 %     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
 disp(methodText{i})
 end
+
+methodText = {'SVM-2K'};
+mode = {'2D','3D','2D3D'};
+
+[gt1,ps1] = svm2kClassify(fs2d,fs3d,rate,mode{1});
+pl1 = ps1>0;
+pl1 = 2 * pl1 - 1;
+pl1 = pl1';
+disp('SVM-2K 2D')
+[gt2,ps2] = svm2kClassify(fs2d,fs3d,rate,mode{2});
+pl2 = ps2>0;
+pl2 = 2 * pl2 - 1;
+pl2 = pl2';
+disp('SVM-2K 3D')
+[gt3,ps3] = svm2kClassify(fs2d,fs3d,rate,mode{3});
+pl3 = ps3>0;
+pl3 = 2 * pl3 - 1;
+pl3 = pl3';
+disp('SVM-2K 2D3D')
+gt{4} = [gt1;gt2;gt3];
+pl{4} = [pl1;pl2;pl3];
+disp(methodText)
+
 toc
 featuresN = {'2D','3D','2D&3D'};
-methodsN = {'Bayes','SVM','Ens'};
+methodsN = {'Bayes','SVM','Ens','SVM-2K'};
 plotErrorRateGroup(gt,pl,featuresN,methodsN,'Classification performance of different methods on photos');
 

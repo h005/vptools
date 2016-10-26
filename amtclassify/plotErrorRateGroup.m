@@ -23,6 +23,7 @@ for i=1:mMethods
     end
     mItem = size(gt{i},2);
     errRate(i,:) = errRate(i,:) / mItem;
+    disp(['error rate of : ' methodN{i} ' ' num2str(1 - errRate(i,:))])
 end
 
 errRate = 1 - errRate;
@@ -41,5 +42,5 @@ bar(errRate);
 set(gca, 'XTick', 1:numel(errRate), 'XTickLabel', methodN)
 ylabel('Error Rate');
 title(titleText,'FontWeight','normal')
-axis([0.5,3.5,0,1.0])
+axis([0.5,4.5,0,0.5])
 legend(fN,'Location','best');

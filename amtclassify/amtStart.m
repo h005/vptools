@@ -334,9 +334,10 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
     [fs3d,fname] = combine(fea3d,scr);
     % set Method
     methodText = {'SVM-2K regress'};
-    virtualModel = {'villa7s'};
+    virtualModel = {'villa7s','circle'};
+%     virtualModel = {'njuSample','halfCircle'};
     
-    [vfea2d,vfea3d] = vdataLoad(virtualModel);
+    [vfea2d,vfea3d] = vdataLoad({virtualModel{1}});
     len2d = numel(vfea2d{1}.fs);
     [vf, vfname] = combine(vfea2d,vfea3d);
     vf2d = vf(:,1:len2d);

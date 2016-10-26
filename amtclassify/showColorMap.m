@@ -10,6 +10,14 @@ sizet = [64,16];
 % for VideoCut3Sample
 % sizet = [64,15];
 psImg = reshape(ps,sizet(1),sizet(2));
+
+if strcmp(virtualModel{2},'circle')
+    psImg = [psImg;psImg(1,:)];
+    sizet(1) = sizet(1) + 1;
+else
+
+end
+
 % this was created for debug
 % image(psImg,'CDataMapping','scaled')
 img = imresize(psImg,sizet * 8);
