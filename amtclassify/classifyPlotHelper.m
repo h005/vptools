@@ -26,7 +26,7 @@ for i=1:numel(fN)
         perfcurve(groundTruth(i,:),score(i,:),scoreLabel);
     X{i} = tmpx;
     Y{i} = tmpy;
-    disp([fN{i} '&' num2str(tmpauc)])
+    disp([fN{i} '&' num2str(round(tmpauc,3))])
 end
 figure
 plot(X{1},Y{1},'Marker',plotMarker{1},'MarkerSize',2);

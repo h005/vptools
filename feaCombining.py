@@ -28,7 +28,7 @@ import io
 #     'BuckinghamPalace'
 #     }
 
-modelList = {'villa7s'};
+modelList = {'castle'};
 
 for ele in modelList:
 	originPath1 = '/home/h005/Documents/vpDataSet/tools/vpData/' + ele + '/vpFea/' + ele + '.2df';

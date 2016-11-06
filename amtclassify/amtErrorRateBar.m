@@ -6,6 +6,7 @@ clc
 
 addpath('../');
 addpath('../fisherVector/')
+addpath('./svm2k')
 
 modelList = {
     'bigben',...
@@ -45,7 +46,7 @@ rate = 0.10;
 % set Method
 methodText = {
     'bayes classify',...
-    'svm classify',...
+%     'svm classify',...
     'ens classify'
     };
 method = 3;
@@ -108,12 +109,12 @@ pl3 = ps3>0;
 pl3 = 2 * pl3 - 1;
 pl3 = pl3';
 disp('SVM-2K 2D3D')
-gt{4} = [gt1;gt2;gt3];
-pl{4} = [pl1;pl2;pl3];
+gt{numel(gt)+1} = [gt1;gt2;gt3];
+pl{numel(gt)} = [pl1;pl2;pl3];
 disp(methodText)
 
 toc
 featuresN = {'2D','3D','2D&3D'};
-methodsN = {'Bayes','SVM','Ens','SVM-2K'};
+methodsN = {'Bayes','Ens','SVM-2K'};
 plotErrorRateGroup(gt,pl,featuresN,methodsN,'Classification performance of different methods on photos');
 

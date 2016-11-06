@@ -1,0 +1,3 @@
+error rate of : Bayes 0.3004      0.2994     0.27146
+error rate of : Ens 0.27545     0.20359     0.18064
+error rate of : SVM-2K 0.25948     0.18663     0.16866

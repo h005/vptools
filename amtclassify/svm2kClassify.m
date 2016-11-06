@@ -13,6 +13,8 @@ groundTruth = zeros(1, 2 * num);
 preLabel = zeros(1, 2 * num);
 preScore = zeros(1, 2 * num);
 
+% picName = fname([negIdx;posIdx]);
+
 % constuct combined dataSet
 % the last column is score
 fea2d = zeros(2 * num, mfetures-1);

@@ -29,3 +29,7 @@ addpath('./svm2k/');
 pl = ps>0;
 pl = 2 * pl - 1;
 pl = pl';
+
+% for i=1:length(picName)
+%     disp([picName{i} ' ' num2str(pl(i)) ' ' num2str(gt(i))])
+% end

@@ -79,7 +79,7 @@ for i = 1:numel(testModel)
 %     gcMethod = {'comparisonClassifyCombine','2D3D combine',svm2kMethod{1},testModel{i}};
 %     [gt0,pl0,ps0,ln0,scl0] = generalClassify(fs,rate,fname,gcMethod);
 %     disp(svm2kMethod{1})
-    [gt0, pl0, ln0] = svm2kClassifyComparisonValidation(fs2d, fs3d, fname, rate, testModel{i});
+    [gt0, pl0, ln0] = svm2kClassifyComparisonValidation(fs2d, fs3d, fname, rate, testModel{i},'2D3D combine');
     
     gt{i} = [gt1;gt2;gt3;gt0];
     ps=[ps1;ps2;ps3];

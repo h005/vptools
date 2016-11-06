@@ -38,7 +38,7 @@ anaMethodList = {
     'generalClassifyCombineFisherVector',... % 12
     'LDL'}; % 13
 
-anaMethod = 8;
+anaMethod = 1;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -54,7 +54,7 @@ if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
         'svm classify',...
         'ens classify'
         };
-    method = 2;
+    method = 1;
     plotMethods = {'ROC','PR','ROC PR'};
     plotMethodsId = 1;
 
@@ -334,7 +334,7 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
     [fs3d,fname] = combine(fea3d,scr);
     % set Method
     methodText = {'SVM-2K regress'};
-    virtualModel = {'villa7s','circle'};
+    virtualModel = {'castle','circle'};
 %     virtualModel = {'njuSample','halfCircle'};
     
     [vfea2d,vfea3d] = vdataLoad({virtualModel{1}});

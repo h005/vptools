@@ -1,5 +1,5 @@
 %% this function was careted to run svm2k comparison
-function [gt, pl, ln] = svm2kClassifyComparisonValidation(fs2d, fs3d, fname, rate, testModel)
+function [gt, pl, ln] = svm2kClassifyComparisonValidation(fs2d, fs3d, fname, rate, testModel, mode)
 addpath './svm2k'
 ln = {'svm2k'};
 
@@ -48,7 +48,6 @@ indices = [testModelIndex(negIdx);testModelIndex(posIdx)];
 scLabel = [];
 preLabel = zeros(2 * num, 1);
 
-% for j=1:nfold
 j=1;
 test = (indices == j);
 train = ~test;
@@ -58,34 +57,6 @@ tf2d = fea2d(train,:);
 tf3d = fea3d(train,:);
 test2d = fea2d(test,:);
 test3d = fea3d(test,:);
-
-
-%% these code may be recoded
-% coded features by CCA
-% compute CCA
-[A,B,r,U,V] = canoncorr(tf2d,tf3d);
-% map to another space
-mode = '2d3d';
-if strcmp(mode,'2d3d')
-    N = size(test2d,1);
-    test2d = (test2d - repmat(mean(test2d),N,1)) * A;
-    test3d = (test3d - repmat(mean(test3d),N,1)) * B;
-elseif strcmp(mode,'2d')
-    N = size(test2d,1);
-    test2d = (test2d - repmat(mean(test2d),N,1)) * A;
-    test3d = getFeaturesCCA(test2d,V,tf3d,B);
-elseif strcmp(mode,'3d')
-    N = size(test3d,1);
-    test3d = (test3d - repmat(mean(test3d),N,1)) * B;
-    test2d = getFeaturesCCA(test3d,U,tf2d,A);
-end
-
-% define a threshold here to control the cca features.
-% threshold is the features' coefficient of correlation
-threshold = 0;
-ind = r > threshold;
-tf2d = U(:,ind);
-tf3d = V(:,ind);
 
 %%
 % data scale
@@ -123,7 +94,15 @@ ifeature = 1;
     test2d,test3d,testLabel,...
     CA,CB,D,eps,ifeature);
 
-preLabel(test) = pre;
+    if strcmp(mode,'2D3D combine')
+        preLabel(test) = pre;
+    elseif strcmp(mode,'2D')
+        preLabel(test) = pre1;
+    elseif strcmp(mode,'3D')
+        preLabel(test) = pre2;
+    end
+
+% preLabel(test) = pre;
 
 pl = preLabel > 0;
 pl = 2 * pl - 1;
@@ -131,7 +110,6 @@ pl = pl';
 modelIndices = modelIndices == 1;
 gt = groundTruth(modelIndices);
 pl = pl(modelIndices);
-% end
 end
 
 
