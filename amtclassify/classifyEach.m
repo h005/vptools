@@ -11,7 +11,7 @@
 
 % k-fold classify with each given feature and plot the ROC and 
 % Precision Recall curve
-function [groundTruth, preLabel, fN, sclabel] ...
+function [groundTruth, predictLabel, Posterior, fN, sclabel] ...
     = classifyEach(fs,feaName,rate,fname,method)
 sc = fs(:,end);
 % sort sc asscend
@@ -24,7 +24,8 @@ posIdx = index(end - num + 1 : end);
 sclabel = [];
 
 groundTruth = zeros(length(feaName),2*num);
-preLabel = zeros(length(feaName),2*num);
+Posterior = zeros(length(feaName),2*num);
+predictLabel = zeros(length(feaName),2*num);
 % construct new calssify data
 for i=1:length(feaName)
     ind = feaName{i}.ind;
@@ -47,8 +48,9 @@ for i=1:length(feaName)
     fea = fea';
     label = label';
 
-    predictLabel = zeros(1,length(label));
-
+    PosteriorTmp = zeros(1,length(label));
+    predictLabelTmp = zeros(1,length(label));
+    
     for j=1:nfold
 
         test = (indices == j);
@@ -68,22 +70,23 @@ for i=1:length(feaName)
             % there is kfoldLoss function should be tried
             mdl = bysClassify(trainFea,trainLabel);
             [tmppl,postierior,cost] = predict(mdl,testFea');
-            predictLabel(test) = postierior(:,2); 
-            
+            PosteriorTmp(test) = postierior(:,2); 
+            predictLabelTmp(test) = tmppl;
         elseif strcmp(method,'svm classify')
             mdl = svmClassify(trainFea,trainLabel);
             [tmppl,score] = predict(mdl,testFea');
-            predictLabel(test) = score(:,2);
-            
+            PosteriorTmp(test) = score(:,2);
+            predictLabelTmp(test) = tmppl;
         elseif strcmp(method,'ens classify')
             mdl = ensClassify(trainFea,trainLabel);
             [tmppl,score] = predict(mdl,testFea');
-            predictLabel(test) = score(:,2);
-            
+            PosteriorTmp(test) = score(:,2);
+            predictLabelTmp(test) = tmppl;
         end
     end
     
-    preLabel(i,:) = predictLabel;
+    Posterior(i,:) = PosteriorTmp;
+    predictLabel(i,:) = predictLabelTmp;
     sclabel = mdl.ClassNames(end);
 end
 

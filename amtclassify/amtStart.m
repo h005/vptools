@@ -54,7 +54,7 @@ if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
         'svm classify',...
         'ens classify'
         };
-    method = 1;
+    method = 2;
     plotMethods = {'ROC','PR','ROC PR'};
     plotMethodsId = 1;
 
@@ -67,7 +67,9 @@ if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
     [gt,pl,ps,ln,scl] = generalClassify(fs2d,rate,fname,gcMethod);
     titleLabel = ['2D feature ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
-
+    
+    f1Score(gt,pl,ln,scl);
+    
     % 3D feature
     [fs3d,fname] = combine(fea3d,scr);
 
@@ -77,6 +79,9 @@ if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
     [gt,pl,ps,ln,scl] = generalClassify(fs3d,rate,fname,gcMethod);
     titleLabel = ['3D feature ' plotMethods{plotMethodsId}  ' curve of ' methodText{method}];
     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
+    
+    f1Score(gt,pl,ln,scl);
+    
 elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombineFisherVector')
     rate = 0.08;
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
