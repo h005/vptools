@@ -24,6 +24,10 @@ angles(2:end) = angle;
 % angles = zeros(1,3);
 % angles = angle;
 
+% modified by h005 at 20161229
+% just reserve the min and max angles between each vanish lines
+% and add their entropy value
+
 angles = [angle(1),angle(3),getVar(angle)];
 
 end
@@ -41,3 +45,4 @@ function var = getVar(num)
     end
     var = var / length(num);
 end
+
