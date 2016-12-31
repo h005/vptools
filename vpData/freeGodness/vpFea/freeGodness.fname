@@ -31,6 +31,9 @@ SaturationHist
 SaturationHist
 SaturationHist
 SaturationEntropy
+ContrastBrightness
+ContrastBrightness
+blur
 projectArea
 visSurfaceArea
 viewPointEntropy

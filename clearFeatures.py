@@ -1,4 +1,6 @@
 # this script was created to clear featurs file to recompute them
+# delete .mm file and feature-Related file in the folder of 
+# /home/h005/Documents/vpDataSet/[model]/vpFea/
 # Usage:
 # python clearFeatures.py all
 # python clearFeatures.py model
@@ -22,18 +24,26 @@ modelList = {
     'TengwangPavilion',
     'mont',
     'HelsinkiCathedral',
-    'BuckinghamPalace'
+    'BuckinghamPalace',
+    'castle',
+    'house8',
+    'njuSample',
+    'pavilion9',
+    'villa7s'
     }
 
 path = '/home/h005/Documents/vpDataSet/'
 
-suffix = {'.2df',
+# in general cases, it is unnecessary to clear .vnf file
+suffix = {
+	'.2df',
 	'.2dfname',
 	'.2dvnfname',
 	'.3df',
 	'.3dfname',
 	'.fname'
-	};
+	# '.vnf'
+	}
 
 if len(sys.argv)  > 2:
 	print 'para error'

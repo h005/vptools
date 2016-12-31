@@ -38,7 +38,7 @@ anaMethodList = {
     'generalClassifyCombineFisherVector',... % 12
     'LDL'}; % 13
 
-anaMethod = 1;
+anaMethod = 8;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -339,8 +339,9 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
     [fs3d,fname] = combine(fea3d,scr);
     % set Method
     methodText = {'SVM-2K regress'};
-    virtualModel = {'castle','circle'};
-%     virtualModel = {'njuSample','halfCircle'};
+%     virtualModel = {'catton2','circle'};
+%     virtualModel = {'njuEnlarge','0circle'};
+    virtualModel = {'njuSample','halfCircle'};
     
     [vfea2d,vfea3d] = vdataLoad({virtualModel{1}});
     len2d = numel(vfea2d{1}.fs);
@@ -349,9 +350,14 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
     vf3d = vf(:,len2d+1:end);
     
     mode = {'2D','3D','2D3D'};
-    method = 3;
+    method = 1;
     
     ps = svm2kRegressStart(fs2d,fs3d,rate,vf2d,vf3d,mode{method});
+    
+    for i = 1:numel(ps)
+        disp([num2str(ps(i)) ' ' vfname{i}])
+    end
+    
     showColorMap;
     
 elseif strcmp(anaMethodList{anaMethod},'svm2kRegressCombineCCA')

@@ -1,4 +1,4 @@
-hsv
+HueCount
 contrast
 brightness
 ruleOfThird
@@ -16,21 +16,24 @@ hogHist
 2DTheta
 2DTheta
 2DTheta
-color
-color
-color
-color
-color
-hsv
-hsv
-hsv
-hsv
-hsv
-hsv
-hsv
-hsv
-hsv
-hsv
+EntropyVariance
+EntropyVariance
+color blue mean
+color green mean
+color red mean
+HueHist
+HueHist
+HueHist
+HueHist
+HueHist
+HueEntropy
+SaturationHist
+SaturationHist
+SaturationHist
+SaturationEntropy
+ContrastBrightness
+ContrastBrightness
+blur
 vanish Line
 vanish Line
 vanish Line

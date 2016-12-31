@@ -28,7 +28,12 @@ modelList = {
     'TengwangPavilion',
     'mont',
     'HelsinkiCathedral',
-    'BuckinghamPalace'
+    'BuckinghamPalace',
+    'castle',
+    'house8',
+    'njuSample',
+    'pavilion9',
+    'villa7s'
     }
 
 suffix = {'.2df',

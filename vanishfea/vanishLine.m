@@ -23,6 +23,9 @@ angles(2:end) = angle;
 
 % angles = zeros(1,3);
 % angles = angle;
+
+angles = [angle(1),angle(3),getVar(angle)];
+
 end
 
 function angle = getAngle(u,v)
@@ -30,4 +33,11 @@ CosTheta = dot(u,v)/(norm(u)*norm(v));
 angle = acos(CosTheta);
 end
 
-
+function var = getVar(num)
+    mean_val = mean(num);
+    var = 0;
+    for i=1:length(num)
+        var = var + (num(i) - mean_val) * (num(i) - mean_val);
+    end
+    var = var / length(num);
+end
