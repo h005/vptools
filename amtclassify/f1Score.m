@@ -22,5 +22,12 @@ for i=1:size(gt,1)
     tn = gFalse & n;
     
     f1(i) = 2 * tp / (2 * tp + fp + fn);
-    disp([ln{i} ' ' num2str(round(f1(i),3))])
+    disp(['standard '  ln{i} '&' num2str(round(f1(i),3))])
 end
+
+[fsorted,index] = sort(f1,'descend');
+
+for i=1:numel(f1)
+    disp([ln{index(i)} '&' num2str(round(f1(index(i)),3))])
+end
+

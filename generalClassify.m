@@ -8,6 +8,7 @@
 % method{2} can be one of {'2D combine','3D combine','2D3D combine'}
 
 function [gt,pl,ps,ln,scl] = generalClassify(fs,rate,fname,method)
+
 if numel(method) == 1
     disp('general classify paramenter error');
     return;
@@ -25,6 +26,24 @@ else
 %             pl = [];
 
         end
+    elseif strcmp(method{1},'featureSelection')
+        if strcmp(method{2},'2D')
+            feaName = loadFeaName('/home/h005/Documents/vpDataSet/tools/vpData/kxm/vpFea/kxm.2dvnfname');
+            combineN = method{4};
+            cfeaName = combiner(feaName,combineN);
+            [gt, pl, ps, ln, scl] = classifyEach(fs,cfeaName,rate,fname,method{3});
+            % it is necessary to modify classifyEach to get predict label.
+            % pl = [];
+            
+        elseif strcmp(method{2},'3D')
+            feaName = loadFeaName('/home/h005/Documents/vpDataSet/tools/vpData/kxm/vpFea/kxm.3dfname');
+            combineN = method{4};
+            cfeaName = combiner(feaName,combineN);
+            [gt, pl, ps, ln, scl] = classifyEach(fs,cfeaName,rate,fname,method{3});
+            %  pl = [];
+            
+        end
+            
     elseif strcmp(method{1},'comparisonClassifyCombine')
         if strcmp(method{2},'2D3D combine')
 %             if strcmp('svm2k',method{3})
@@ -100,3 +119,25 @@ else
         return;
     end
 end
+
+end
+
+%% this function generate the combination of feaName
+% choose num elements from feaName
+% such as [1,2,3] num = 2
+% return [1,2],[1,3],[2,3]
+% warning this function need num >= 2
+function vec = combiner(feaName,num)
+    tmp = 1:numel(feaName);
+    vecIndex = nchoosek(tmp,num);
+    vec = cell(1,size(vecIndex,1));
+    for i=1:numel(vec)
+        vec{i}.name = feaName{vecIndex(i,1)}.name;
+        vec{i}.ind = feaName{vecIndex(i,1)}.ind;
+        for j=2:size(vecIndex,2)
+            vec{i}.name = [vec{i}.name '_' feaName{vecIndex(i,j)}.name];
+            vec{i}.ind = [vec{i}.ind feaName{vecIndex(i,j)}.ind];
+        end
+    end
+end
+

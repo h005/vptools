@@ -7,10 +7,12 @@
 
 function classifyPlotHelper(groundTruth,score,scoreLabel,fN,method,titleLabel)
 
-plotMarker = {'o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h'};
+plotMarker = {'o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h','o','+','*','.','x','s','d','^','v','>','<','p','h'};
 
 if strcmp(method,'ROC')
-    rocPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker);
+    rocPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker,1);
+elseif strcmp(method,'ROC_n') % ROC curve without plot
+    rocPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker,0);
 elseif strcmp(method,'PR')
     prPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker);
 elseif strcmp(method,'ROC PR')
@@ -18,27 +20,61 @@ elseif strcmp(method,'ROC PR')
     prPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker);
 end
 end
-function rocPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker)
-X = cell(numel(fN),1);
-Y = cell(numel(fN),1);
-for i=1:numel(fN)
-    [tmpx,tmpy,tmpt,tmpauc] = ...
-        perfcurve(groundTruth(i,:),score(i,:),scoreLabel);
-    X{i} = tmpx;
-    Y{i} = tmpy;
-    disp([fN{i} '&' num2str(round(tmpauc,3))])
+function rocPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker,flag)
+if(flag)
+    X = cell(numel(fN),1);
+    Y = cell(numel(fN),1);
+    for i=1:numel(fN)
+        [tmpx,tmpy,tmpt,tmpauc] = ...
+            perfcurve(groundTruth(i,:),score(i,:),scoreLabel);
+        X{i} = tmpx;
+        Y{i} = tmpy;
+        disp([fN{i} '&' num2str(round(tmpauc,3))])
+    end
+    figure
+    plot(X{1},Y{1},'Marker',plotMarker{1},'MarkerSize',2);
+    hold on
+    for i=2:length(fN)
+        plot(X{i},Y{i},'Marker',plotMarker{i},'MarkerSize',2);
+    end
+    legend(fN,'Location','best');
+    xlabel('False positive rate');
+    ylabel('True positive rate');
+    % title(titleLabel,'FontWeight','normal');
+    hold off
+else
+    X = cell(numel(fN),1);
+    Y = cell(numel(fN),1);
+    aucvec = zeros(numel(fN),1);
+    for i=1:numel(fN)
+        [tmpx,tmpy,tmpt,tmpauc] = ...
+            perfcurve(groundTruth(i,:),score(i,:),scoreLabel);
+        X{i} = tmpx;
+        Y{i} = tmpy;
+        aucvec(i) = tmpauc;
+        disp(['standard ' fN{i} '&' num2str(round(tmpauc,3))])
+    end
+%     figure
+%     plot(X{1},Y{1},'Marker',plotMarker{1},'MarkerSize',2);
+%     hold on
+%     for i=2:length(fN)
+%         plot(X{i},Y{i},'Marker',plotMarker{i},'MarkerSize',2);
+%     end
+%     legend(fN,'Location','best');
+%     xlabel('False positive rate');
+%     ylabel('True positive rate');
+%     % title(titleLabel,'FontWeight','normal');
+%     hold off
+
+    [aucvecSorted,index] = sort(aucvec,'descend');
+    for i=1:numel(index)
+        disp([fN{index(i)} '&' num2str(round(aucvec(index(i)),3))])
+    end
+    
 end
-figure
-plot(X{1},Y{1},'Marker',plotMarker{1},'MarkerSize',2);
-hold on
-for i=2:length(fN)
-    plot(X{i},Y{i},'Marker',plotMarker{i},'MarkerSize',2);
-end
-legend(fN,'Location','best');
-xlabel('False positive rate');
-ylabel('True positive rate');
-% title(titleLabel,'FontWeight','normal');
-hold off
+
+disp('================cutline=========AUC val===========')
+
 end
 
 function prPlotHelper(groundTruth,score,scoreLabel,fN,titleLabel,plotMarker)

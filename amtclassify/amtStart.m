@@ -36,9 +36,11 @@ anaMethodList = {
     'svm2kRegressCombineCCA',... % 10
     'combineCCA',... % 11
     'generalClassifyCombineFisherVector',... % 12
-    'LDL'}; % 13
+    'LDL',... % 13
+    'featureSelection' % 14
+    };
 
-anaMethod = 1;
+anaMethod = 14;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -380,7 +382,48 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegressCombineCCA')
     
     ps = svm2kRegress(fs2d,fs3d,rate,vf2d,vf3d);
     showColorMap;
+elseif strcmp(anaMethodList{anaMethod},'featureSelection')
+%% coded for features selection
+    rate = 0.10;
     
+    [sc,scr,fea2d,fea3d] = dataLoad(modelList);
+    
+        methodText = {
+        'bayes classify',...
+        'svm classify',...
+        'ens classify'
+        };
+    method = 2;
+    plotMethods = {'ROC','ROC_n','PR','ROC PR'};
+    plotMethodsId = 2;
+    
+    % 2D feature
+    [fs2d,fname] = combine(fea2d,scr);
+
+    % general classify method paramenters
+    gcMethod = {anaMethodList{anaMethod},'2D',methodText{method},2};
+
+    [gt,pl,ps,ln,scl] = generalClassify(fs2d,rate,fname,gcMethod);
+    titleLabel = ['2D feature ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
+    classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
+    
+    f1Score(gt,pl,ln,scl);
+    
+    disp('================cutline=========2D feature===========')
+    
+    % 3D feature
+    [fs3d,fname] = combine(fea3d,scr);
+
+    % general classify method parameters
+    gcMethod = {anaMethodList{anaMethod},'3D',methodText{method},2};
+
+    [gt,pl,ps,ln,scl] = generalClassify(fs3d,rate,fname,gcMethod);
+    titleLabel = ['3D feature ' plotMethods{plotMethodsId}  ' curve of ' methodText{method}];
+    classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
+    
+    f1Score(gt,pl,ln,scl);    
+    
+    disp('================cutline=========3D feature===========')
 elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
 %% virtual generalRegress
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
