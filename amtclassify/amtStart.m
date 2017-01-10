@@ -386,6 +386,9 @@ elseif strcmp(anaMethodList{anaMethod},'featureSelection')
 %% coded for features selection
     rate = 0.10;
     
+    % the number of features should be choosed from feature vector
+    choosen = 3;
+    
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
     
         methodText = {
@@ -401,7 +404,8 @@ elseif strcmp(anaMethodList{anaMethod},'featureSelection')
     [fs2d,fname] = combine(fea2d,scr);
 
     % general classify method paramenters
-    gcMethod = {anaMethodList{anaMethod},'2D',methodText{method},2};
+    % gcMethod{4} means choose gcMethod{4} from n features.
+    gcMethod = {anaMethodList{anaMethod},'2D',methodText{method},choosen};
 
     [gt,pl,ps,ln,scl] = generalClassify(fs2d,rate,fname,gcMethod);
     titleLabel = ['2D feature ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
@@ -409,13 +413,14 @@ elseif strcmp(anaMethodList{anaMethod},'featureSelection')
     
     f1Score(gt,pl,ln,scl);
     
-    disp('================cutline=========2D feature===========')
+    disp('================cutline=========2D feature===========f1 Score==========')
     
     % 3D feature
     [fs3d,fname] = combine(fea3d,scr);
 
     % general classify method parameters
-    gcMethod = {anaMethodList{anaMethod},'3D',methodText{method},2};
+    % gcMethod{4} means choose gcMethod{4} from n features.
+    gcMethod = {anaMethodList{anaMethod},'3D',methodText{method},choosen};
 
     [gt,pl,ps,ln,scl] = generalClassify(fs3d,rate,fname,gcMethod);
     titleLabel = ['3D feature ' plotMethods{plotMethodsId}  ' curve of ' methodText{method}];
@@ -423,7 +428,7 @@ elseif strcmp(anaMethodList{anaMethod},'featureSelection')
     
     f1Score(gt,pl,ln,scl);    
     
-    disp('================cutline=========3D feature===========')
+    disp('================cutline=========3D feature===========f1 Score==========')
 elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')
 %% virtual generalRegress
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);

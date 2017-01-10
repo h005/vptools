@@ -222,7 +222,7 @@ end
 %% copy images to folder with name as clusterId
 if copyFlag
     % WARNNING: this function is dangerous!
-    % make sure your clusterDest don't have another other important files
+    % make sure your clusterDest don't have any other important files
     clusterCopyTo(imgSource,clusterDest,fileName,cluster);
     disp('copy done');
 end

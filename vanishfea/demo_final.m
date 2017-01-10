@@ -2,7 +2,7 @@ clc;clear;
 % fprintf('DEMO FOR VANISHING POINT DETECTION AND CAMERA CALIBRATION\n');
 % fprintf('Line Detection Step:\n');
 % tic;
-fileName = 'D:\viewpoint\freeGodness\img0008.jpg';
+fileName = '~/Documents/vpDataSet/freeGodness/imgs/img0008.jpg';
 % f = imread('object0133.view05.png');
 f = imread(fileName);
 g = f;
