@@ -28,8 +28,7 @@ modelList = {
     'BrandenburgGate',...
     'potalaPalace'
     };
-rate = 0.15;
-model = {'kxm'};
+% model = {'BrandenburgGate'};
 % read in .cluster file
 [picInfo, centerInfo] = clusterReaderVpval(clusterFile,model{1});
 % load in pos images
@@ -40,6 +39,10 @@ model = {'kxm'};
 % 
 for i = 1:numel(posImgs)
     disp(posImgs{i})
+end
+
+for i=1:numel(negImgs)
+    disp(negImgs{i})
 end
 
 for i=1:numel(centerInfo)

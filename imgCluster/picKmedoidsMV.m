@@ -6,7 +6,7 @@ pmv = convertmv(mv);
 % kmedoids
 % row of Data correspond to obervations
 % col of Data correspond to variables
-nClusters = 15;
+nClusters = 9;
 [idx,C] = kmedoids(pmv,nClusters,'Distance',@getDisKmedoids);
 
 

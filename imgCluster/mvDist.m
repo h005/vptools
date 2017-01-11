@@ -11,7 +11,7 @@ feaFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.fs';
 % matrixFile = '/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.matrix';
 
 % matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/model/selectedMatrix.matrix'];
-matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/model/' modelName 'Cluster.matrix'];
+matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/model/' modelName 'Pt.matrix'];
 % imgSource = '/home/h005/Documents/vpDataSet/kxm/imgs';
 imgSource = ['/home/h005/Documents/vpDataSet/' modelName '/imgs'];
 % clusterDest = '/home/h005/Documents/vpDataSet/kxm/cluster';
@@ -34,7 +34,7 @@ method = 'meanshiftPCU'
 % method = 'kmedoidsMV';
 method = 'kmedoidsMV';
 %%
-copyFlag = 0;
+copyFlag = 1;
 output = 1;
 showDistribution = 0;
 
