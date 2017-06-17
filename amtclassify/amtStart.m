@@ -40,7 +40,7 @@ anaMethodList = {
     'featureSelection' % 14
     };
 
-anaMethod = 14;
+anaMethod = 8;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -341,9 +341,9 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
     [fs3d,fname] = combine(fea3d,scr);
     % set Method
     methodText = {'SVM-2K regress'};
-%     virtualModel = {'catton2','circle'};
+%     virtualModel = {'castle','circle'};
 %     virtualModel = {'njuEnlarge','0circle'};
-    virtualModel = {'njuSample','halfCircle'};
+    virtualModel = {'njuActivity','halfCircle'};
     
     [vfea2d,vfea3d] = vdataLoad({virtualModel{1}});
     len2d = numel(vfea2d{1}.fs);
@@ -352,7 +352,7 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
     vf3d = vf(:,len2d+1:end);
     
     mode = {'2D','3D','2D3D'};
-    method = 1;
+    method = 3;
     
     ps = svm2kRegressStart(fs2d,fs3d,rate,vf2d,vf3d,mode{method});
     
@@ -387,10 +387,10 @@ elseif strcmp(anaMethodList{anaMethod},'featureSelection')
     rate = 0.10;
     
     % the number of features should be choosed from feature vector
-    choosen = 3;
+    choosen = 1;
     
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
-    
+    [fs,fname] = combine(fea2d,fea3d,scr);
         methodText = {
         'bayes classify',...
         'svm classify',...
@@ -398,7 +398,11 @@ elseif strcmp(anaMethodList{anaMethod},'featureSelection')
         };
     method = 2;
     plotMethods = {'ROC','ROC_n','PR','ROC PR'};
-    plotMethodsId = 2;
+    plotMethodsId = 1;
+    
+    % combined all the 2D and 3D features
+    gcMethod = {{'generalClassifyCombine'},'2D3D combine',methodText{method}};
+    [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs,rate,fname,gcMethod);
     
     % 2D feature
     [fs2d,fname] = combine(fea2d,scr);
@@ -409,10 +413,24 @@ elseif strcmp(anaMethodList{anaMethod},'featureSelection')
 
     [gt,pl,ps,ln,scl] = generalClassify(fs2d,rate,fname,gcMethod);
     titleLabel = ['2D feature ' plotMethods{plotMethodsId} ' curve of ' methodText{method}];
-    classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
     
-    f1Score(gt,pl,ln,scl);
+    % plot the ROC-figure
+%     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
     
+%     f1Score(gt,pl,ln,scl);
+
+    % test all the combined 2D features
+%     gcMethod = {anaMethodList{anaMethod},'2D',methodText{method},10};
+%     [gt1,pl1,ps1,ln1,scl1] = generalClassify(fs2d,rate,fname,gcMethod);
+    ln1 = {'combine'};
+    gt2 = [gt;gt1];
+    pl2 = [pl;pl1];
+    ps2 = [ps;ps1];
+    ln2 = [ln,ln1];
+
+    
+%     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
+        
     disp('================cutline=========2D feature===========f1 Score==========')
     
     % 3D feature
@@ -423,10 +441,25 @@ elseif strcmp(anaMethodList{anaMethod},'featureSelection')
     gcMethod = {anaMethodList{anaMethod},'3D',methodText{method},choosen};
 
     [gt,pl,ps,ln,scl] = generalClassify(fs3d,rate,fname,gcMethod);
-    titleLabel = ['3D feature ' plotMethods{plotMethodsId}  ' curve of ' methodText{method}];
-    classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
+%     titleLabel = ['3D feature ' plotMethods{plotMethodsId}  ' curve of ' methodText{method}];
+%     classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
     
-    f1Score(gt,pl,ln,scl);    
+%     f1Score(gt,pl,ln,scl);    
+%     test all the combined 3D features
+%     gcMethod = {anaMethodList{anaMethod},'3D',methodText{method},15};
+%     [gt1,pl,ps1,ln1,scl1] = generalClassify(fs3d,rate,fname,gcMethod);
+%     ln1 = {'3D combine'};
+%     titleLabel = ['3D feature ' plotMethods{plotMethodsId}  ' curve of ' methodText{method}];
+
+%     collect all the 2D and 3D features performance
+    gt = [gt;gt2];
+    pl = [pl;pl2];
+    ps = [ps;ps2];
+    ln = [ln,ln2];
+
+    classifyPlotHelper(gt,ps,scl,ln,plotMethods{plotMethodsId},titleLabel);
+
+    
     
     disp('================cutline=========3D feature===========f1 Score==========')
 elseif strcmp(anaMethodList{anaMethod},'generalRegressVirtual')

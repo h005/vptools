@@ -9,7 +9,7 @@
 %}
 
 % read in .cluster file
-clusterFile = '../../kxm/model/kxmCluster.cluster';
+clusterFile = '../../kxm/model/kxmPt.cluster';
 % read in score of each picture of one model
 modelList = {
     'bigben',...
@@ -36,6 +36,7 @@ modelList = {
 % if it set as the model in the modelList then only the pictures about this model will be return
 % otherwise, return all the model
 [posImgs, negImgs] = posNegImgsLoadVpval(modelList,rate,model{1});
+
 % 
 for i = 1:numel(posImgs)
     disp(posImgs{i})
@@ -46,6 +47,6 @@ for i=1:numel(negImgs)
 end
 
 for i=1:numel(centerInfo)
-	[imgList,pImgList,rate] = showClusterImgsVpval(picInfo, i, posImgs);
-	disp([num2str(i) ' ' num2str(rate)])
+	[imgList,pImgList,rate,num,total] = showClusterImgsVpval(picInfo, i, posImgs);
+	disp([num2str(i) ' ' num2str(rate), ' -num ' num2str(num) ' / ' num2str(total)])
 end

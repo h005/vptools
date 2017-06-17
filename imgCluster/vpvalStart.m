@@ -10,9 +10,9 @@ addpath ../amtclassify/
 close all
 clear
 clc
-rate = 0.2;
+rate = 0.3;
 
-% modelList = {
+% mode list
 %     'bigben',...
 %     'kxm',...
 %     'notredame',...
@@ -28,8 +28,12 @@ rate = 0.2;
 %     'BritishMuseum',...
 %     'BrandenburgGate',...
 %     'potalaPalace'
-%     };
-model = {'BrandenburgGate'};
+
+
+
+model = {'kxm'};
+
+
 
 numericalVpval;
 
@@ -40,3 +44,13 @@ numericalVpval;
 % 4 0.38462
 % 5 0.61111
 % 6 0.77778
+
+% 1 0.73913 -num 17 / 23
+% 2 0.44444 -num 4 / 9
+% 3 0.69231 -num 9 / 13
+% 4 0.63636 -num 14 / 22
+% 5 0.25 -num 2 / 8
+% 6 0.66667 -num 4 / 6
+% 7 0.71429 -num 5 / 7
+% 8 0.55556 -num 10 / 18
+% 9 0.38462 -num 5 / 13

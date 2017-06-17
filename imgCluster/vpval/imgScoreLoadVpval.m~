@@ -1,0 +1,10 @@
+%% this file was created to load image scores
+% imgScore is a cell array
+% and imgScore{i} has score and fn two fileds
+function imgScore = imgScoreLoadVpval(modelList)
+% load in feature and score
+[sc,scr,fea2d,fea3d] = dataLoad(modelList);
+% combine feature and score stored in fs
+[fs2d, myFname] = combine(fea2d,scr);
+
+score = fs2d(:,end);

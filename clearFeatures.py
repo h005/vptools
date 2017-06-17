@@ -29,8 +29,10 @@ modelList = {
     'house8',
     'njuSample',
     'pavilion9',
-    'villa7s'
+    'villa7s',
+    'model5'
     }
+
 
 path = '/home/h005/Documents/vpDataSet/'
 
@@ -65,7 +67,7 @@ elif sys.argv[1] in modelList:
 	model = sys.argv[1];
 	# delete features already computed
 	for suf in suffix:
-		fileName = path + modewl + '/vpFea/' + model + suf
+		fileName = path + model + '/vpFea/' + model + suf
 		if os.path.exists(fileName):
 			os.remove(fileName)
 			print fileName + ' deleted'

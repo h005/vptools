@@ -35,6 +35,7 @@ modelList = {
 
 # modelList = {'castle'};
 # modelList = {'njuEnlarge'}
+modelList = {'njuActivity'}
 
 for ele in modelList:
 	originPath1 = '/home/h005/Documents/vpDataSet/tools/vpData/' + ele + '/vpFea/' + ele + '.2df';

@@ -11,7 +11,7 @@
 
 
 % rate = numel(pImgList) / numel(imgList)
-function [imgList,pImgList,rate] = showClusterImgsVpval(pic, id, posImgs)
+function [imgList,pImgList,rate,num0,total] = showClusterImgsVpval(pic, id, posImgs)
 
 index = 0;
 imgList = {};
@@ -26,3 +26,5 @@ end
 
 pImgList = intersect(imgList,posImgs);
 rate = numel(pImgList) / numel(imgList);
+num0 = numel(pImgList);
+total = numel(imgList);

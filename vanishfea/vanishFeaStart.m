@@ -28,7 +28,7 @@ modelList = {
 
 
 
-% modelList = {'njuEnlarge'};
+modelList = {'njuActivity'};
 
 
 suffix = {

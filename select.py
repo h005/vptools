@@ -9,12 +9,12 @@ import io
 # scorefilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameScore.txt';
 # extractfilePath = '/home/h005/Documents/flickr/flickr_downloader2/notredameSelected.matrix';
 
-model = 'BrandenburgGate'
+model = 'kxm'
 
-matrixfilePath = '/home/h005/Documents/vpDataSet/' + model +'/model/'+ model +'.matrix'
+matrixfilePath = '/home/h005/Documents/vpDataSet/' + model +'/model/'+ model +'Pt.matrix'
 scorefilePath = '/home/h005/Documents/vpDataSet/'+ model +'/model/filelist.txt'
-extractfilePath = '/home/h005/Documents/vpDataSet/'+ model +'/model/selectedMatrix.matrix'
-
+# extractfilePath = '/home/h005/Documents/vpDataSet/'+ model +'/model/selectedMatrix.matrix'
+extractfilePath = '/home/h005/Documents/vpDataSet/'+ model +'/model/' + model + 'PtSelected.matrix'
 
 matrixfile = open(matrixfilePath,'r')
 selectfile = open(scorefilePath)
