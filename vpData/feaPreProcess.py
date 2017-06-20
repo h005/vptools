@@ -13,43 +13,48 @@ def backUp(modelList,suffix,path):
 	for model in modelList:
 		# backup
 		for suf in suffix:
-			srcPath = path + model + suffix
-			dstPath = path + model + suffix + '_back'
-			# shutil.copy(srcPath,dstPath)
+			srcPath = path + model + '/vpFea/' + model + suf
+			dstPath = path + model + '/vpFea/' + model + suf + '_back'
+			shutil.copy(srcPath,dstPath)
+			print 'copy ' + srcPath + ' to ' + dstPath
 
 # users can use this function to recover the .2dvnf file
 def recovery(modelList,suffix,path):
 	for model in modelList:
 		# backup
 		for suf in suffix:
-			srcPath = path + model + suffix
-			dstPath = path + model + suffix + '_back'
+			srcPath = path + model + '/vpFea/' + model + suf
+			dstPath = path + model + '/vpFea/' + model + suf + '_back'
 			# shutil.copy(dstPath,srcPath)
 
 
-def modify(modelList):
+def modify(modelList,path):
 	# this index was counted from 1.
 	noColorIndex = [4, # rule of Thirds
     5,6,7,8,9,10,11,12,13,14, # hogHist
     15,16,17,18, # 2DTheta
     # 19,20, # EntropyVariance
     37,38,39, # vanish line feature
-    40] # score
+    ]
 
 	for model in modelList:
-		feafile = path + model + '.2dvnf_back'
-		feafilieOut = path + model + '.2dvnf'
+		feafile = path + model + '/vpFea/' + model + '.2dvnf_back'
+		feafilieOut = path + model + '/vpFea/' + model + '.2dvnf'
 		fea = open(feafile,'r')
 		feaout = open(feafilieOut,'w')
 
 		line = "not null"
+		print '.........' + model + '........'
 		while line:
 			line = fea.readline()
 			line = line.strip()
+			if line  == '':
+				break;
 			feaout.write(line + "\n")
 			line = fea.readline()
 			line = line.strip()
 			feaVec = line.split(' ')
+			# print len(feaVec)
 			modifiedFea = ""
 			for index in noColorIndex:
 				modifiedFea = modifiedFea + ' ' + feaVec[index - 1]
@@ -59,22 +64,23 @@ def modify(modelList):
 		fea.close()
 		feaout.close()
 
-		feafile = path + model + '.2dvnfname_back'
-		feafilieOut = path + model + '.2dvnfname'
+		feafile = path + model + '/vpFea/' + model + '.2dvnfname_back'
+		feafilieOut = path + model + '/vpFea/' + model + '.2dvnfname'
 		feaName = open(feafile,'r')
-		feaout = open(feafilieOut,'w')
+		feaNameout = open(feafilieOut,'w')
 		
 		line = "not null"
-		index = 1
+		index = 0
 		while line:
 			line = feaName.readline()
 			line = line.strip()
+			index = index + 1
 			if index in noColorIndex:
-				fea.write(line + "\n")
+				feaNameout.write(line + "\n")
 
 
 		feaName.close()
-		feaout.close()
+		feaNameout.close()
 
 
 
@@ -104,6 +110,8 @@ def main():
 	    'njuActivity'
 	    }
 
+	# modelList = {'njuSample'}
+
 	path = './'
 
 	suffix = {
@@ -111,8 +119,8 @@ def main():
 		'.2dvnfname'
 	}
 
-	backUp(modelList,suffix,path)
-	modify(modelList)
+	# backUp(modelList,suffix,path)
+	modify(modelList,path)
 
 if __name__ == '__main__':
 	main()

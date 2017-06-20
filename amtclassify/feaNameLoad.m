@@ -3,7 +3,7 @@
 % each of them contains name and index field
 % read file to get them
 function [visualFea, geometricFea, validVisualIndex, validGeoIndex] = feaNameLoad()
-path = ['/home/h005/Documents/vpDataSet/tools/vpData/kxm/vpFea/', 'kxm','.2dvnfname'];
+path = ['../vpData/kxm/vpFea/', 'kxm','.2dvnfname'];
 fid = fopen(path,'r');
 ind = 0;
 index = 0;
@@ -32,7 +32,7 @@ while 1
     end
 end
 
-path = ['/home/h005/Documents/vpDataSet/tools/vpData/kxm/vpFea/', 'kxm','.3dfname'];
+path = ['../vpData/kxm/vpFea/', 'kxm','.3dfname'];
 fid = fopen(path,'r');
 ind = 0;
 index = 0;
