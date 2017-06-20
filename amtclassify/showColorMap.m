@@ -21,7 +21,7 @@ else
 end
 
 % this was created for debug
-% image(psImg,'CDataMapping','scaled')
+image(psImg,'CDataMapping','scaled')
 img = imresize(psImg,sizet * 8);
 
 % show in 3D

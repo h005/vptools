@@ -29,11 +29,13 @@ noColorIndex = [4,... % rule of Thirds
     37,38,39,... % vanish line feature
     40]; % score
 if strcmp(mode,'2DnoColor')
-    fs2d = fs2d(:,noColorIndex);
-    mode = '2D';
+    fs2d = fs2d(noColorIndex,:);
+    
+    
 else strcmp(mode,'2DnoColor3D')
-    fs2d = fs2d(:,noColorIndex);
-    mode = '2D3D';
+    
+
+    
 end
 
 

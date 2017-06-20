@@ -15,20 +15,20 @@ if numel(method) == 1
 else
     if strcmp(method{1},'generalClassifyEach')
         if strcmp(method{2},'2D')
-            feaName = loadFeaName('/home/h005/Documents/vpDataSet/tools/vpData/kxm/vpFea/kxm.2dvnfname');
+            feaName = loadFeaName('../vpData/kxm/vpFea/kxm.2dvnfname');
             [gt, pl, ps, ln, scl] = classifyEach(fs,feaName,rate,fname,method{3});
             % it is necessary to modify classifyEach to get predict label.
 %             pl = [];
 
         elseif strcmp(method{2},'3D')
-            feaName = loadFeaName('/home/h005/Documents/vpDataSet/tools/vpData/kxm/vpFea/kxm.3dfname');
+            feaName = loadFeaName('../vpData/kxm/vpFea/kxm.3dfname');
             [gt, pl, ps, ln, scl] = classifyEach(fs,feaName,rate,fname,method{3});
 %             pl = [];
 
         end
     elseif strcmp(method{1},'featureSelection')
         if strcmp(method{2},'2D')
-            feaName = loadFeaName('/home/h005/Documents/vpDataSet/tools/vpData/kxm/vpFea/kxm.2dvnfname');
+            feaName = loadFeaName('../vpData/kxm/vpFea/kxm.2dvnfname');
             combineN = method{4};
             cfeaName = combiner(feaName,combineN);
             [gt, pl, ps, ln, scl] = classifyEach(fs,cfeaName,rate,fname,method{3});
@@ -36,7 +36,7 @@ else
             % pl = [];
             
         elseif strcmp(method{2},'3D')
-            feaName = loadFeaName('/home/h005/Documents/vpDataSet/tools/vpData/kxm/vpFea/kxm.3dfname');
+            feaName = loadFeaName('../vpData/kxm/vpFea/kxm.3dfname');
             combineN = method{4};
             cfeaName = combiner(feaName,combineN);
             [gt, pl, ps, ln, scl] = classifyEach(fs,cfeaName,rate,fname,method{3});

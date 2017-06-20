@@ -40,7 +40,7 @@ anaMethodList = {
     'featureSelection' % 14
     };
 
-anaMethod = 8;
+anaMethod = 7;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -304,6 +304,7 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombine')
 %     gt = [gt1;gt2;gt3];
 %     pl = [pl1;pl2;pl3];    
     mode = {'2D','3D','2D3D'};
+%     mode = {'2DnoColor','3D','2DnoColor3D'};
     
     [gt1,pl1] = svm2kStart(modelList,rate,mode{1});
     [gt2,pl2] = svm2kStart(modelList,rate,mode{2});
@@ -311,6 +312,7 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombine')
     gt = [gt1;gt2;gt3];
     pl = [pl1;pl2;pl3];
     ln = {'2D','3D','2D3D'};
+%     ln = mode;
     titleText = {'Svm2k of different method on photos'};
     plotErrorRate(gt,pl,ln,titleText);
 elseif strcmp(anaMethodList{anaMethod},'svm2kClassifyCombineCCA')
@@ -342,7 +344,7 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
     % set Method
     methodText = {'SVM-2K regress'};
 %     virtualModel = {'castle','circle'};
-%     virtualModel = {'njuEnlarge','0circle'};
+%     virtualModel = {'njuSample','0circle'};
     virtualModel = {'njuActivity','halfCircle'};
     
     [vfea2d,vfea3d] = vdataLoad({virtualModel{1}});
