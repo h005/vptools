@@ -3,7 +3,7 @@
 clear
 close all
 clc
-
+time = tic;
 addpath('../');
 addpath('../fisherVector/')
 addpath('./svm2k')
@@ -25,8 +25,6 @@ modelList = {
     'BrandenburgGate',...
     'potalaPalace'
 };
-% this code was created for some selected features
-[visualFea, geometricFea,validVisIndex, validGeoIndex] = feaNameLoad();
 
 % top rate pictures will be assign good
 % last rate pictures will be assign bad
@@ -39,10 +37,11 @@ rate = 0.10;
 [fs2d,fname] = combine(fea2d,scr);
 [fs3d,fname] = combine(fea3d,scr);
 
-% fs2d = fs2d(:,[validVisIndex,size(fs2d,2)]);
-% fs3d = fs3d(:,[validGeoIndex,size(fs3d,2)]);
-% % this code was created for some selected features
-% fs = fs(:,[validVisIndex,visualFea{end}.index(end)+validGeoIndex, size(fs,2)]);
+% this code was created for some selected features
+[visualFea, geometricFea,validVisIndex, validGeoIndex] = feaNameLoad();
+fs2d = fs2d(:,[validVisIndex,size(fs2d,2)]);
+fs3d = fs3d(:,[validGeoIndex,size(fs3d,2)]);
+fs = fs(:,[validVisIndex,visualFea{end}.index(end)+validGeoIndex, size(fs,2)]);
 % set Method
 methodText = {
     'bayes classify',...
@@ -50,7 +49,7 @@ methodText = {
     'ens classify'
     };
 method = 3;
-tic
+
 for i=1:numel(methodText)
     
     % result preparing
@@ -111,10 +110,9 @@ pl3 = pl3';
 disp('SVM-2K 2D3D')
 gt{numel(gt)+1} = [gt1;gt2;gt3];
 pl{numel(gt)} = [pl1;pl2;pl3];
-disp(methodText)
 
-toc
+
 featuresN = {'2D','3D','2D&3D'};
 methodsN = {'Bayes','Ens','SVM-2K'};
 plotErrorRateGroup(gt,pl,featuresN,methodsN,'Classification performance of different methods on photos');
-
+toc(time)

@@ -40,7 +40,10 @@ path = '/home/h005/Documents/vpDataSet/'
 suffix = {
 	'.2df',
 	'.2dfname',
+	'.2dvnf'
 	'.2dvnfname',
+	'.2dvnf_back',
+	'.2dvnfname_back',
 	'.3df',
 	'.3dfname',
 	'.fname'

@@ -32,6 +32,7 @@ groundTruth(num+1:2*num) = 1;
 label = groundTruth;
 
 indices = crossvalind('Kfold',length(label),nfold);
+% load indices
 
 % transpose mfeatues * ncases
 fea2d = fea2d';

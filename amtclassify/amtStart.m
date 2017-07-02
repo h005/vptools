@@ -40,7 +40,7 @@ anaMethodList = {
     'featureSelection' % 14
     };
 
-anaMethod = 7;
+anaMethod = 8;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -339,30 +339,10 @@ elseif strcmp(anaMethodList{anaMethod},'svm2kRegresssCombine')
     rate = 0.1;
     addpath('./svm2k/')
     [sc,scr,fea2d,fea3d] = dataLoad(modelList);
-    [fs2d,fname] = combine(fea2d,scr);
-    [fs3d,fname] = combine(fea3d,scr);
-    % set Method
-    methodText = {'SVM-2K regress'};
-%     virtualModel = {'castle','circle'};
-%     virtualModel = {'njuSample','0circle'};
-    virtualModel = {'njuActivity','halfCircle'};
+    [fs2dAll,fname] = combine(fea2d,scr);
+    [fs3dAll,fname] = combine(fea3d,scr);
     
-    [vfea2d,vfea3d] = vdataLoad({virtualModel{1}});
-    len2d = numel(vfea2d{1}.fs);
-    [vf, vfname] = combine(vfea2d,vfea3d);
-    vf2d = vf(:,1:len2d);
-    vf3d = vf(:,len2d+1:end);
-    
-    mode = {'2D','3D','2D3D'};
-    method = 3;
-    
-    ps = svm2kRegressStart(fs2d,fs3d,rate,vf2d,vf3d,mode{method});
-    
-    for i = 1:numel(ps)
-        disp([num2str(ps(i)) ' ' vfname{i}])
-    end
-    
-    showColorMap;
+    svm2kRegressCombine;
     
 elseif strcmp(anaMethodList{anaMethod},'svm2kRegressCombineCCA')
 %% CCA regress with svm2k combine just apply sigmod function active the distance to hyper plane

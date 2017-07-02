@@ -8,7 +8,7 @@ len = numel(ps);
 % villa7_1
 sizet = [64,16];
 % njuActivity test
-sizet = sizet./2;
+% sizet = sizet./2;
 % for VideoCut3Sample
 % sizet = [64,15];
 psImg = reshape(ps,sizet(1),sizet(2));

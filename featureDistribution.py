@@ -34,6 +34,8 @@ modelList = {
     'njuSample',
     # 'pavilion9',
     # 'villa7s'
+    'njuSample2',
+    'njuActivity2',
     'njuActivity'
     }
 
