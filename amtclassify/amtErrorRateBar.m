@@ -39,6 +39,8 @@ rate = 0.10;
 
 % this code was created for some selected features
 [visualFea, geometricFea,validVisIndex, validGeoIndex] = feaNameLoad();
+validVisIndex = sort(validVisIndex);
+validGeoIndex = sort(validGeoIndex);
 fs2d = fs2d(:,[validVisIndex,size(fs2d,2)]);
 fs3d = fs3d(:,[validGeoIndex,size(fs3d,2)]);
 fs = fs(:,[validVisIndex,visualFea{end}.index(end)+validGeoIndex, size(fs,2)]);

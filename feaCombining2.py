@@ -2,7 +2,7 @@
 # @Author: h005
 # @Date:   2017-07-02 11:08:32
 # @Last Modified by:   h005
-# @Last Modified time: 2017-07-02 14:38:22
+# @Last Modified time: 2017-07-06 16:20:32
 
 # this file was created to combine features, such as .2df, .3df, .vnf .dpf
 # and this file will cope all the models in model list.
@@ -35,12 +35,15 @@ def getFeaFile(model,suffix):
 def loadBaseFea(feaFile, feaFnameFile):
 	fea = {}
 	feaNameList = []
+	# this was used to keep the order with the .2df
+	feaFileList = []
 	feaReader = open(feaFile,'r')
 	feaFnameReader = open(feaFnameFile,'r')
 
 	fname = feaReader.readline()
 	while fname:
 		fname = fname.strip()
+		feaFileList.append(fname)
 		tmpFea = feaReader.readline()
 		tmpFea = tmpFea.strip()
 		fea[fname] = tmpFea
@@ -55,7 +58,7 @@ def loadBaseFea(feaFile, feaFnameFile):
 
 	feaReader.close()
 	feaFnameReader.close()
-	return fea,feaNameList
+	return fea,feaNameList,feaFileList
 
 def appendFea(feaDict, feaFile):
 	feaReader = open(feaFile,'r')
@@ -69,14 +72,14 @@ def appendFea(feaDict, feaFile):
 	feaReader.close()
 	return feaDict
 
-def outputFeatures(feaDict, feaNameList, outputFeaFile, outputFeaFnameFile):
+def outputFeatures(feaDict, feaNameList, feaFileList, outputFeaFile, outputFeaFnameFile):
 
 	feaOut = open(outputFeaFile, 'w')
 	feaFnameOut = open(outputFeaFnameFile, 'w')
 
-	keys = feaDict.keys()
-	keys.sort()
-	for ele in keys:
+	# keys = feaDict.keys()
+	# keys.sort()
+	for ele in feaFileList:
 		feaOut.write(ele + '\n')
 		feaOut.write(feaDict[ele] + '\n')
 
@@ -90,14 +93,14 @@ def outputFeatures(feaDict, feaNameList, outputFeaFile, outputFeaFnameFile):
 
 feaMap = {'.vnf':'vanish Line',
 		  '.lsd':'LineSegment',
-		  '.gist':'gist'}
+		  '.gist512':'gist'}
 
 baseFeafile = '.2df'
 baseFeaName = '.2dfname'
 outputFile = '.2dvnf'
 outputFileName = '.2dvnfname'
 
-modelList = [    
+modelList = [
 	'bigben',
     'kxm',
     'notredame',
@@ -116,15 +119,16 @@ modelList = [
     'castle',
     'njuSample',
     'njuSample2',
+    'njuSample3',
     'njuActivity',
-    'njuActivity2',
+    'njuActivity2'
     # 'house8',
     # 'pavilion9',
     # 'villa7s',
     # 'model5'
     ]
 
-modelList = ['cctv3','kxm']
+# modelList = ['njuSample3','kxm']
 
 bsaePath = '/home/h005/Documents/vpDataSet/tools/vpData/'
 
@@ -141,7 +145,7 @@ for model in modelList:
 	# load in the base feature file as well as the base feature name file
 	baseFeaFile = getFeaFile(model, baseFeafile)
 	baseFeaFnameFile = getFeaFile(model, baseFeaName)
-	feaDict, feaNameList = loadBaseFea(baseFeaFile, baseFeaFnameFile)
+	feaDict, feaNameList, feaFileList = loadBaseFea(baseFeaFile, baseFeaFnameFile)
 	for suffix in feaMap:
 		feaFile = getFeaFile(model,suffix)
 		feaDict = appendFea(feaDict, feaFile)
@@ -153,7 +157,7 @@ for model in modelList:
 	# output the features
 	outputFeaFile = getFeaFile(model, outputFile)
 	outputFeaFnameFile = getFeaFile(model, outputFileName)
-	outputFeatures(feaDict, feaNameList, outputFeaFile, outputFeaFnameFile)
+	outputFeatures(feaDict, feaNameList, feaFileList, outputFeaFile, outputFeaFnameFile)
 	print model
 
 
