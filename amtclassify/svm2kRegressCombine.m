@@ -1,11 +1,11 @@
 %% svm2kRegressCombine
-
+close all
 % set Method
 methodText = {'SVM-2K regress'};
 %     virtualModel = {'castle','circle'};
-virtualModel = {'castle','circle'};
-%     virtualModel = {'njuSample2','0circle'};
-%     virtualModel = {'njuActivity2','halfCircle'};
+% virtualModel = {'castle','circle'};
+%     virtualModel = {'njuSample3','0circle'};
+    virtualModel = {'njuActivity2','halfCircle'};
 
 [vfea2d,vfea3d] = vdataLoad({virtualModel{1}});
 
@@ -16,6 +16,8 @@ vf3d = vf(:,len2d+1:end);
 
 % this code was created for some selected features
 [visualFea, geometricFea,validVisIndex, validGeoIndex] = feaNameLoad();
+validVisIndex = sort(validVisIndex);
+validGeoIndex = sort(validGeoIndex);
 fs2d = fs2dAll(:,[validVisIndex,size(fs2dAll,2)]);
 fs3d = fs3dAll(:,[validGeoIndex,size(fs3dAll,2)]);
 %     fs = fs(:,[validVisIndex,visualFea{end}.index(end)+validGeoIndex, size(fs,2)]);
