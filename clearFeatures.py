@@ -26,11 +26,14 @@ modelList = {
     'HelsinkiCathedral',
     'BuckinghamPalace',
     'castle',
-    # 'house8',
     'njuSample',
+    'njuSample2',
+    'njuSample3',
+    'njuActivity',
+    'njuActivity2'
     # 'pavilion9',
     # 'villa7s',
-    'njuActivity'
+    # 'house8',
     }
 
 
