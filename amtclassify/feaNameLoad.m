@@ -87,8 +87,8 @@ end
 % };
 
 validVisualFea = {};
-validVisualFea = {validVisualFea{:},'contrast'};
-validVisualFea = {validVisualFea{:},'brightness'};
+% validVisualFea = {validVisualFea{:},'contrast'};
+% validVisualFea = {validVisualFea{:},'brightness'};
 validVisualFea = {validVisualFea{:},'SaturationHist'};
 validVisualFea = {validVisualFea{:},'SaturationEntropy'};
 validVisualFea = {validVisualFea{:},'ContrastBrightness'};
@@ -109,9 +109,9 @@ validVisualFea = {validVisualFea{:},'LineSegment'};
 
 
 validGeoFea = {};
-validGeoFea = {validGeoFea{:},'maxDepth'};
+% validGeoFea = {validGeoFea{:},'maxDepth'};
 validGeoFea = {validGeoFea{:},'visSurfaceArea'};
-validGeoFea = {validGeoFea{:},'depthDistribute'};
+% validGeoFea = {validGeoFea{:},'depthDistribute'};
 validGeoFea = {validGeoFea{:},'projectArea'};
 validGeoFea = {validGeoFea{:},'viewPointEntropy'};
 validGeoFea = {validGeoFea{:},'silhouetteLength'};

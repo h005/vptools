@@ -2,7 +2,7 @@
 # @Author: h005
 # @Date:   2017-07-02 11:08:32
 # @Last Modified by:   h005
-# @Last Modified time: 2017-07-06 16:20:32
+# @Last Modified time: 2017-07-06 21:10:32
 
 # this file was created to combine features, such as .2df, .3df, .vnf .dpf
 # and this file will cope all the models in model list.
@@ -93,7 +93,7 @@ def outputFeatures(feaDict, feaNameList, feaFileList, outputFeaFile, outputFeaFn
 
 feaMap = {'.vnf':'vanish Line',
 		  '.lsd':'LineSegment',
-		  '.gist512':'gist'}
+		  '.gist960':'gist'}
 
 baseFeafile = '.2df'
 baseFeaName = '.2dfname'
