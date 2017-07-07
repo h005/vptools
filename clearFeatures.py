@@ -26,15 +26,18 @@ modelList = {
     'HelsinkiCathedral',
     'BuckinghamPalace',
     'castle',
-    # 'house8',
     'njuSample',
+    'njuSample2',
+    'njuSample3',
+    'njuActivity',
+    'njuActivity2'
     # 'pavilion9',
     # 'villa7s',
-    'njuActivity'
+    # 'house8',
     }
 
 
-path = '/home/h005/Documents/vpDataSet/'
+path = '/home/hejw005/Documents/vpDataSet/'
 
 # in general cases, it is unnecessary to clear .vnf file
 suffix = {

@@ -2,7 +2,7 @@
 # @Author: h005
 # @Date:   2017-07-02 11:08:32
 # @Last Modified by:   h005
-# @Last Modified time: 2017-07-06 21:10:32
+# @Last Modified time: 2017-07-07 10:18:39
 
 # this file was created to combine features, such as .2df, .3df, .vnf .dpf
 # and this file will cope all the models in model list.
@@ -43,6 +43,10 @@ def loadBaseFea(feaFile, feaFnameFile):
 	fname = feaReader.readline()
 	while fname:
 		fname = fname.strip()
+		# print fname
+		# print '.......replace.....'
+		fname = fname.replace('hejw005','h005')
+		# print fname
 		feaFileList.append(fname)
 		tmpFea = feaReader.readline()
 		tmpFea = tmpFea.strip()
@@ -65,8 +69,13 @@ def appendFea(feaDict, feaFile):
 	fname = feaReader.readline()
 	while fname:
 		fname = fname.strip()
+		# print fname
+		# print '.......replace.....'
+		fname.replace('hejw005','h005')
+		# print fname
 		tmpFea = feaReader.readline()
 		tmpFea = tmpFea.strip()
+		# print fname
 		feaDict[fname] = feaDict[fname] + ' ' + tmpFea
 		fname = feaReader.readline()
 	feaReader.close()
@@ -93,7 +102,7 @@ def outputFeatures(feaDict, feaNameList, feaFileList, outputFeaFile, outputFeaFn
 
 feaMap = {'.vnf':'vanish Line',
 		  '.lsd':'LineSegment',
-		  '.gist960':'gist'}
+		  '.gist32':'gist'}
 
 baseFeafile = '.2df'
 baseFeaName = '.2dfname'
@@ -128,7 +137,7 @@ modelList = [
     # 'model5'
     ]
 
-# modelList = ['njuSample3','kxm']
+modelList = ['cctv3','kxm']
 
 bsaePath = '/home/h005/Documents/vpDataSet/tools/vpData/'
 
@@ -148,6 +157,7 @@ for model in modelList:
 	feaDict, feaNameList, feaFileList = loadBaseFea(baseFeaFile, baseFeaFnameFile)
 	for suffix in feaMap:
 		feaFile = getFeaFile(model,suffix)
+		print feaFile
 		feaDict = appendFea(feaDict, feaFile)
 		count = 0
 		while count < feaNum[suffix]:

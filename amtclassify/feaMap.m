@@ -3,7 +3,7 @@
 clear;
 clc;
 
-virtualModel = {'njuSample','njuSample2'};
+virtualModel = {'njuSample','castle'};
     
 
 [vfea2d,vfea3d] = vdataLoad({virtualModel{1}});

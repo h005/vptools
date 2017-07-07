@@ -28,7 +28,7 @@ modelList = {
 
 
 
-modelList = {'njuSample3'};
+modelList = {'cctv3'};
 
 
 suffix = {
