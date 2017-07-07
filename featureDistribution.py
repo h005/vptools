@@ -6,8 +6,8 @@ import os
 import sys
 import shutil
 
-sourcePath = '/home/h005/Documents/vpDataSet/'
-destPath = '/home/h005/Documents/vpDataSet/tools/vpData/'
+sourcePath = '/home/hejw005/Documents/vpDataSet/'
+destPath = '/home/hejw005/Documents/vpDataSet/tools/vpData/'
 
 if len(sys.argv) > 2:
 	print 'para error'
@@ -35,6 +35,7 @@ modelList = {
     # 'pavilion9',
     # 'villa7s'
     'njuSample2',
+    'njuSample3',
     'njuActivity2',
     'njuActivity'
     }
