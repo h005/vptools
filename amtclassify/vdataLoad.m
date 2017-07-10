@@ -7,8 +7,8 @@ fea3d = {};
 % visit models
 for i = 1 : length(models)
     sceneName = models{i};
-    fea2Dfile = ['/home/h005/Documents/vpDataSet/tools/vpData/' sceneName '/vpFea/' sceneName '.2dvnf'];
-    fea3Dfile = ['/home/h005/Documents/vpDataSet/tools/vpData/' sceneName '/vpFea/' sceneName '.3df'];
+    fea2Dfile = ['../vpData/' sceneName '/vpFea/' sceneName '.2dvnf'];
+    fea3Dfile = ['../vpData/' sceneName '/vpFea/' sceneName '.3df'];
 
     fea2dtmp = scload(fea2Dfile,sceneName);
     fea3dtmp = scload(fea3Dfile,sceneName);

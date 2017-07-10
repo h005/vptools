@@ -39,7 +39,7 @@ image(img,'CDataMapping','scaled')
 colormap jet
 % colorbar
 axis off
-savePath = ['/home/h005/Documents/vpDataSet/' virtualModel{1} '/colormap90_360gaussianProcess' virtualModel{1} '.jpg'];
+savePath = ['../../' virtualModel{1} '/colormap90_360gaussianProcess' virtualModel{1} '.jpg'];
 disp(savePath)
 % save and read to get color information
 saveas(fig,savePath);
@@ -61,13 +61,13 @@ colSize = sort(colSize);
 R = R(rowSize(1):rowSize(2),colSize(1):colSize(2),:);
 R = imresize(R,sizet * 8);
 % imshow(R)
-savePath = ['/home/h005/Documents/vpDataSet/' virtualModel{1} '/colormap90_360gaussianProcessHeatmap' virtualModel{1} '.jpg'];
+savePath = ['../../' virtualModel{1} '/colormap90_360gaussianProcessHeatmap' virtualModel{1} '.jpg'];
 disp(savePath)
 % save and read to get color information
 imwrite(R,savePath);
 figure(2)
 colorbar
-savePath = ['/home/h005/Documents/vpDataSet/' virtualModel{1} '/colormap90_360gaussianProcess' virtualModel{1} '.jpg'];
+savePath = ['../../' virtualModel{1} '/colormap90_360gaussianProcess' virtualModel{1} '.jpg'];
 disp(savePath)
 % grid off
 

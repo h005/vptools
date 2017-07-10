@@ -28,7 +28,7 @@ angles(2:end) = angle;
 % just reserve the min and max angles between each vanish lines
 % and add their entropy value
 
-angles = [angle(1),angle(3),getVar(angle)];
+% angles = [angle(1),angle(3),getVar(angle)];
 
 end
 
