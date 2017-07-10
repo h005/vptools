@@ -2,7 +2,7 @@
 # @Author: h005
 # @Date:   2017-07-02 11:08:32
 # @Last Modified by:   h005
-# @Last Modified time: 2017-07-07 10:18:39
+# @Last Modified time: 2017-07-08 11:03:49
 
 # this file was created to combine features, such as .2df, .3df, .vnf .dpf
 # and this file will cope all the models in model list.
@@ -102,7 +102,7 @@ def outputFeatures(feaDict, feaNameList, feaFileList, outputFeaFile, outputFeaFn
 
 feaMap = {'.vnf':'vanish Line',
 		  '.lsd':'LineSegment',
-		  '.gist32':'gist'}
+		  '.gist512':'gist'}
 
 baseFeafile = '.2df'
 baseFeaName = '.2dfname'
@@ -137,7 +137,7 @@ modelList = [
     # 'model5'
     ]
 
-modelList = ['cctv3','kxm']
+# modelList = ['cctv3','kxm']
 
 bsaePath = '/home/h005/Documents/vpDataSet/tools/vpData/'
 

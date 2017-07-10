@@ -87,10 +87,10 @@ end
 % };
 
 validVisualFea = {};
-validVisualFea = {validVisualFea{:},'contrast'};
-validVisualFea = {validVisualFea{:},'brightness'};
-validVisualFea = {validVisualFea{:},'SaturationHist'};
-validVisualFea = {validVisualFea{:},'SaturationEntropy'};
+% validVisualFea = {validVisualFea{:},'contrast'};
+% validVisualFea = {validVisualFea{:},'brightness'};
+% validVisualFea = {validVisualFea{:},'SaturationHist'};
+% validVisualFea = {validVisualFea{:},'SaturationEntropy'};
 validVisualFea = {validVisualFea{:},'ContrastBrightness'};
 % validVisualFea = {validVisualFea{:},'blur'};
 % validVisualFea = {validVisualFea{:},'2DTheta'};
@@ -120,7 +120,7 @@ validGeoFea = {validGeoFea{:},'silhouetteCurvatureExtrema'};
 validGeoFea = {validGeoFea{:},'meanCurvature'};
 validGeoFea = {validGeoFea{:},'gaussianCurvature'};
 validGeoFea = {validGeoFea{:},'boundingBox'};
-% validGeoFea = {validGeoFea{:},'boundingBoxAbs'};
+validGeoFea = {validGeoFea{:},'boundingBoxAbs'};
 validGeoFea = {validGeoFea{:},'outlierCount'};
 validGeoFea = {validGeoFea{:},'abovePreference'};
 validGeoFea = {validGeoFea{:},'ztitleAngle'};

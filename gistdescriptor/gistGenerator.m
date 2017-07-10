@@ -32,13 +32,13 @@ modelList = {
     };
 
 modelList = {    
-    'njuSample3'};
+    'njuSample2'};
 
 % I think that there is no need to clear the .2dvnf and
 % .2dvnfname file, because the feaCombining.py file will
 % generate them again.
 suffix = {
-    '.gist32'
+    '.gist512'
 %     '.2dvnf',...
 %     '.2dvnfname',...
     };
