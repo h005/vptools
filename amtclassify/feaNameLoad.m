@@ -91,9 +91,12 @@ validVisualFea = {validVisualFea{:},'contrast'};
 validVisualFea = {validVisualFea{:},'brightness'};
 validVisualFea = {validVisualFea{:},'SaturationHist'};
 validVisualFea = {validVisualFea{:},'SaturationEntropy'};
+
 validVisualFea = {validVisualFea{:},'ContrastBrightness'};
+
 validVisualFea = {validVisualFea{:},'blur'};
-validVisualFea = {validVisualFea{:},'2DTheta'};
+% validVisualFea = {validVisualFea{:},'2DTheta'};
+
 validVisualFea = {validVisualFea{:},'HueCount'};
 validVisualFea = {validVisualFea{:},'EntropyVariance'};
 validVisualFea = {validVisualFea{:},'color blue mean'};

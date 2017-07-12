@@ -24,15 +24,15 @@ end
 image(psImg,'CDataMapping','scaled')
 img = imresize(psImg,sizet * 8);
 
-% show in 3D
-figure(1)
-surf(img);
-colormap jet
-axis on
-xlabel('x label');
-ylabel('y label');
+%% show in 3D
+% figure(1)
+% surf(img);
+% colormap jet
+% axis on
+% xlabel('x label');
+% ylabel('y label');
 
-% show in 2D
+%% show in 2D
 % hold on
 fig = figure(2);
 image(img,'CDataMapping','scaled')
