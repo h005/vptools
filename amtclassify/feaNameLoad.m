@@ -87,13 +87,16 @@ end
 % };
 
 validVisualFea = {};
-% validVisualFea = {validVisualFea{:},'contrast'};
-% validVisualFea = {validVisualFea{:},'brightness'};
-% validVisualFea = {validVisualFea{:},'SaturationHist'};
-% validVisualFea = {validVisualFea{:},'SaturationEntropy'};
+validVisualFea = {validVisualFea{:},'contrast'};
+validVisualFea = {validVisualFea{:},'brightness'};
+validVisualFea = {validVisualFea{:},'SaturationHist'};
+validVisualFea = {validVisualFea{:},'SaturationEntropy'};
+
 validVisualFea = {validVisualFea{:},'ContrastBrightness'};
-% validVisualFea = {validVisualFea{:},'blur'};
+
+validVisualFea = {validVisualFea{:},'blur'};
 % validVisualFea = {validVisualFea{:},'2DTheta'};
+
 validVisualFea = {validVisualFea{:},'HueCount'};
 validVisualFea = {validVisualFea{:},'EntropyVariance'};
 validVisualFea = {validVisualFea{:},'color blue mean'};
@@ -104,14 +107,14 @@ validVisualFea = {validVisualFea{:},'HueEntropy'};
 validVisualFea = {validVisualFea{:},'ruleOfThird'};
 validVisualFea = {validVisualFea{:},'hogHist'};
 validVisualFea = {validVisualFea{:},'vanish Line'};
-validVisualFea = {validVisualFea{:},'gist'};
-validVisualFea = {validVisualFea{:},'LineSegment'};
+% validVisualFea = {validVisualFea{:},'gist'};
+% validVisualFea = {validVisualFea{:},'LineSegment'};
 
 
 validGeoFea = {};
-% validGeoFea = {validGeoFea{:},'maxDepth'};
+validGeoFea = {validGeoFea{:},'maxDepth'};
 validGeoFea = {validGeoFea{:},'visSurfaceArea'};
-% validGeoFea = {validGeoFea{:},'depthDistribute'};
+validGeoFea = {validGeoFea{:},'depthDistribute'};
 validGeoFea = {validGeoFea{:},'projectArea'};
 validGeoFea = {validGeoFea{:},'viewPointEntropy'};
 validGeoFea = {validGeoFea{:},'silhouetteLength'};
@@ -119,7 +122,7 @@ validGeoFea = {validGeoFea{:},'silhouetteCurvature'};
 validGeoFea = {validGeoFea{:},'silhouetteCurvatureExtrema'};
 validGeoFea = {validGeoFea{:},'meanCurvature'};
 validGeoFea = {validGeoFea{:},'gaussianCurvature'};
-validGeoFea = {validGeoFea{:},'boundingBox'};
+% validGeoFea = {validGeoFea{:},'boundingBox'};
 validGeoFea = {validGeoFea{:},'boundingBoxAbs'};
 validGeoFea = {validGeoFea{:},'outlierCount'};
 validGeoFea = {validGeoFea{:},'abovePreference'};

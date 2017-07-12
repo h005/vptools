@@ -11,11 +11,11 @@ feaFile = '/home/h005/Documents/vpDataSet/notredame/vpFea/notredame.fs';
 % matrixFile = '/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.matrix';
 
 % matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/model/selectedMatrix.matrix'];
-matrixFile = ['/home/h005/Documents/vpDataSet/' modelName '/model/' modelName 'Pt.matrix'];
+matrixFile = ['../../' modelName '/model/' modelName 'Pt.matrix'];
 % imgSource = '/home/h005/Documents/vpDataSet/kxm/imgs';
-imgSource = ['/home/h005/Documents/vpDataSet/' modelName '/imgs'];
+imgSource = ['../../' modelName '/imgs'];
 % clusterDest = '/home/h005/Documents/vpDataSet/kxm/cluster';
-clusterDest = ['/home/h005/Documents/vpDataSet/' modelName '/cluster'];
+clusterDest = ['../../' modelName '/cluster'];
 % feaFile = '/home/h005/Documents/vpDataSet/kxm/vpFea/kxm.fs';
 fid = fopen(matrixFile,'r');
 ind = 0;
@@ -32,8 +32,8 @@ method = 'meanshiftPCU'
         'meanshiftCUp'
 %}
 % method = 'kmedoidsMV';
-method = 'kmedoidsMV';
-%%
+method = 'kmedoidsP';
+
 copyFlag = 1;
 output = 1;
 showDistribution = 0;
@@ -98,6 +98,8 @@ switch method
 %         cameraPSshow(ps,cluster,modelName);
 %         plotModel;
 %         cameraPSshow(ps,cluster,modelName);
+    case 'kmedoidsP'
+        [cluster,clusterCenter] = picKmedoidsP(ps);
     case 'meanshiftMV'
         [cluster,label,clusterCenter] = picMeanShiftMV(mv);
     case 'meanshiftPCU'
@@ -167,7 +169,7 @@ end
 if output
     %% print out clustering info
     dot = find(matrixFile == '.');
-    clusterFile = [matrixFile(1:dot) 'cluster'];
+    clusterFile = [matrixFile(1:dot(end)) 'cluster'];
     fid = fopen(clusterFile,'w');
     fprintf(fid,'%d %d\n',size(clusterCenter,1),ind);
     for i=1:ind
@@ -204,15 +206,19 @@ if output
        index = cluster == i;
        tmpPs = ps(index,:);
        psCenter = mean(tmpPs,1);
+       tmpCad = cad(index,:);
+       cadCenter = mean(tmpCad,1);
+       tmpUpd = upd(index,:);
+       updCenter = mean(tmpUpd,1);
         fprintf(fid,'%f %f %f %f %f %f %f %f %f\n',psCenter(1),...
             psCenter(2),...
             psCenter(3),...
-            clusterCenter(i,4),...
-            clusterCenter(i,5),...
-            clusterCenter(i,6),...
-            clusterCenter(i,7),...
-            clusterCenter(i,8),...
-            clusterCenter(i,9));
+            cadCenter(1),...
+            cadCenter(2),...
+            cadCenter(3),...
+            updCenter(1),...
+            updCenter(2),...
+            updCenter(3));
     end
 
 
