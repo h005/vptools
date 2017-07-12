@@ -29,6 +29,7 @@ angles(2:end) = angle;
 % and add their entropy value
 
 % angles = [angle(1),angle(3),getVar(angle)];
+angles = [angles angle(1) angle(3) getVar(angle)];
 
 end
 
