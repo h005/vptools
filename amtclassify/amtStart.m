@@ -40,7 +40,8 @@ anaMethodList = {
     'featureSelection' % 14
     };
 
-anaMethod = 8;
+% anaMethod = 8;
+anaMethod = 14;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
