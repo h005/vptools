@@ -34,8 +34,12 @@ angles = [angles angle(1) angle(3) getVar(angle)];
 end
 
 function angle = getAngle(u,v)
-CosTheta = dot(u,v)/(norm(u)*norm(v));
-angle = acos(CosTheta);
+if norm(u) == 0 || norm(v) == 0
+    angle = 0;
+else 
+    CosTheta = dot(u,v)/(norm(u)*norm(v));
+    angle = acos(CosTheta);
+end
 end
 
 function var = getVar(num)
