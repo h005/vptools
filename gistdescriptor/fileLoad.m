@@ -4,7 +4,7 @@
 % fileList is a cell array contains filename
 function fileList = fileLoad(sceneName)
 % just analysis fea2D file is ok
-fea2Dfile = ['/home/h005/Documents/vpDataSet/' sceneName '/vpFea/' sceneName '.2df'];
+fea2Dfile = ['../vpData/' sceneName '/vpFea/' sceneName '.2df'];
 fileList = feaload(fea2Dfile,sceneName);
 
 end
@@ -24,7 +24,7 @@ while 1
     % load basename
     [pathstr,name,ext] = fileparts(tline);
     % add this as prefix
-    prefix = '/home/h005/Documents/vpDataSet/';
+    prefix = '/home/hejw005/Documents/vpDataSet/';
     fileList{ind} = [prefix sceneName '/imgs/' name ext];
     tline = fgetl(fid);
 end
