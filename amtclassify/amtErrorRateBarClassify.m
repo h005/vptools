@@ -1,11 +1,33 @@
+%%
 time = tic;
 % this code was created for some selected features
+gt = {};
+pl = {};
 [visualFea, geometricFea,validVisIndex, validGeoIndex] = feaNameLoad();
 validVisIndex = sort(validVisIndex);
 validGeoIndex = sort(validGeoIndex);
 fs2d = fs2dAll(:,[validVisIndex,size(fs2dAll,2)]);
+% fs2d = fs2dAll(:,validVisIndex);
+%{
+% pca for fs2d
+fs2 = fs2dAll(:,validVisIndex);
+[coeff,score,latent] = pca(fs2);
+pcaCounter = 1;
+pcaRate = 0;
+while pcaRate < 1
+    pcaRate = sum(latent(1:pcaCounter))/sum(latent);
+    pcaCounter = pcaCounter + 1;
+end
+pcaCounter = size(fs2,2);
+% fs2d = fs2 * coeff;
+fs2d = fs2d(:,1:pcaCounter);
+%}
+
 fs3d = fs3dAll(:,[validGeoIndex,size(fs3dAll,2)]);
 fs = fsAll(:,[validVisIndex,visualFea{end}.index(end)+validGeoIndex, size(fsAll,2)]);
+% fs = [fs2d,fs3d];
+% fs2d = [fs2d, fs2dAll(:,size(fs2dAll,2))];
+
 % set Method
 methodText = {
     'bayes classify',...
@@ -57,17 +79,17 @@ end
 methodText = {'SVM-2K'};
 mode = {'2D','3D','2D3D'};
 
-[gt1,ps1] = svm2kClassify(fs2d,fs3d,rate,mode{1});
+[gt1,ps1] = svm2kClassify(fs2d,fs3d,rate,mode{1},fname);
 pl1 = ps1>0;
 pl1 = 2 * pl1 - 1;
 pl1 = pl1';
 disp('SVM-2K 2D')
-[gt2,ps2] = svm2kClassify(fs2d,fs3d,rate,mode{2});
+[gt2,ps2] = svm2kClassify(fs2d,fs3d,rate,mode{2},fname);
 pl2 = ps2>0;
 pl2 = 2 * pl2 - 1;
 pl2 = pl2';
 disp('SVM-2K 3D')
-[gt3,ps3] = svm2kClassify(fs2d,fs3d,rate,mode{3});
+[gt3,ps3,picName,gtScore] = svm2kClassify(fs2d,fs3d,rate,mode{3},fname);
 pl3 = ps3>0;
 pl3 = 2 * pl3 - 1;
 pl3 = pl3';
