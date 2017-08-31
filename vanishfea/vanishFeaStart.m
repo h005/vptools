@@ -33,7 +33,9 @@ modelList = {
 
 
 modelList = {    
-    'njuSample2'};
+%     'njuSample10',...
+%     'njuSample12',...
+    'njuSample9'};
 
 
 suffix = {
