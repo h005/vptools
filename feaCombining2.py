@@ -2,7 +2,7 @@
 # @Author: h005
 # @Date:   2017-07-02 11:08:32
 # @Last Modified by:   h005
-# @Last Modified time: 2017-07-19 14:20:21
+# @Last Modified time: 2017-08-30 13:44:27
 
 # this file was created to combine features, such as .2df, .3df, .vnf .dpf
 # and this file will cope all the models in model list.
@@ -101,8 +101,9 @@ def outputFeatures(feaDict, feaNameList, feaFileList, outputFeaFile, outputFeaFn
 
 
 feaMap = {'.vnf':'vanish Line',
-		  '.lsd':'LineSegment',
-		  '.gist512':'gist'}
+		  '.lsd_x':'LineSegment_x',
+		  '.lsd_diagonal':'LineSegment_diagonal',
+		  '.gist960':'gist'}
 
 baseFeafile = '.2df'
 baseFeaName = '.2dfname'
@@ -124,20 +125,25 @@ modelList = [
     'TengwangPavilion',
     'mont',
     'HelsinkiCathedral',
-    'BuckinghamPalace',
-    'castle',
-    'njuSample',
-    'njuSample2',
-    'njuSample3',
-    'njuActivity',
-    'njuActivity2'
+    'BuckinghamPalace'
+    # 'castle',
+    # 'njuSample6'
+    # 'njuSample',
+    # 'njuSample2',
+    # 'njuSample3',
+    # 'njuSample5',
+    # 'njuActivity',
+    # 'njuActivity2'
+
     # 'house8',
     # 'pavilion9',
     # 'villa7s',
     # 'model5'
     ]
 
-modelList = ['njuSample2','kxm']
+# modelList = ['njuSample10', 'kxm' ,'njuSample12','njuSample23']
+
+# modelList = ['njuSample9', 'kxm']
 
 bsaePath = '/home/h005/Documents/vpDataSet/tools/vpData/'
 

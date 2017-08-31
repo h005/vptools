@@ -29,6 +29,7 @@ modelList = {
     'njuSample',
     'njuSample2',
     'njuSample3',
+    'njuSample5',
     'njuActivity',
     'njuActivity2'
     # 'pavilion9',
@@ -37,7 +38,7 @@ modelList = {
     }
 
 
-path = '/home/hejw005/Documents/vpDataSet/'
+path = '/home/h005/Documents/vpDataSet/'
 
 # in general cases, it is unnecessary to clear .vnf file
 suffix = {
