@@ -2,9 +2,10 @@
 close all
 % set Method
 methodText = {'SVM-2K regress'};
+%     virtualModel = {'model12','circle'};
 %     virtualModel = {'castle','circle'};
-% virtualModel = {'castle','circle'};
-    virtualModel = {'njuSample2','0circle'};
+%     virtualModel = {'model13','circle'};
+    virtualModel = {'njuSample4','0circle'};
 %     virtualModel = {'njuActivity2','halfCircle'};
 
 [vfea2d,vfea3d] = vdataLoad({virtualModel{1}});
@@ -36,3 +37,5 @@ end
 
 showColorMap;
 title(virtualModel{1})
+
+save(['vpRecommendation/' virtualModel{1} '.mat'],'ps');
