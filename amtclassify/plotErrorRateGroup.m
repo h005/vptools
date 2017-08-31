@@ -41,6 +41,6 @@ bar(errRate);
 % end
 set(gca, 'XTick', 1:numel(errRate), 'XTickLabel', methodN)
 ylabel('Error Rate');
-title(titleText,'FontWeight','normal')
+% title(titleText,'FontWeight','normal')
 axis([0.5,3.5,0,0.4])
 legend(fN,'Location','best');
