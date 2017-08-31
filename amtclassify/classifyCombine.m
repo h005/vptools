@@ -38,7 +38,8 @@ fea = cfs(:,1:end-1);
 groundTruth(:) = label';
 
 indices = crossvalind('Kfold',length(label),nfold);
-% load indices
+save('indices.mat','indices');
+load indices.mat
 
 % transpose mfeatures * ncases
 fea = fea';

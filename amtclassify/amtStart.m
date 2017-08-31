@@ -40,8 +40,8 @@ anaMethodList = {
     'featureSelection' % 14
     };
 
-% anaMethod = 8;
-anaMethod = 14;
+anaMethod = 8;
+% anaMethod = 14;
 
 if strcmp(anaMethodList{anaMethod},'generalClassifyEach')
 %%
@@ -165,7 +165,7 @@ elseif strcmp(anaMethodList{anaMethod},'generalClassifyCombine')
         'svm classify',...
         'ens classify'
         };
-    method = 3;
+    method = 2;
     % result preparing
     % gt  groundTruth
     % pl  preLabel
