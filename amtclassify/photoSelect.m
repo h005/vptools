@@ -34,7 +34,7 @@ modelList = {
     'potalaPalace'
     };
 
-rate = 0.08;
+rate = 0.1;
 % load Data
 % sc = scload(scorefile,sceneName);
 [sc,scr,fea2d,fea3d] = dataLoad(modelList);
@@ -62,7 +62,7 @@ label(num+1:end) = 1;
 % end
 
 
-
+clc;
 
 % num = 20;
 disp('...............high quality...........')
