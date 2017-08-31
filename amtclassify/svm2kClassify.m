@@ -1,5 +1,5 @@
 %% this function was created to run svm2k
-function [groundTruth,preLabel] = svm2kClassify(fs2d,fs3d,rate,mode)
+function [groundTruth,preLabel,picName,gtScore] = svm2kClassify(fs2d,fs3d,rate,mode,fname)
 nfold = 10;
 sc = fs2d(:,end);
 % sort sc asscend
@@ -13,7 +13,8 @@ groundTruth = zeros(1, 2 * num);
 preLabel = zeros(1, 2 * num);
 preScore = zeros(1, 2 * num);
 
-% picName = fname([negIdx;posIdx]);
+picName = fname([negIdx;posIdx]);
+gtScore = sc([negIdx;posIdx]);
 
 % constuct combined dataSet
 % the last column is score
