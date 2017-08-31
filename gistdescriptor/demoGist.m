@@ -6,7 +6,7 @@ img1 = imread('/home/h005/Documents/vpDataSet/model5/imgs/img0087.jpg');
 clear param
 param.imageSize = [256 256]; % it works also with non-square images
 param.orientationsPerScale = [8 8 8 8];
-param.numberBlocks = 2;
+param.numberBlocks = 4;
 param.fc_prefilt = 4;
 
 % Computing gist requires 1) prefilter image, 2) filter image and collect

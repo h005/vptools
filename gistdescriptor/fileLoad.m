@@ -24,7 +24,7 @@ while 1
     % load basename
     [pathstr,name,ext] = fileparts(tline);
     % add this as prefix
-    prefix = '/home/hejw005/Documents/vpDataSet/';
+    prefix = '/home/h005/Documents/vpDataSet/';
     fileList{ind} = [prefix sceneName '/imgs/' name ext];
     tline = fgetl(fid);
 end

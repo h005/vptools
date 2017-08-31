@@ -6,8 +6,8 @@ import os
 import sys
 import shutil
 
-sourcePath = '/home/hejw005/Documents/vpDataSet/'
-destPath = '/home/hejw005/Documents/vpDataSet/tools/vpData/'
+sourcePath = '/home/h005/Documents/vpDataSet/'
+destPath = '/home/h005/Documents/vpDataSet/tools/vpData/'
 
 if len(sys.argv) > 2:
 	print 'para error'
@@ -30,14 +30,15 @@ modelList = {
     'HelsinkiCathedral',
     'BuckinghamPalace',
     'castle',
-    # 'house8',
     'njuSample',
-    # 'pavilion9',
-    # 'villa7s'
     'njuSample2',
     'njuSample3',
+    'njuSample5',
     'njuActivity2',
     'njuActivity'
+    # 'house8',
+    # 'pavilion9',
+    # 'villa7s'
     }
 
 suffix = {'.2df',
